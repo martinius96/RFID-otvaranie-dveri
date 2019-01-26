@@ -28,6 +28,16 @@
 * v zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, meno webservera
 * Hotovo
 
+# Webová časť
+![Hlavný prehľad](https://i.nahraj.to/f/2afM.PNG)
+![Autorizované karty](https://i.nahraj.to/f/2afL.PNG)
+
+# Zakúpenie projektu
+* Okrem tejto verzie zdarma ponúkam i platenú variantu projektu s dokonalejším overením prijatého kódu (porovnáva sa dátový typ)
+* Overenie NodeMCU
+* Login systém do webového rozhrania - prístupný iba adminovi
+* Pri záujme navštívte: https://arduino.php5.sk/rfid-system.php
+
 # Zapojenie
 | RC522 | NodeMCU |
 |:-----|--------:|
@@ -45,3 +55,6 @@
 | 5V | VIN / VUSB    |
 | GND  | GND |
 | IN  | D0 (GPIO16) |
+
+# Obrázkové zapojenie
+https://i.stack.imgur.com/e1ewN.png
