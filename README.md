@@ -57,4 +57,4 @@
 | IN  | D0 (GPIO16) |
 
 # Obrázkové zapojenie
-https://i.stack.imgur.com/e1ewN.png
+![Schéma](https://i.stack.imgur.com/e1ewN.png)
