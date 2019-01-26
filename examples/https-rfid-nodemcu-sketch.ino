@@ -22,57 +22,56 @@ RFID rfid(SS_PIN, RST_PIN);
 unsigned long kod;
 WiFiClientSecure client; //HTTPS client
 void setup(){ 
-  Serial.begin(9600);
-  SPI.begin(); 
-  rfid.init();
-  WiFi.begin(ssid, password);
-  pinMode(rele, OUTPUT);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println("");
-  Serial.println("WiFi uspesne pripojene");
-  Serial.println("IP adresa: ");
-  Serial.println(WiFi.localIP());
-  Serial.println("Ready");
-
+	Serial.begin(9600);
+  	SPI.begin(); 
+  	rfid.init();
+  	pinMode(rele, OUTPUT);
+	WiFi.begin(ssid, password);
+  	while (WiFi.status() != WL_CONNECTED) {
+    		delay(500);
+    		Serial.print(".");
+  	}
+	Serial.println("");
+  	Serial.println("WiFi uspesne pripojene");
+  	Serial.println("IP adresa: ");
+  	Serial.println(WiFi.localIP());
+  	Serial.println("Ready");
 }
 
 void loop(){
-  if (WiFi.status() != WL_CONNECTED) {
-    WiFi.begin(ssid, password);
-  }
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  if (rfid.isCard()) {
-    if (rfid.readCardSerial()) {
-      Serial.println(" ");
-      Serial.println("Card found");
-      kod = 10000*rfid.serNum[4]+1000*rfid.serNum[3]+100*rfid.serNum[2]+10*rfid.serNum[1]+rfid.serNum[0];
-      Serial.println(kod);
-      String kodik = String(kod);
-      if (client.connect(host, httpsPort)) {
-        String url = "/rfid/karta.php?kod="+kodik;
-        client.print(String("GET ") + url + " HTTP/1.0\r\n" + "Host: " + host + "\r\n" + "User-Agent: NodeMCU\r\n" + "Connection: close\r\n\r\n");
-      while (client.connected()) {
-        String line = client.readStringUntil('\n');
-        if (line == "\r") {
-          break;
-        }
-      }
-  String line = client.readStringUntil('\n');
-  if (line == "OK"){
-	 digitalWrite(rele, LOW); //invertovane spinane rele active LOW
-	 delay(5500);              //cas otvorenia dveri
-  }else if (line == "NO") {
-    digitalWrite(rele,HIGH);
-	}
-  }
+  	if (WiFi.status() != WL_CONNECTED) {
+    		WiFi.begin(ssid, password);
+  	}
+  	while (WiFi.status() != WL_CONNECTED) {
+    		delay(500);
+    		Serial.print(".");
+  	}
+  	if (rfid.isCard()) {
+    		if (rfid.readCardSerial()) {
+      			Serial.println(" ");
+      			Serial.println("Card found");
+      			kod = 10000*rfid.serNum[4]+1000*rfid.serNum[3]+100*rfid.serNum[2]+10*rfid.serNum[1]+rfid.serNum[0];
+      			Serial.println(kod);
+      			String kodik = String(kod);
+      			client.stop();      
+      			if (client.connect(host, httpsPort)) {
+        			String url = "/rfid/karta.php?kod="+kodik;
+        			client.print(String("GET ") + url + " HTTP/1.0\r\n" + "Host: " + host + "\r\n" + "User-Agent: NodeMCU\r\n" + "Connection: close\r\n\r\n");
+      				while (client.connected()) {
+        				String line = client.readStringUntil('\n');
+        				if (line == "\r") {
+          					break;
+        				}	
+      				}
+  				String line = client.readStringUntil('\n');
+  				if (line == "OK"){
+	 				digitalWrite(rele, LOW); //invertovane spinane rele active LOW
+	 				delay(5500);              //cas otvorenia dveri
+  				}else if (line == "NO") {
+    					digitalWrite(rele,HIGH);
+				}
+  			}
           }
-    }
-
-    rfid.halt();
+    	}
+	rfid.halt();
 }
