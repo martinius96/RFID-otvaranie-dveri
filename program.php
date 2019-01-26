@@ -53,6 +53,14 @@
 	   <li><a href="https://github.com/esp8266/Arduino/">Návod na inštaláciu NodeMCU do ArduinoIDE</a></li><br>
 	  <hr><h2>Zdrojový kód</h2><hr>
 <pre style="background-color:powderblue;">
+/*|----------------------------------------------------------|*/
+/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU               |*/
+/*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
+/*|EMAIL: martinius96@gmail.com                              |*/
+/*|Doska: NodeMCU v3 Lolin (v2 compatible)                   |*/
+/*|CORE: 2.3.0                                               |*/
+/*|WEB: https://arduino.php5.sk                              |*/
+/*|----------------------------------------------------------|*/
 #include &lt;ESP8266WiFi.h&gt;
 #include &lt;WiFiClientSecure.h&gt;
 #include &lt;SPI.h&gt;
