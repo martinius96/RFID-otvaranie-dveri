@@ -33,7 +33,7 @@
 ![Autorizované karty](https://i.nahraj.to/f/2afL.PNG)
 
 # Zakúpenie projektu
-* Okrem tejto verzie zdarma ponúkam i platenú variantu projektu s dokonalejším overením prijatého kódu (porovnáva sa dátový typ)
+* Okrem Github verzie projektu zdarma ponúkam i platenú variantu projektu s dokonalejším overením prijatého kódu (porovnáva sa dátový typ)
 * Overenie NodeMCU
 * Login systém do webového rozhrania - prístupný iba adminovi
 * Pri záujme navštívte: https://arduino.php5.sk/rfid-system.php
