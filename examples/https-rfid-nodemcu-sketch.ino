@@ -15,7 +15,7 @@ const char * password = "HesloWifiSiete";
 const char * host = "arduino.php5.sk"; //bez https a www
 const int httpsPort = 443; //https port
 const int rele = 16; //GPIO16 == D0
-const char * fingerprint = "‎a6 02 4d e1 32 b0 0b fe 56 85 0f 84 03 ec b2 18 23 09 f0 63"; // odtlacok HTTPS cert
+const char * fingerprint = "a6 02 4d e1 32 b0 0b fe 56 85 0f 84 03 ec b2 18 23 09 f0 63"; // odtlacok HTTPS cert
 #define SS_PIN 4
 #define RST_PIN 5
 RFID rfid(SS_PIN, RST_PIN); 
@@ -56,6 +56,7 @@ void loop(){
       			client.stop();      
       			if (client.connect(host, httpsPort)) {
         			String url = "/rfid/karta.php?kod="+kodik;
+				//String url = "/rfid/karta.php?kod="+kodik+"&origin=Lolin";
         			client.print(String("GET ") + url + " HTTP/1.0\r\n" + "Host: " + host + "\r\n" + "User-Agent: NodeMCU\r\n" + "Connection: close\r\n\r\n");
       				while (client.connected()) {
         				String line = client.readStringUntil('\n');
