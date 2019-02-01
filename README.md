@@ -21,10 +21,10 @@
 
 # Inštalácia systému
 * Stiahnuť repozitár
-* Súbor export_dat_db.sql z priečinka sql importovať do vašej MySQL databázy
+* Súbor priečinka sql importovať do vašej MySQL databázy - štruktúru, alebo štruktúru + vzorové dáta
 * V súbore connect.php nastaviť vaše údaje na databázu
-* src priečinok skopírovať do: C:/Moje Dokumenty/Arduino/libraries/rfid
-* Web súbory nahrať na FTP
+* src priečinok skopírovať do: C:/Moje Dokumenty/Arduino/libraries/rfid (Win 10)
+* Web súbory nahrať na FTP server
 * v zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, meno webservera
 * Hotovo
 
