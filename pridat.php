@@ -50,12 +50,15 @@ include("connect.php");
     <!-- Page Content -->
     <div class="container">
       <div class="row">
-	<?php   if(isset($_POST['odoslat'])){
-    $cislo = mysqli_real_escape_string($con, $_POST['cislo']);
-    $cislo = htmlspecialchars( $cislo, ENT_QUOTES );
-    $cislo = trim( $cislo );
-    $ins = mysqli_query($con,"INSERT INTO `autorizovane` (`cislo_karty`) VALUES ('$cislo')") or die (mysqli_error($con));
-} ?>
+	<?php   
+	if(isset($_POST['odoslat'])){
+    		$cislo = mysqli_real_escape_string($con, $_POST['cislo']);
+    		$cislo = trim( $cislo );
+		if($cislo!=""){
+    			$ins = mysqli_query($con,"INSERT INTO `autorizovane` (`cislo_karty`) VALUES ('$cislo')") or die (mysqli_error($con));
+		}
+	} 
+	?>
         <div class="col-lg-12 text-center">
 		<center><b>Posledných 5 interakcií</b></center>
           <div id="last5"></div>
