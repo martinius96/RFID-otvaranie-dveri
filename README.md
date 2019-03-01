@@ -52,7 +52,7 @@
 
 | Relé | NodeMCU |
 |:-----|--------:|
-| 5V | VIN / VUSB    |
+| 5V | VIN / VUSB (Adaptér/USB napájanie)  |
 | GND  | GND |
 | IN  | D0 (GPIO16) |
 
