@@ -12,6 +12,7 @@
 * Basekit (možný iba pri V3, možnosť využiť napájanie na 6-24V)
 * Čítačka RC522 na 13.56 MHz pre štandard ISO/IEC 14443 A,
 * 5V elmg. 1-kanálové relé
+* Solenoid jazýček ![Jazýček](http://www.kuhnke.co.uk/images/solenoids/bistable.gif)
 
 # Technológie
 * PHP
