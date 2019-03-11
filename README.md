@@ -8,11 +8,14 @@
 * Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, jazýček sa vtiahne
 
 # Hardvér
-* NodeMCU (v2, alebo v3)
-* Basekit (možný iba pri V3, možnosť využiť napájanie na 6-24V)
-* Čítačka RC522 na 13.56 MHz pre štandard ISO/IEC 14443 A,
-* 5V elmg. 1-kanálové relé
-* Solenoid jazýček ![Jazýček](http://www.kuhnke.co.uk/images/solenoids/bistable.gif)
+* NodeMCU (v2, alebo v3) ![NodeMCU](https://www.researchgate.net/profile/Hamzah_Marhoon/publication/325181089/figure/fig3/AS:627026931236872@1526506278395/NodeMCU-module_Q320.jpg)
+* Basekit (možný iba pri V3, možnosť využiť napájanie na 6-24V) ![Base kit](https://images-na.ssl-images-amazon.com/images/I/51Gqf0K%2B2QL._SX342_.jpg)
+* Čítačka RC522 na 13.56 MHz pre štandard ISO/IEC 14443 A ![RC522](http://www.desiengineer.in/wp-content/uploads/2017/03/Desi2513_b.png)
+* 5V elmg. 1-kanálové relé ![Relé](https://leobot.net/productimages/1636.jpg)
+* Solenoid jazýček ![Jazýček](https://www.heaps.co.uk/images/Products/Solenoids/lucifer-solenoid.jpg)
+
+# Princíp solenoid jazýčka 
+![Jazýček](http://www.kuhnke.co.uk/images/solenoids/bistable.gif)
 
 # Technológie
 * PHP
