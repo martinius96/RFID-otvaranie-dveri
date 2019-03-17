@@ -1,13 +1,13 @@
-# [RFID prístupový systém so správou on-line](https://arduino.php5.sk/rfid/)
+# [RFID prístupový systém so správou on-line](https://arduino.php5.sk/rfid-system.php)
 
 # Systém ponúka 2 typy užívateľov projektu
 | Administrátor <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width="64" height="64"> | Používateľ <img src="https://www.flaticon.com/premium-icon/icons/svg/1610/1610320.svg" width="64" height="64"> |
 | ------------- | ------------- |
-| Spravuje webové rozhranie | Využíva služby RFID čítačky fyzickým priložením NFC tagu, kľúčenky, karty, náramku  |
-| V reálnom čase vidí priloženie karty s výsledkom overenia  | V prípade overenia priloženého čipu mu NodeMCU odistí dvere na 5 sekúnd.  |
-| Historicky vidí 100 posledných priložení  | Pri neoverení používateľa z dôvodu neovereného čipu, prípadne nedostupnosti overenia webu mu zámok nie je odistený - nevtiahne sa  |
-| Jedným klikutím môže schváliť už priloženú kartu  | Používateľ o neoverení svojho čipu ako takého nie je informovaný. Jeho pokus je zapísaný do databázy za predpokladu, že sa NodeMCU napojí na web, kde sa karta overuje.  |
-| Manuálne zadanie karty  | Používateľ môže na overenie použiť aj svoju bankomatovú kartu, ISIC kartu, či zamestnaneckú kartu, ktorej fyzickú adresu čítačka dokáže prečítať, musí spĺňať štandard ISO/IEC 14443 A.|
+| Spravuje webové rozhranie | Fyzicky prikladá NFC tag/kľúčenku/náramok/kartu|
+| V reálnom čase vidí priloženie karty s výsledkom overenia  | Pri overeni sú odistené dvere na 5 sekúnd|
+| Historicky vidí 100 posledných priložení  | Pri neoverení používateľa sa jazýček nevtiahne  |
+| Jedným klikutím môže schváliť už priloženú kartu  | Používateľ o overení/neoverení nie je informovaný (led/buzzer)|
+| Manuálne zadanie karty  | Používateľ použije bankomatovú kartu, ISIC kartu, spĺňajú štandard ISO/IEC 14443 A|
 | Odstránenie karty  |  Informovanie používateľa o výsleku overenia cez diódu/buzzer (len platená verzia) |
 | Vidí zdrojový kód pre NodeMCU  |  |
 | Prihlásenie/odhlásenie (len platená verzia)  |   |
