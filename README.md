@@ -7,8 +7,7 @@
 | V reálnom čase vidí priloženie karty s výsledkom overenia  | V prípade overenia priloženého čipu mu NodeMCU odistí dvere na 5 sekúnd.  |
 | Historicky vidí 100 posledných priložení  | Pri neoverení používateľa z dôvodu neovereného čipu, prípadne nedostupnosti overenia webu mu zámok nie je odistený - nevtiahne sa  |
 | Jedným klikutím môže schváliť už priloženú kartu  | Používateľ o neoverení svojho čipu ako takého nie je informovaný. Jeho pokus je zapísaný do databázy za predpokladu, že sa NodeMCU napojí na web, kde sa karta overuje.  |
-| Manuálne zadanie karty  | Používateľ môže na overenie použiť aj svoju bankomatovú kartu, ISIC kartu, či zamestnaneckú kartu, ktorej fyzickú adresu čítačka dokáže prečítať, musí spĺňať štandard ISO/IEC 14443 A.
- |
+| Manuálne zadanie karty  | Používateľ môže na overenie použiť aj svoju bankomatovú kartu, ISIC kartu, či zamestnaneckú kartu, ktorej fyzickú adresu čítačka dokáže prečítať, musí spĺňať štandard ISO/IEC 14443 A.|
 | Odstránenie karty  |  Informovanie používateľa o výsleku overenia cez diódu/buzzer (len platená verzia) |
 | Vidí zdrojový kód pre NodeMCU  |  |
 | Prihlásenie/odhlásenie (len platená verzia)  |   |
