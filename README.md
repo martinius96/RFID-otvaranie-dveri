@@ -3,13 +3,24 @@
 # Systém ponúka 2 typy užívateľov projektu
 | Administrátor <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width="64" height="64"> | Používateľ <img src="https://www.flaticon.com/premium-icon/icons/svg/1610/1610320.svg" width="64" height="64"> |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Spravuje webové rozhranie | Využíva služby RFID čítačky fyzickým priložením NFC tagu, kľúčenky, karty, náramku  |
+| V reálnom čase vidí priloženie karty s výsledkom overenia  | V prípade overenia priloženého čipu mu NodeMCU odistí dvere na 5 sekúnd.  |
+| Historicky vidí 100 posledných priložení  | Pri neoverení používateľa z dôvodu neovereného čipu, prípadne nedostupnosti overenia webu mu zámok nie je odistený - nevtiahne sa  |
+| Jedným klikutím môže schváliť už priloženú kartu  | Používateľ o neoverení svojho čipu ako takého nie je informovaný. Jeho pokus je zapísaný do databázy za predpokladu, že sa NodeMCU napojí na web, kde sa karta overuje.  |
+| Manuálne zadanie karty  | Používateľ môže na overenie použiť aj svoju bankomatovú kartu, ISIC kartu, či zamestnaneckú kartu, ktorej fyzickú adresu čítačka dokáže prečítať, musí spĺňať štandard ISO/IEC 14443 A.
+ |
+| Odstránenie karty  |  Informovanie používateľa o výsleku overenia cez diódu/buzzer (len platená verzia) |
+| Vidí zdrojový kód pre NodeMCU  |  |
+| Prihlásenie/odhlásenie (len platená verzia)  |   |
+| Priradenie mien ku kartám (len platená verzia)  |  |
+| Export mesačnej dochádzky (len platená verzia)  |  |
+| História 1 rok dozadu (len platená verzia)  |  |
+
 * Overenie kariet a prístupu cez web do objektu
 * Čítačka prečíta kartu štandardu ISO/IEC 14443 A, jej MAC adresu odošle na web, kde sa overí a odpovie sa OK/NO
 * Možno použiť ISIC karty, bankomatové, zamestnanecké karty
 * V prípade odpovede OK NodeMCU aktivuje jazýček, čím je možné dvere otvoriť. 
-* Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, jazýček sa vtiahne
+* Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, elmg. jazýček sa vtiahne
 
 # Hardvér
 * NodeMCU (v2, alebo v3) ![NodeMCU](https://www.researchgate.net/profile/Hamzah_Marhoon/publication/325181089/figure/fig3/AS:627026931236872@1526506278395/NodeMCU-module_Q320.jpg)
