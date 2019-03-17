@@ -4,7 +4,7 @@
 | Administrátor <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width="64" height="64"> | Používateľ <img src="https://www.flaticon.com/premium-icon/icons/svg/1610/1610320.svg" width="64" height="64"> |
 | ------------- | ------------- |
 | Spravuje webové rozhranie | Fyzicky prikladá NFC tag/kľúčenku/náramok/kartu|
-| V reálnom čase vidí priloženie karty s výsledkom overenia  | Pri overeni sú odistené dvere na 5 sekúnd|
+| V reálnom čase vidí priloženie karty s výsledkom overenia  | Pri overeni sú mu odistené dvere na 5 sekúnd|
 | Historicky vidí 100 posledných priložení  | Pri neoverení používateľa sa jazýček nevtiahne  |
 | Jedným klikutím môže schváliť už priloženú kartu  | Používateľ o overení/neoverení nie je informovaný (led/buzzer)|
 | Manuálne zadanie karty  | Používateľ použije bankomatovú kartu, ISIC kartu, spĺňajú štandard ISO/IEC 14443 A|
