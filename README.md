@@ -51,9 +51,13 @@
 ![Autorizované karty](https://i.nahraj.to/f/2afL.PNG)
 
 # Zakúpenie projektu
-* Okrem Github verzie projektu zdarma ponúkam i platenú variantu projektu s dokonalejším overením prijatého kódu (porovnáva sa dátový typ)
+* Okrem Github verzie projektu zdarma ponúkam i platenú variantu projektu s dokonalejším overením
 * Overenie NodeMCU
-* Login systém do webového rozhrania - prístupný iba adminovi
+* Overenie user-agent
+* Login systém do webového rozhrania - prístupné iba adminovi
+* Možnosť zmeny login údajov
+* Priradenie mien zamestnancov ku kartám
+* Export dochádzky za mesiac v .csv formáte (vhodné pre Excel)
 * Pri záujme navštívte: https://arduino.php5.sk/rfid-system.php
 
 # Zapojenie
