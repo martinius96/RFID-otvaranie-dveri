@@ -1,6 +1,10 @@
 # [RFID prístupový systém so správou on-line](https://arduino.php5.sk/rfid/)
 
-# Systém ponúka
+# Systém ponúka 2 typy užívateľov projektu
+| Administrátor ![ADMIN](https://image.flaticon.com/icons/svg/236/236831.svg) | Používateľ |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 * Overenie kariet a prístupu cez web do objektu
 * Čítačka prečíta kartu štandardu ISO/IEC 14443 A, jej MAC adresu odošle na web, kde sa overí a odpovie sa OK/NO
 * Možno použiť ISIC karty, bankomatové, zamestnanecké karty
