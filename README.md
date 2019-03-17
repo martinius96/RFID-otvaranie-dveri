@@ -78,5 +78,13 @@
 | GND  | GND |
 | IN  | D0 (GPIO16) |
 
+| Relé | Solenoid |
+|:-----|--------:|
+| NO | IN |
+| COM  | - |
+| NC  | 12/24 DC/AC |
+
+* GND solenoidu je zapojené na GND zdroja
+
 # Obrázkové zapojenie
 ![Schéma](https://i.stack.imgur.com/e1ewN.png)
