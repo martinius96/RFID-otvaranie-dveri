@@ -1,7 +1,7 @@
 # [RFID prístupový systém so správou on-line](https://arduino.php5.sk/rfid/)
 
 # Systém ponúka 2 typy užívateľov projektu
-| Administrátor ![ADMIN](https://image.flaticon.com/icons/svg/236/236831.svg =64x64) | Používateľ ![ADMIN](https://www.flaticon.com/premium-icon/icons/svg/1610/1610320.svg =64x64) |
+| Administrátor <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width="100" height="100"> | Používateľ ![ADMIN](https://www.flaticon.com/premium-icon/icons/svg/1610/1610320.svg =64x64) |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
