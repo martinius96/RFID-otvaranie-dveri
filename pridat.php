@@ -50,15 +50,21 @@ include("connect.php");
     <!-- Page Content -->
     <div class="container">
       <div class="row">
-	<?php   
-	if(isset($_POST['odoslat'])){
-    		$cislo = mysqli_real_escape_string($con, $_POST['cislo']);
-    		$cislo = trim( $cislo );
-		if($cislo!=""){
-    			$ins = mysqli_query($con,"INSERT INTO `autorizovane` (`cislo_karty`) VALUES ('$cislo')") or die (mysqli_error($con));
-		}
-	} 
-	?>
+		<?php   if(isset($_POST['odoslat'])){
+    $cislo = mysqli_real_escape_string($con, $_POST['cislo']);
+    $cislo = htmlspecialchars( $cislo, ENT_QUOTES );
+    $cislo = trim( $cislo );
+    if($cislo==""){
+    echo '<div class="alert alert-danger" style="width:100%;">
+  <strong>Pozor!</strong> Neplatný kód karty! Opakujte pokus!
+</div>';
+    }else{
+    $ins = mysqli_query($con,"INSERT INTO `autorizovane` (`cislo_karty`) VALUES ('$cislo')") or die (mysqli_error($con));
+    echo '<div class="alert alert-success" style="width:100%;">
+  <strong>Zapísané!</strong> Manuálny kód karty zapísaný do systému!
+</div>';
+    }
+} ?>
         <div class="col-lg-12 text-center">
 		<center><b>Posledných 5 interakcií</b></center>
           <div id="last5"></div>
@@ -70,7 +76,7 @@ include("connect.php");
 		<hr><b>Manuálne pridať kartu</b><hr>
 		 <form method="post"ction="<?php echo $_SERVER['PHP_SELF']; ?>" >
   <fieldset>
-    <input type="number" min=0 max=99999999999999 name="cislo"><br>
+    <input type="number" min=0 max=99999999999999 name="cislo" required><br>
   <input type="submit" class="btn btn-success" name="odoslat" value="Zapísať">
   </fieldset>
 </form>
