@@ -52,12 +52,14 @@ include("connect.php");
       <div class="row">
 		<?php   if(isset($_POST['odoslat'])){
     $cislo = mysqli_real_escape_string($con, $_POST['cislo']);
-    $cislo = htmlspecialchars( $cislo, ENT_QUOTES );
     $cislo = trim( $cislo );
     if($cislo==""){
     echo '<div class="alert alert-danger" style="width:100%;">
   <strong>Pozor!</strong> Neplatný kód karty! Opakujte pokus!
 </div>';
+    }else if($cislo<0){
+    echo '<div class="alert alert-danger" style="width:100%;">
+  <strong>Pozor!</strong> Neplatný kód karty! Opakujte pokus s rozsahom 0-99999999999999</div>';
     }else{
     $ins = mysqli_query($con,"INSERT INTO `autorizovane` (`cislo_karty`) VALUES ('$cislo')") or die (mysqli_error($con));
     echo '<div class="alert alert-success" style="width:100%;">
@@ -66,6 +68,9 @@ include("connect.php");
     }
 } ?>
         <div class="col-lg-12 text-center">
+		<div class="alert alert-success">
+  <strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a>
+</div>
 		<center><b>Posledných 5 interakcií</b></center>
           <div id="last5"></div>
 		<b>Autorizované karty</b>
