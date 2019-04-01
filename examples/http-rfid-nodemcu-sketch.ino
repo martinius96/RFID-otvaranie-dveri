@@ -55,6 +55,7 @@ void loop(){
       			if (client.connect(host, httpPort)) {
         			String url = "/rfid/karta.php?kod="+kodik;
 				//String url = "/rfid/karta.php?kod="+kodik+"&origin=Lolin";
+				//String url = "/rfid/karta.php?kod="+kodik+"&origin=Lolin&topsecret=topsecret";
         			client.print(String("GET ") + url + " HTTP/1.0\r\n" + "Host: " + host + "\r\n" + "User-Agent: NodeMCU\r\n" + "Connection: close\r\n\r\n");
       				while (client.connected()) {
         				String line = client.readStringUntil('\n');
