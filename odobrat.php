@@ -53,7 +53,9 @@ include("connect.php");
       <div class="row">
 	
         <div class="col-lg-12 text-center">
-		<center><b>Posledných 5 interakcií</b></center>
+		<div class="alert alert-success">
+  <strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a>
+</div><center><b>Posledných 5 interakcií</b></center>
       <div id="last5"></div>
 		<b>Autorizované karty</b>
 		<div id="aut"></div>
