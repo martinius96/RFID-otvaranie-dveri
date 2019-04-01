@@ -2,10 +2,15 @@
 include("connect.php");
 $kod = mysqli_real_escape_string($con, $_GET['kod']);
 $kod = trim( $kod );
+
 // VOLITELNE (zmenu aplikovat i v programe NodeMCU) $origin = mysqli_real_escape_string($con, $_GET['origin']);
 // VOLITELNE (zmenu aplikovat i v programe NodeMCU) $origin = trim( $origin );
+
+// VOLITELNE (zmenu aplikovat i v programe NodeMCU) $topsecret = mysqli_real_escape_string($con, $_GET['topsecret']);
+// VOLITELNE (zmenu aplikovat i v programe NodeMCU) $topsecret = trim( $topsecret );
 if($kod!=""){
 // VOLITELNE (zmenu aplikovat i v programe NodeMCU)if($origin=="Lolin"){
+// VOLITELNE (zmenu aplikovat i v programe NodeMCU)if($topsecret=="topsecret"){
  $register1 = mysqli_query($con,"SELECT * FROM `autorizovane` WHERE `cislo_karty`='$kod'") or die(mysqli_error($con));
  	 if(mysqli_num_rows($register1) < 1){
 	 	 $ins7 = mysqli_query($con,"INSERT INTO `pokusy` (`cislo_karty`,`vysledok`) VALUES ('$kod',0)") or die (mysqli_error($con));
@@ -18,5 +23,6 @@ if($kod!=""){
 	 	$ins7 = mysqli_query($con,"INSERT INTO `pokusy` (`cislo_karty`,`vysledok`) VALUES ('$kod',1)") or die (mysqli_error($con));
 		echo "OK";
 	 }
-// VOLITELNE (zmenu aplikovat i v programe NodeMCU)
+// VOLITELNE (zmenu aplikovat i v programe NodeMCU) }
+// VOLITELNE (zmenu aplikovat i v programe NodeMCU) }	
 }
