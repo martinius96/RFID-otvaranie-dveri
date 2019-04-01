@@ -2,12 +2,14 @@
 <html lang="en">
   <head>
 
-    <meta charset="utf-8">
+     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <meta name="author" content="Martin Chlebovec">
-    <meta name="contact" content="martinius96@gmail.com">
+  <meta name="description" content="Zdrojový kód pre mikrokontróler NodeMCU s čipom ESP8266-12E. RFID čítačka RC522 na 13.56MHz.">
+    <meta name="keywords" content="program, arduino, core, arduinoide, nodemcu, esp8266, čip, iot, rfid, vrátnik, rc522, relé, solenoid, dvere, jazýček, ovládanie, internet">
+    <meta name="author" content="Martin Chlebovec">
+    <meta name="robots" content="index, follow">
+    <title>RFID vrátnik - ESP8266 - Zdrojový kód</title>
 
-    <title>Webaplikácia apartmánu</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
