@@ -13,7 +13,6 @@ include("connect.php");
     <meta name="robots" content="index, follow">
     <title>RFID vrátnik - ESP8266</title>
     <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
-
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
