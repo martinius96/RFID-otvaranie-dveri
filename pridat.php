@@ -4,13 +4,13 @@
 include("connect.php");
 ?>
   <head>
-
-    <meta charset="utf-8">
+  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <meta name="author" content="Martin Chlebovec">
-    <meta name="contact" content="martinius96@gmail.com">
-
-    <title>Webaplikácia apartmánu</title>
+    <meta name="description" content="Webové rozhranie RFID vrátnika pre pridanie karty do systému pre overenie vstupujúceho.">
+    <meta name="keywords" content="rfid, vrátnik, dochádzka, systém, prístup, overenie, otvorenie, dvere, solenoid, relé, esp8266, nodemcu, jazýček, kľučka">
+    <meta name="author" content="Martin Chlebovec">
+    <meta name="robots" content="index, follow">
+    <title>RFID vrátnik - ESP8266 - Pridanie karty</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
