@@ -52,6 +52,9 @@ include("connect.php");
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
+		<div class="alert alert-success">
+  <strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a>
+</div>
        <div id="full"></div>
         </div>
       </div>
