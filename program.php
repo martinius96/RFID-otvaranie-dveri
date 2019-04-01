@@ -48,16 +48,17 @@
     <!-- Page Content -->
     <div class="container">
 	    <div class="alert alert-success">
-  <strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a>
+  <center><strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a></center>
 </div>
 	 <hr><h2>Wiring</h2><hr>
 	 	 <img src="https://i.stack.imgur.com/e1ewN.png" style="display: block; max-width: 100%; height: auto;">
 	   <hr><h2>Projekt</h2><hr>
-	   <li><a href="https://github.com/esp8266/Arduino/">Návod na inštaláciu NodeMCU do ArduinoIDE</a></li><br>
+	   <li><a href="https://github.com/esp8266/Arduino/">Návod na inštaláciu NodeMCU alebo inej ESP8266 vývojovej dosky do ArduinoIDE</a></li><br>
 	   <li><a href="http://www.handsontec.com/pdf_learn/esp8266-V10.pdf">NodeMCU v1.0 (v3, v2) datasheet</a></li><br>
 	   <li>Knižnica pre čítačku RC522 je obsiahnutá v repozitári</li><br>
 	   <li><a href="https://www.nxp.com/docs/en/data-sheet/MFRC522.pdf">RC522 datasheet</a></li><br>
 	   <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár free verzie projektu pod MIT licenciou</a></li>
+     <li>Zdrojové kódy sú kompatibilné medzi: ESP8266 moduly 0-12F, NodeMCU všetky verzie, Wemos D1, Wemos D1 mini atď... - pinout sedí</li>
 	   <hr><h2>Zdrojový kód - HTTPS</h2><hr>
 <pre style="background-color:#4cd137;">
 /*|----------------------------------------------------------|*/
@@ -65,7 +66,7 @@
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
 /*|Doska: NodeMCU v3 Lolin (v2 compatible)                   |*/
-/*|CORE: 2.3.0                                               |*/
+/*|CORE: 2.3.0 STRICT!                                       |*/
 /*|WEB: https://arduino.php5.sk                              |*/
 /*|----------------------------------------------------------|*/
 #include &lt;ESP8266WiFi.h&gt;
@@ -145,7 +146,7 @@ void loop(){
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
 /*|Doska: NodeMCU v3 Lolin (v2 compatible)                   |*/
-/*|CORE: 2.3.0                                               |*/
+/*|CORE: 2.3.0, 2.5.0                                        |*/
 /*|WEB: https://arduino.php5.sk                              |*/
 /*|----------------------------------------------------------|*/
 #include &lt;ESP8266WiFi.h&gt;
