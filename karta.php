@@ -2,6 +2,7 @@
 include("connect.php");
 $kod = mysqli_real_escape_string($con, $_GET['kod']);
 $kod = trim( $kod );
+$kod = hexdec(hash('crc32b', $kod));
 
 // VOLITELNE (zmenu aplikovat i v programe NodeMCU) $origin = mysqli_real_escape_string($con, $_GET['origin']);
 // VOLITELNE (zmenu aplikovat i v programe NodeMCU) $origin = trim( $origin );
