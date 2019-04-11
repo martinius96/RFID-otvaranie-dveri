@@ -5,11 +5,14 @@
 * Vizualizácia overenia/neoverenia v grafe
 * Štatistika systému
 * Program pre NodeMCU
-* Čítačka prečíta kartu štandardu ISO/IEC 14443 A, jej MAC adresu odošle na web, kde sa overí a odpovie sa OK/NO
-* Možno použiť ISIC karty, bankomatové, zamestnanecké karty
-* V prípade odpovede OK NodeMCU aktivuje jazýček, čím je možné dvere otvoriť. 
+
+# Funkčnosť
+* Používateľ priloží kartu k čítačke
+* Čítačka prečíta kartu štandardu ISO/IEC 14443 A, jej MAC adresu (upravenú) odošle na web, kde sa hashuje, overí sa a odpovie sa OK/NO
+* Možno použiť ISIC karty, bankomatové, zamestnanecké karty, bez nutnosti investovať do nových funkcionalít
+* V prípade odpovede OK NodeMCU aktivuje jazýček, čím je možné dvere otvoriť, otvorenie je na 5 sekúnd 
 * Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, jazýček sa vtiahne
-* Adresy kariet sú odteraz hashované cez crc32b algoritmus
+* Adresy kariet sú odteraz hashované cez crc32b algoritmus, možno nahrať výkonnejším
 
 # Hardvér
 * NodeMCU (v2, alebo v3)![NodeMCU](https://arduino.php5.sk/images/nodemcuv3.jpg)
