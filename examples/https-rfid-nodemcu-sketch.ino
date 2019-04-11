@@ -1,6 +1,7 @@
 /*|----------------------------------------------------------|*/
 /*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU               |*/
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
+/*|FB: https://www.facebook.com/martin.s.chlebovec           |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
 /*|Doska: NodeMCU v3 Lolin (v2 compatible)                   |*/
 /*|CORE: 2.3.0                                               |*/
