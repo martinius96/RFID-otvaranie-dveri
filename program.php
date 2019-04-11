@@ -63,7 +63,8 @@
 	   <li><a href="http://www.handsontec.com/pdf_learn/esp8266-V10.pdf">NodeMCU v1.0 (v3, v2) datasheet</a></li><br>
 	   <li>Knižnica pre čítačku RC522 je obsiahnutá v repozitári</li><br>
 	   <li><a href="https://www.nxp.com/docs/en/data-sheet/MFRC522.pdf">RC522 datasheet</a></li><br>
-	   <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár free verzie projektu pod MIT licenciou</a></li>
+	   <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár free verzie projektu pod MIT licenciou</a></li><br>
+     	   <li><a href="https://sk.wikipedia.org/wiki/MIT_licencia">MIT licencia</a></li>
 	   <hr><h2>Zdrojový kód - HTTPS</h2><hr>
 <pre style="background-color:#4cd137;">
 /*|----------------------------------------------------------|*/
