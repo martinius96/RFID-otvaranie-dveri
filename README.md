@@ -37,6 +37,8 @@
 # Webová časť
 ![Hlavný prehľad](https://i.nahraj.to/f/2afM.PNG)
 ![Autorizované karty](https://i.nahraj.to/f/2afL.PNG)
+![RFID grafy vstupov](https://i.nahraj.to/f/2gIt.PNG)
+![RFID štatistika vrátnika](https://i.nahraj.to/f/2gIs.PNG)
 
 # Zapojenie
 | RC522 | NodeMCU |
