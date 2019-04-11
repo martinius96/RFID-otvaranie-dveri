@@ -14,7 +14,7 @@
 * NodeMCU (v2, alebo v3)![NodeMCU](https://arduino.php5.sk/images/nodemcuv3.jpg)
 * Basekit (možný iba pri V3, možnosť využiť napájanie na 6-24V)![Basekit](https://arduino.php5.sk/images/basekit.jpg)
 * Čítačka RC522 na 13.56 MHz pre štandard ISO/IEC 14443 A![RC522](https://rukminim1.flixcart.com/image/128/128/learning-toy/m/b/e/grab-em-rfid-rc522-spi-original-imaehszrwtx9gshm.jpeg?q=70)
-* Kompatibilné karty a kľúčenky ![13.56MHz](https://leobot.net/productimages/534.jpg)
+* Kompatibilné karty a kľúčenky ![13.56MHz](https://mi4.rightinthebox.com/images/128x128/201307/rpqwut1374140279910.jpg)
 * 5V elmg. 1-kanálové relé![RC522](https://rukminim1.flixcart.com/image/128/128/jlfh6kw0/learning-toy/2/z/f/single-channel-5v-relay-module-sunrobotics-original-imaf8k84asferu9r.jpeg?q=70)
 
 # Technológie
