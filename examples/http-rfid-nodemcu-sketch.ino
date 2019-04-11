@@ -3,7 +3,7 @@
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
 /*|Doska: NodeMCU v3 Lolin (v2 compatible)                   |*/
-/*|CORE: 2.3.0                                               |*/
+/*|CORE: 2.3.0 - 2.5.0 compatible                            |*/
 /*|WEB: https://arduino.php5.sk                              |*/
 /*|----------------------------------------------------------|*/
 #include <ESP8266WiFi.h>
