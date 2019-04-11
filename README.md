@@ -18,7 +18,9 @@
 * 5V elmg. 1-kanálové relé![RC522](https://rukminim1.flixcart.com/image/128/128/jlfh6kw0/learning-toy/2/z/f/single-channel-5v-relay-module-sunrobotics-original-imaf8k84asferu9r.jpeg?q=70)
 
 # Technológie
+* ![HTML5](https://imag.malavida.com/mvimgbig/download-s/html5-video-player-10741-0.jpg)
 * ![PHP](https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/4050af38-9b27-11e6-b10d-00163ec9f5fa/1688065098/php-logo.jpg)
+* ![AJAX](https://cdn.iconscout.com/icon/free/png-256/jquery-10-1175155.png){:height="64px" width="64px"}
 * AJAX
 * HTML
 * Jazyk Wiring - zjednodušený jazyk C s knižnicami pre ArduinoIDE (Arduino core 2.3.0 compatible)
