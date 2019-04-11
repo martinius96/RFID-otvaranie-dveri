@@ -1,8 +1,9 @@
 <?php 
-$con = mysqli_connect("localhost","xxx","xxx","xxx");
+$con = mysqli_connect("localhost","root","pass","dbname");
 
+// Check connection
 if (mysqli_connect_errno($con))
 {
-    echo "Problém s pripojením na databázu: Popis problému: " . mysqli_connect_error();
+    echo "Failed to connect to DataBase: " . mysqli_connect_error();
 }
 ?>

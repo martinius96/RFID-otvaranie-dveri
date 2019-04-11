@@ -4,14 +4,15 @@
 include("connect.php");
 ?>
   <head>
-  <meta charset="utf-8">
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Webové rozhranie RFID vrátnika pre pridanie karty do systému pre overenie vstupujúceho.">
     <meta name="keywords" content="rfid, vrátnik, dochádzka, systém, prístup, overenie, otvorenie, dvere, solenoid, relé, esp8266, nodemcu, jazýček, kľučka">
     <meta name="author" content="Martin Chlebovec">
     <meta name="robots" content="index, follow">
     <title>RFID vrátnik - ESP8266 - Pridanie karty</title>
-    <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
+     <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -22,7 +23,7 @@ include("connect.php");
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
-        <a class="navbar-brand" href="index.php">RFID vrátnik - webaplikácia</a>
+       <a class="navbar-brand" href="index.php">Webaplikácia - RFID vrátnik cez ESP8266</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,8 +40,14 @@ include("connect.php");
             <li class="nav-item">
               <a class="nav-link" href="odobrat.php">Odobrať kartu</a>
             </li>
+             <li class="nav-item">
+              <a class="nav-link" href="grafy.php">Grafy</a>
+            </li>
 			<li class="nav-item">
               <a class="nav-link" href="program.php">Program</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="statistika.php">Štatistika</a>
             </li>
           </ul>
         </div>
@@ -50,16 +57,14 @@ include("connect.php");
     <!-- Page Content -->
     <div class="container">
       <div class="row">
-		<?php   if(isset($_POST['odoslat'])){
+	<?php   if(isset($_POST['odoslat'])){
     $cislo = mysqli_real_escape_string($con, $_POST['cislo']);
+    $cislo = htmlspecialchars( $cislo, ENT_QUOTES );
     $cislo = trim( $cislo );
     if($cislo==""){
     echo '<div class="alert alert-danger" style="width:100%;">
   <strong>Pozor!</strong> Neplatný kód karty! Opakujte pokus!
 </div>';
-    }else if($cislo<0){
-    echo '<div class="alert alert-danger" style="width:100%;">
-  <strong>Pozor!</strong> Neplatný kód karty! Opakujte pokus s rozsahom 0-99999999999999</div>';
     }else{
     $ins = mysqli_query($con,"INSERT INTO `autorizovane` (`cislo_karty`) VALUES ('$cislo')") or die (mysqli_error($con));
     echo '<div class="alert alert-success" style="width:100%;">
@@ -68,7 +73,7 @@ include("connect.php");
     }
 } ?>
         <div class="col-lg-12 text-center">
-		<div class="alert alert-success">
+        <div class="alert alert-success">
   <strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a>
 </div>
 		<center><b>Posledných 5 interakcií</b></center>
@@ -81,7 +86,7 @@ include("connect.php");
 		<hr><b>Manuálne pridať kartu</b><hr>
 		 <form method="post"ction="<?php echo $_SERVER['PHP_SELF']; ?>" >
   <fieldset>
-    <input type="number" min=0 max=99999999999999 name="cislo" required><br>
+    <input type="number" min=0 max=99999999999999 name="cislo"><br>
   <input type="submit" class="btn btn-success" name="odoslat" value="Zapísať">
   </fieldset>
 </form>

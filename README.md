@@ -1,90 +1,66 @@
-# [RFID prístupový systém so správou on-line](https://arduino.php5.sk/rfid-system.php)
+# [Start Bootstrap - Bare](https://startbootstrap.com/template-overviews/bare/)
 
-# Systém ponúka 2 typy užívateľov projektu
-| Administrátor <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width="64" height="64"> | Používateľ <img src="https://www.flaticon.com/premium-icon/icons/svg/1610/1610320.svg" width="64" height="64"> |
-| ------------- | ------------- |
-| Spravuje webové rozhranie | Fyzicky prikladá NFC tag/kľúčenku/náramok/kartu|
-| V reálnom čase vidí priloženie karty s výsledkom overenia  | Pri overeni sú mu odistené dvere na 5 sekúnd|
-| Historicky vidí 100 posledných priložení  | Pri neoverení používateľa sa jazýček nevtiahne  |
-| Jedným klikutím môže schváliť už priloženú kartu  | Používateľ o overení/neoverení nie je informovaný (led/buzzer)|
-| Manuálne zadanie karty  | Používateľ použije bankomatovú kartu, ISIC kartu, spĺňajú štandard ISO/IEC 14443 A|
-| Odstránenie karty  |  Informovanie používateľa o výsleku overenia cez diódu/buzzer (len platená verzia) |
-| Vidí zdrojový kód pre NodeMCU  |  |
-| Prihlásenie/odhlásenie (len platená verzia)  |   |
-| Priradenie mien ku kartám (len platená verzia)  |  |
-| Export mesačnej dochádzky (len platená verzia)  |  |
-| História 1 rok dozadu (len platená verzia)  |  |
+[Bare](http://startbootstrap.com/template-overviews/bare/) is a bare HTML starter template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This template features predefined file paths for Bootstrap and jQuery, so you can quickly create Bootstrap websites.
 
-* Overenie kariet a prístupu cez web do objektu
-* Čítačka prečíta kartu štandardu ISO/IEC 14443 A, jej MAC adresu odošle na web, kde sa overí a odpovie sa OK/NO
-* Možno použiť ISIC karty, bankomatové, zamestnanecké karty
-* V prípade odpovede OK NodeMCU aktivuje jazýček, čím je možné dvere otvoriť. 
-* Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, elmg. jazýček sa vtiahne
+## Preview
 
-# Hardvér
-* NodeMCU (v2, alebo v3) ![NodeMCU](https://www.researchgate.net/profile/Hamzah_Marhoon/publication/325181089/figure/fig3/AS:627026931236872@1526506278395/NodeMCU-module_Q320.jpg)
-* Basekit (možný iba pri V3, možnosť využiť napájanie na 6-24V) ![Base kit](https://images-na.ssl-images-amazon.com/images/I/51Gqf0K%2B2QL._SX342_.jpg)
-* Čítačka RC522 na 13.56 MHz pre štandard ISO/IEC 14443 A ![RC522](http://www.desiengineer.in/wp-content/uploads/2017/03/Desi2513_b.png)
-* 5V elmg. 1-kanálové relé ![Relé](https://leobot.net/productimages/1636.jpg)
-* Solenoid jazýček ![Jazýček](https://www.heaps.co.uk/images/Products/Solenoids/lucifer-solenoid.jpg)
+[![Bare Preview](https://startbootstrap.com/assets/img/templates/bare.jpg)](https://blackrockdigital.github.io/startbootstrap-bare/)
 
-# Princíp solenoid jazýčka 
-![Jazýček](http://www.kuhnke.co.uk/images/solenoids/bistable.gif)
+**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-bare/)**
 
-# Technológie
-* PHP
-* AJAX
-* HTML
-* Wiring (pre NodeMCU)
+## Status
 
-# Inštalácia systému
-* Stiahnuť repozitár
-* Súbor priečinka sql importovať do vašej MySQL databázy - štruktúru, alebo štruktúru + vzorové dáta
-* V súbore connect.php nastaviť vaše údaje na databázu
-* src priečinok skopírovať do: C:/Moje Dokumenty/Arduino/libraries/rfid (Win 10)
-* Web súbory nahrať na FTP server
-* v zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, meno webservera
-* Hotovo
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-bare/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-bare.svg)](https://www.npmjs.com/package/startbootstrap-bare)
+[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-bare.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-bare)
+[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-bare/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-bare)
+[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-bare/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-bare?type=dev)
 
-# Webová časť
-![Hlavný prehľad](https://i.nahraj.to/f/2afM.PNG)
-![Autorizované karty](https://i.nahraj.to/f/2afL.PNG)
+## Download and Installation
 
-# Zakúpenie projektu
-* Okrem Github verzie projektu zdarma ponúkam i platenú variantu projektu s dokonalejším overením
-* Overenie NodeMCU
-* Overenie user-agent
-* Login systém do webového rozhrania - prístupné iba adminovi
-* Možnosť zmeny login údajov
-* Priradenie mien zamestnancov ku kartám
-* Export dochádzky za mesiac v .csv formáte (vhodné pre Excel)
-* Pri záujme navštívte: https://arduino.php5.sk/rfid-system.php
+To begin using this template, choose one of the following options to get started:
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/bare/)
+* Install via npm: `npm i startbootstrap-bare`
+* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-bare.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-bare)
 
-# Zapojenie
-| RC522 | NodeMCU |
-|:-----|--------:|
-| 3.3V | 3.3V    |
-| RST  | D1 (GPIO5) |
-| GND  | GND |
-| MISO | D6 (GPIO12) |
-| MOSI | D7 (GPIO13) |
-| SCK  | D5 (GPIO14) |
-| SDA  | D2 (GPIO4) |
-| IRQ  | Nezapája sa |
+## Usage
 
-| Relé | NodeMCU |
-|:-----|--------:|
-| 5V | VIN / VUSB (Adaptér/USB napájanie)  |
-| GND  | GND |
-| IN  | D0 (GPIO16) |
+### Basic Usage
 
-| Relé | Solenoid |
-|:-----|--------:|
-| NO | IN |
-| COM  | - |
-| NC  | 12/24 DC/AC |
+After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-* GND solenoidu je zapojené na GND zdroja
+### Advanced Usage
 
-# Obrázkové zapojenie
-![Schéma](https://i.stack.imgur.com/e1ewN.png)
+After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+
+You must have npm and Gulp installed globally on your machine in order to use these features.
+
+## Troubleshooting and Help
+
+Start Bootstrap has a public Slack channel which is a great place to ask questions about this template and all things related to Start Bootstrap.
+
+**[Click here to join the Slack channel!](https://startbootstrap-slack.herokuapp.com/)**
+
+## Bugs and Issues
+
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-bare/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/bare/).
+
+## About
+
+Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+
+* https://startbootstrap.com
+* https://twitter.com/SBootstrap
+
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+
+* http://davidmiller.io
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
+
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+
+## Copyright and License
+
+Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-bare/blob/gh-pages/LICENSE) license.

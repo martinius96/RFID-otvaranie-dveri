@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
 
-     <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Zdrojový kód pre mikrokontróler NodeMCU s čipom ESP8266-12E. RFID čítačka RC522 na 13.56MHz.">
+  <meta name="description" content="Zdrojový kód pre mikrokontróler NodeMCU s čipom ESP8266-12E. RFID čítačka RC522 na 13.56MHz.">
     <meta name="keywords" content="program, arduino, core, arduinoide, nodemcu, esp8266, čip, iot, rfid, vrátnik, rc522, relé, solenoid, dvere, jazýček, ovládanie, internet">
     <meta name="author" content="Martin Chlebovec">
     <meta name="robots" content="index, follow">
     <title>RFID vrátnik - ESP8266 - Zdrojový kód</title>
-    <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
+     <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
-        <a class="navbar-brand" href="index.php">RFID vrátnik - webaplikácia</a>
+        <a class="navbar-brand" href="index.php">Webaplikácia - RFID vrátnik cez ESP8266</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,8 +37,14 @@
             <li class="nav-item">
               <a class="nav-link" href="odobrat.php">Odobrať kartu</a>
             </li>
+             <li class="nav-item">
+              <a class="nav-link" href="grafy.php">Grafy</a>
+            </li>
 			<li class="nav-item active">
               <a class="nav-link" href="program.php">Program</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="statistika.php">Štatistika</a>
             </li>
           </ul>
         </div>
@@ -47,18 +53,17 @@
 
     <!-- Page Content -->
     <div class="container">
-	    <div class="alert alert-success">
-  <center><strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a></center>
+    <div class="alert alert-success">
+  <strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a>
 </div>
 	 <hr><h2>Wiring</h2><hr>
 	 	 <img src="https://i.stack.imgur.com/e1ewN.png" style="display: block; max-width: 100%; height: auto;">
 	   <hr><h2>Projekt</h2><hr>
-	   <li><a href="https://github.com/esp8266/Arduino/">Návod na inštaláciu NodeMCU alebo inej ESP8266 vývojovej dosky do ArduinoIDE</a></li><br>
+	   <li><a href="https://github.com/esp8266/Arduino/">Návod na inštaláciu NodeMCU do ArduinoIDE</a></li><br>
 	   <li><a href="http://www.handsontec.com/pdf_learn/esp8266-V10.pdf">NodeMCU v1.0 (v3, v2) datasheet</a></li><br>
 	   <li>Knižnica pre čítačku RC522 je obsiahnutá v repozitári</li><br>
 	   <li><a href="https://www.nxp.com/docs/en/data-sheet/MFRC522.pdf">RC522 datasheet</a></li><br>
 	   <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár free verzie projektu pod MIT licenciou</a></li>
-     <li>Zdrojové kódy sú kompatibilné medzi: ESP8266 moduly 0-12F, NodeMCU všetky verzie, Wemos D1, Wemos D1 mini atď... - pinout sedí</li>
 	   <hr><h2>Zdrojový kód - HTTPS</h2><hr>
 <pre style="background-color:#4cd137;">
 /*|----------------------------------------------------------|*/
@@ -66,7 +71,7 @@
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
 /*|Doska: NodeMCU v3 Lolin (v2 compatible)                   |*/
-/*|CORE: 2.3.0 STRICT!                                       |*/
+/*|CORE: 2.3.0                                               |*/
 /*|WEB: https://arduino.php5.sk                              |*/
 /*|----------------------------------------------------------|*/
 #include &lt;ESP8266WiFi.h&gt;
@@ -146,7 +151,7 @@ void loop(){
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
 /*|Doska: NodeMCU v3 Lolin (v2 compatible)                   |*/
-/*|CORE: 2.3.0, 2.5.0                                        |*/
+/*|CORE: 2.3.0                                               |*/
 /*|WEB: https://arduino.php5.sk                              |*/
 /*|----------------------------------------------------------|*/
 #include &lt;ESP8266WiFi.h&gt;

@@ -4,7 +4,8 @@
 include("connect.php");
 ?>
   <head>
- <meta charset="utf-8">
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Webové rozhranie RFID vrátnika pre odobratie karty zo systému pre znefunkčnenie už overenej karty.">
     <meta name="keywords" content="rfid, vrátnik, dochádzka, systém, overenie, otvorenie, dvere, solenoid, relé, esp8266, nodemcu, jazýček, kľučka">
@@ -22,7 +23,7 @@ include("connect.php");
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
-       <a class="navbar-brand" href="index.php">RFID vrátnik - webaplikácia</a>
+     <a class="navbar-brand" href="index.php">Webaplikácia - RFID vrátnik cez ESP8266</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,8 +41,14 @@ include("connect.php");
               <a class="nav-link" href="odobrat.php">Odobrať kartu</a>
 			  <span class="sr-only">(current)</span>
             </li>
+             <li class="nav-item">
+              <a class="nav-link" href="grafy.php">Grafy</a>
+            </li>
 			<li class="nav-item">
               <a class="nav-link" href="program.php">Program</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="statistika.php">Štatistika</a>
             </li>
           </ul>
         </div>
@@ -53,9 +60,10 @@ include("connect.php");
       <div class="row">
 	
         <div class="col-lg-12 text-center">
-		<div class="alert alert-success">
+        <div class="alert alert-success">
   <strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a>
-</div><center><b>Posledných 5 interakcií</b></center>
+</div>
+		<center><b>Posledných 5 interakcií</b></center>
       <div id="last5"></div>
 		<b>Autorizované karty</b>
 		<div id="aut"></div>
