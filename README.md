@@ -9,6 +9,7 @@
 * Možno použiť ISIC karty, bankomatové, zamestnanecké karty
 * V prípade odpovede OK NodeMCU aktivuje jazýček, čím je možné dvere otvoriť. 
 * Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, jazýček sa vtiahne
+* Adresy kariet sú odteraz hashované cez crc32b algoritmus
 
 # Hardvér
 * NodeMCU (v2, alebo v3)![NodeMCU](https://arduino.php5.sk/images/nodemcuv3.jpg)
