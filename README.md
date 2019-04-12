@@ -2,9 +2,11 @@
 
 # Systém ponúka
 * Overenie kariet a prístupu cez web do objektu
+* Real-time výpis overenia/neoverenia používateľa
+* Správa kariet, schválenie, odstránenie jedným kliknutím
 * Vizualizácia overenia/neoverenia v grafe
 * Štatistika systému
-* Program pre NodeMCU
+* Program pre NodeMCU (ESP8266)
 
 # Funkčnosť
 * Používateľ priloží kartu k čítačke
