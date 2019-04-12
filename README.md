@@ -80,5 +80,5 @@
 
 * GND solenoidu je zapojené na GND zdroja
 
-# Obrázkové zapojenie
+# Obrázkové zapojenie pre DC zdroj solenoidu
 ![Schéma](https://i.nahraj.to/f/2gIA.png)
