@@ -1,20 +1,26 @@
-# [RFID prístupový systém so správou on-line](https://arduino.php5.sk/rfid/)
+# [RFID prístupový systém so správou on-line](https://arduino.php5.sk/rfid-system.php)
 
-# Systém ponúka
+# Systém ponúka 2 typy užívateľov projektu
+| Administrátor <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width="64" height="64"> | Používateľ <img src="https://www.flaticon.com/premium-icon/icons/svg/1610/1610320.svg" width="64" height="64"> |
+| ------------- | ------------- |
+| Spravuje webové rozhranie | Fyzicky prikladá NFC tag/kľúčenku/náramok/kartu|
+| V reálnom čase vidí priloženie karty s výsledkom overenia  | Pri overeni sú mu odistené dvere na 5 sekúnd|
+| Historicky vidí 100 posledných priložení  | Pri neoverení používateľa sa jazýček nevtiahne  |
+| Jedným klikutím môže schváliť už priloženú kartu  | Používateľ o overení/neoverení nie je informovaný (led/buzzer)|
+| Manuálne zadanie karty  | Používateľ použije bankomatovú kartu, ISIC kartu, spĺňajú štandard ISO/IEC 14443 A|
+| Odstránenie karty  |  Informovanie používateľa o výsleku overenia cez diódu/buzzer (len platená verzia) |
+| Grafická reprezentácia prístupov + štatistika vrátnika  |  |
+| Vidí zdrojový kód pre NodeMCU  |  |
+| Prihlásenie/odhlásenie (len platená verzia)  |   |
+| Priradenie mien ku kartám (len platená verzia)  |  |
+| Export mesačnej dochádzky  v .csv, .xml, .sql (len platená verzia)  |  |
+| História 1 rok dozadu (len platená verzia)  |  |
+
 * Overenie kariet a prístupu cez web do objektu
-* Real-time výpis overenia/neoverenia používateľa
-* Správa kariet, schválenie, odstránenie jedným kliknutím
-* Vizualizácia overenia/neoverenia v grafe
-* Štatistika systému
-* Program pre NodeMCU (ESP8266)
-
-# Funkčnosť
-* Používateľ priloží kartu k čítačke
-* Čítačka prečíta kartu štandardu ISO/IEC 14443 A, jej MAC adresu (upravenú) odošle na web, kde sa hashuje, overí sa a odpovie sa OK/NO
-* Možno použiť ISIC karty, bankomatové, zamestnanecké karty, bez nutnosti investovať do nových funkcionalít
-* V prípade odpovede OK NodeMCU aktivuje jazýček, čím je možné dvere otvoriť, otvorenie je na 5 sekúnd 
-* Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, jazýček sa vtiahne
-* Adresy kariet sú odteraz hashované cez crc32b algoritmus, možno nahrať výkonnejším
+* Čítačka prečíta kartu štandardu ISO/IEC 14443 A, jej MAC adresu odošle na web, kde sa overí a odpovie sa OK/NO
+* Možno použiť ISIC karty, bankomatové, zamestnanecké karty
+* V prípade odpovede OK NodeMCU aktivuje jazýček, čím je možné dvere otvoriť. 
+* Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, elmg. jazýček sa vtiahne
 
 # Hardvér
 * NodeMCU (v2, alebo v3)![NodeMCU](https://arduino.php5.sk/images/nodemcuv3.jpg)
@@ -23,6 +29,9 @@
 * Kompatibilné karty a kľúčenky ![13.56MHz](https://mi4.rightinthebox.com/images/128x128/201307/rpqwut1374140279910.jpg)
 * 5V elmg. 1-kanálové relé![RC522](https://rukminim1.flixcart.com/image/128/128/jlfh6kw0/learning-toy/2/z/f/single-channel-5v-relay-module-sunrobotics-original-imaf8k84asferu9r.jpeg?q=70)
 
+# Princíp solenoid jazýčka 
+![Jazýček](http://www.kuhnke.co.uk/images/solenoids/bistable.gif)
+
 # Technológie
 * ![HTML5](https://imag.malavida.com/mvimgbig/download-s/html5-video-player-10741-0.jpg)
 * ![PHP](https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/4050af38-9b27-11e6-b10d-00163ec9f5fa/1688065098/php-logo.jpg)
@@ -30,11 +39,13 @@
 * <img src="https://cdn.iconscout.com/icon/free/png-256/bootstrap-6-1175203.png" width="64" height="64">
 * ![Arduino core](http://users.sch.gr/johnmaga/0/images/logo/logo-64x64/arduino_b-64x64.png)
 
+
 # Inštalácia systému
 * Stiahnuť repozitár
 * Súbor priečinka sql importovať do vašej MySQL databázy - štruktúru, alebo štruktúru + vzorové dáta
 * V súbore connect.php nastaviť vaše údaje na databázu
-* src priečinok skopírovať do: C:/Moje Dokumenty/Arduino/libraries/rfid (Win 10)
+*  **(Win 10)** src priečinok skopírovať do: C:/Moje Dokumenty/Arduino/libraries/rfid
+*  **(Win XP/7)** src priečinok skopírovať do: C:/Program Files/Arduino/libraries/rfid
 * Web súbory nahrať na FTP server
 * v zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, meno webservera
 * Hotovo
@@ -42,8 +53,6 @@
 # Webová časť
 ![Hlavný prehľad](https://i.nahraj.to/f/2afM.PNG)
 ![Autorizované karty](https://i.nahraj.to/f/2afL.PNG)
-![RFID grafy vstupov](https://i.nahraj.to/f/2gIt.PNG)
-![RFID štatistika vrátnika](https://i.nahraj.to/f/2gIs.PNG)
 
 # Zapojenie
 | RC522 | NodeMCU |
@@ -59,9 +68,17 @@
 
 | Relé | NodeMCU |
 |:-----|--------:|
-| 5V | VIN / VUSB    |
+| 5V | VIN / VUSB (Adaptér/USB napájanie)  |
 | GND  | GND |
 | IN  | D0 (GPIO16) |
+
+| Relé | Solenoid |
+|:-----|--------:|
+| NO | IN |
+| COM  | - |
+| NC  | 12/24 DC/AC |
+
+* GND solenoidu je zapojené na GND zdroja
 
 # Obrázkové zapojenie
 ![Schéma](https://i.stack.imgur.com/e1ewN.png)
