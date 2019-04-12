@@ -81,4 +81,4 @@
 * GND solenoidu je zapojené na GND zdroja
 
 # Obrázkové zapojenie
-![Schéma](https://i.stack.imgur.com/e1ewN.png)
+![Schéma](https://i.nahraj.to/f/2gIA.png)
