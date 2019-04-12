@@ -54,7 +54,7 @@
     <!-- Page Content -->
     <div class="container">
     <div class="alert alert-success">
-  <strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a>
+  <center><strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a></center>
 </div>
 	 <hr><h2>Wiring</h2><hr>
 	 	 <img src="https://i.stack.imgur.com/e1ewN.png" style="display: block; max-width: 100%; height: auto;">
