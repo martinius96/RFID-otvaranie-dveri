@@ -61,7 +61,7 @@
     <!-- Page Content -->
     <div class="container">
     <div class="alert alert-success">
-  <strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a>
+<center><strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a></center>
 </div>
   <center><h2>Štatistika RFID vrátnika</h2></center>
     <li><b>Počet záznamov: </b><?php echo mysqli_num_rows($vsetky); ?></li>
