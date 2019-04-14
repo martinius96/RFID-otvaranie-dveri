@@ -53,6 +53,7 @@
 # Webová časť
 ![Hlavný prehľad](https://i.nahraj.to/f/2afM.PNG)
 ![Autorizované karty](https://i.nahraj.to/f/2afL.PNG)
+![Grafická reprezentácia overení](https://i.nahraj.to/f/2gPU.PNG)
 
 # Zapojenie
 | RC522 | NodeMCU |
