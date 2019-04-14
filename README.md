@@ -53,7 +53,7 @@
 # Webová časť
 * Hlavný prehľad (real-time vstupy s výsledkom overenia)
 ![Hlavný prehľad](https://i.nahraj.to/f/2afM.PNG)
-* Prehľad autorizovaných kariet s možnosťou odstránenia jedným tlačidlom)
+* Prehľad neautorizovaných a autorizovaných kariet( s možnosťou autorizovania jedným tlačidlom)
 ![Autorizované karty](https://i.nahraj.to/f/2afL.PNG)
 * Grafická reprezentácia overení za 7 dní s výsledok 1 - overený, 0 - neoverený
 ![Grafická reprezentácia overení](https://i.nahraj.to/f/2gPU.PNG)
