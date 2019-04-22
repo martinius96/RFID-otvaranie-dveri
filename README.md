@@ -28,6 +28,7 @@
 * Čítačka RC522 na 13.56 MHz pre štandard ISO/IEC 14443 A![RC522](https://rukminim1.flixcart.com/image/128/128/learning-toy/m/b/e/grab-em-rfid-rc522-spi-original-imaehszrwtx9gshm.jpeg?q=70)
 * Kompatibilné karty a kľúčenky ![13.56MHz](https://mi4.rightinthebox.com/images/128x128/201307/rpqwut1374140279910.jpg)
 * 5V elmg. 1-kanálové relé![RC522](https://rukminim1.flixcart.com/image/128/128/jlfh6kw0/learning-toy/2/z/f/single-channel-5v-relay-module-sunrobotics-original-imaf8k84asferu9r.jpeg?q=70)
+* Solenoid zámok![Solenoidový jazýček](https://robosap.in/wp-content/uploads/2018/07/download-8-1.jpeg)
 
 # Princíp solenoid jazýčka 
 ![Jazýček](http://www.kuhnke.co.uk/images/solenoids/bistable.gif)
