@@ -11,7 +11,7 @@ include("connect.php");
     <meta name="keywords" content="rfid, vrátnik, dochádzka, systém, prístup, odmietnutie, otvorenie, dvere, solenoid, relé, esp8266, nodemcu, jazýček, kľučka">
     <meta name="author" content="Martin Chlebovec">
     <meta name="robots" content="index, follow">
-    <title>RFID vrátnik - ESP8266</title>
+    <title>RFID vrátnik - ESP8266 - prehľad</title>
     <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -48,6 +48,9 @@ include("connect.php");
             </li>
              <li class="nav-item">
               <a class="nav-link" href="statistika.php">Štatistika</a>
+            </li>
+		  <li class="nav-item" id="right">
+            <a href="https://www.paypal.me/chlebovec" class="btn btn-success" role="button" style="border-radius: 25px;"><img src="https://image.flaticon.com/icons/svg/888/888870.svg" width=32px height=32px>Podpora</a>
             </li>
           </ul>
         </div>
