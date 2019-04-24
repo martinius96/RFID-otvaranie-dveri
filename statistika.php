@@ -53,6 +53,9 @@
             	<li class="nav-item active">
               <a class="nav-link" href="statistika.php">Štatistika</a>
             </li>
+		  <li class="nav-item" id="right">
+            <a href="https://www.paypal.me/chlebovec" class="btn btn-success" role="button" style="border-radius: 25px;"><img src="https://image.flaticon.com/icons/svg/888/888870.svg" width=32px height=32px>Podpora</a>
+            </li>
           </ul>
         </div>
       </div>
