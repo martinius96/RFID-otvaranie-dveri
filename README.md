@@ -31,10 +31,10 @@
 * Čítačka RC522 na 13.56 MHz pre štandard ISO/IEC 14443 A![RC522](https://rukminim1.flixcart.com/image/128/128/learning-toy/m/b/e/grab-em-rfid-rc522-spi-original-imaehszrwtx9gshm.jpeg?q=70)
 * Kompatibilné karty a kľúčenky ![13.56MHz](https://mi4.rightinthebox.com/images/128x128/201307/rpqwut1374140279910.jpg)
 * 5V elmg. 1-kanálové relé![RC522](https://rukminim1.flixcart.com/image/128/128/jlfh6kw0/learning-toy/2/z/f/single-channel-5v-relay-module-sunrobotics-original-imaf8k84asferu9r.jpeg?q=70)
-* Solenoid zámok![Solenoidový jazýček](https://tshop.r10s.com/e15/6ac/b493/9ecd/709c/ca5e/d201/1108e7b222c4544488dd21.jpg?_ex=128x128)
+* Solenoid jazýček![Solenoidový jazýček](https://tshop.r10s.com/e15/6ac/b493/9ecd/709c/ca5e/d201/1108e7b222c4544488dd21.jpg?_ex=128x128)
 
 # Princíp solenoid jazýčka 
-![Jazýček](http://www.kuhnke.co.uk/images/solenoids/bistable.gif)
+![Princíp jazýčka](http://www.kuhnke.co.uk/images/solenoids/bistable.gif)
 
 # Technológie
 * ![HTML5](https://imag.malavida.com/mvimgbig/download-s/html5-video-player-10741-0.jpg)
@@ -45,13 +45,14 @@
 
 
 # Inštalácia systému
-* Stiahnuť repozitár
+* Stiahnuť repozitár v .zip archíve z Githubu
 * Súbor priečinka sql importovať do vašej MySQL databázy - štruktúru, alebo štruktúru + vzorové dáta
-* V súbore connect.php nastaviť vaše údaje na databázu
+* V súbore connect.php nastaviť vaše údaje na databázu (tvorené pre MySQL)
 *  **(Win 10)** src priečinok skopírovať do: C:/Moje Dokumenty/Arduino/libraries/rfid
 *  **(Win XP/7)** src priečinok skopírovať do: C:/Program Files/Arduino/libraries/rfid
-* Web súbory nahrať na FTP server
+* Web súbory nahrať na FTP server (kompatibilné s PHP 5, aj PHP 7)
 * v zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, meno webservera
+* Nahrať program, používať Arduino core 2.3.0, verzia 2.5.0 (najnovšia) je nekompatibilná pre HTTPS!
 * Hotovo
 
 # Webová časť
@@ -86,7 +87,7 @@
 | COM  | - |
 | NC  | 12/24 DC/AC |
 
-* GND solenoidu je zapojené na GND zdroja
+* Nulák, resp. GND (AC/DC) je pripojený na zdroj po celú dobu prevádzky
 
 # Obrázkové zapojenie pre DC zdroj solenoidu
 ![Schéma](https://i.nahraj.to/f/2gIA.png)
