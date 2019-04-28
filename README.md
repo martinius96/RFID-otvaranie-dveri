@@ -34,7 +34,7 @@
 * ![Solenoidový jazýček](https://tshop.r10s.com/e15/6ac/b493/9ecd/709c/ca5e/d201/1108e7b222c4544488dd21.jpg?_ex=128x128)Solenoid jazýček
 
 # Princíp solenoid jazýčka 
-![Princíp jazýčka](http://www.kuhnke.co.uk/images/solenoids/bistable.gif)
+![Princíp jazýčka](https://www.adafruit.com/images/1512animation.gif)
 
 # Technológie
 * ![HTML5](https://imag.malavida.com/mvimgbig/download-s/html5-video-player-10741-0.jpg)
