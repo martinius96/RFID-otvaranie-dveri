@@ -2,10 +2,10 @@
 include("connect.php");
 ?>
 <table style="width: 100%;" border="1">
-									 <tr>
-									 <th style="width: 50%;">Od</th>
-									 <th style="width: 50%;">Číslo karty</th>
- </tr>
+	<tr>
+		<th style="width: 50%;">Od</th>
+		<th style="width: 50%;">Číslo karty</th>
+	</tr>
 <?php
  	$karty = mysqli_query($con,"SELECT * FROM autorizovane ORDER BY id DESC") or die(mysqli_error($con));
 		while($line = mysqli_fetch_assoc($karty)){
