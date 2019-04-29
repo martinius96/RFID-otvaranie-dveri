@@ -127,7 +127,7 @@ const char * password = "HesloWifiSiete";
 const char * host = "arduino.php5.sk"; //bez https a www
 const int httpsPort = 443; //https port
 const int rele = 16; //GPIO16 == D0
-const char * fingerprint = "‎a6 02 4d e1 32 b0 0b fe 56 85 0f 84 03 ec b2 18 23 09 f0 63"; // odtlacok HTTPS cert
+const char * fingerprint = "b0 6d 7f 8c 98 78 8e 6e 0a 57 a8 2f 7e d1 40 2a 1e 3f 48 f7"; // odtlacok HTTPS cert
 #define SS_PIN 4
 #define RST_PIN 5
 RFID rfid(SS_PIN, RST_PIN); 
