@@ -1,20 +1,8 @@
-/* RFID.h - Library to use ARDUINO RFID MODULE KIT 13.56 MHZ WITH TAGS SPI W AND R BY COOQROBOT.
- * Based on code Dr.Leong   ( WWW.B2CQSHOP.COM )
- * Created by Miguel Balboa (circuitito.com), Jan, 2012. 
- */
 #ifndef RFID_h
 #define RFID_h
-
 #include <Arduino.h>
 #include <SPI.h>
-
-
-/******************************************************************************
- * 定义
- ******************************************************************************/
 #define MAX_LEN 16   // 数组最大长度
-
-//MF522命令字
 #define PCD_IDLE              0x00               //无动作，取消当前命令
 #define PCD_AUTHENT           0x0E               //验证密钥
 #define PCD_RECEIVE           0x08               //接收数据
@@ -22,8 +10,6 @@
 #define PCD_TRANSCEIVE        0x0C               //发送并接收数据
 #define PCD_RESETPHASE        0x0F               //复位
 #define PCD_CALCCRC           0x03               //CRC计算
-
-//Mifare_One卡片命令字
 #define PICC_REQIDL           0x26               //寻天线区内未进入休眠状态
 #define PICC_REQALL           0x52               //寻天线区内全部卡
 #define PICC_ANTICOLL         0x93               //防冲撞
@@ -33,12 +19,10 @@
 #define PICC_READ             0x30               //读块
 #define PICC_WRITE            0xA0               //写块
 #define PICC_DECREMENT        0xC0               
-#define PICC_INCREMENT        0xC1               
-#define PICC_RESTORE          0xC2               //调块数据到缓冲区
-#define PICC_TRANSFER         0xB0               //保存缓冲区中数据
-#define PICC_HALT             0x50               //休眠
- 
-//和MF522通讯时返回的错误代码
+#define PICC_INCREMENT        0xC1
+#define PICC_RESTORE          0xC2
+#define PICC_TRANSFER         0xB0
+#define PICC_HALT             0x50
 #define MI_OK                 0
 #define MI_NOTAGERR           1
 #define MI_ERR                2
