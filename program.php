@@ -12,7 +12,7 @@
      <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
- <script type="text/javascript">
+    <script type="text/javascript">
     window.smartlook||(function(d) {
     var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
     var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
@@ -20,7 +20,6 @@
     })(document);
     smartlook('init', 'db50efe9fff280a17db52b82be221240cbbd3dbe');
 </script>
-
   </head>
 
   <body>
@@ -54,9 +53,10 @@
              <li class="nav-item">
               <a class="nav-link" href="statistika.php">Štatistika</a>
             </li>
-		  <li class="nav-item" id="right">
+            <li class="nav-item" id="right">
             <a href="https://www.paypal.me/chlebovec" class="btn btn-success" role="button" style="border-radius: 25px;"><img src="https://image.flaticon.com/icons/svg/888/888870.svg" width=32px height=32px>Podpora</a>
             </li>
+            
           </ul>
         </div>
       </div>
@@ -64,19 +64,51 @@
 
     <!-- Page Content -->
     <div class="container">
-    <div class="alert alert-success">
-  <center><strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a></center>
-</div>
-	 <hr><h2>Wiring</h2><hr>
-	 	 <img src="https://i.stack.imgur.com/e1ewN.png" style="display: block; max-width: 100%; height: auto;">
+	 <hr><h2>Zapojenie</h2><hr>
+	 	 <img src="https://i.nahraj.to/f/2gIA.png" style="display: block; max-width: 100%; height: auto;">
 	   <hr><h2>Projekt</h2><hr>
 	   <li><a href="https://github.com/esp8266/Arduino/">Návod na inštaláciu NodeMCU do ArduinoIDE</a></li><br>
 	   <li><a href="http://www.handsontec.com/pdf_learn/esp8266-V10.pdf">NodeMCU v1.0 (v3, v2) datasheet</a></li><br>
 	   <li>Knižnica pre čítačku RC522 je obsiahnutá v repozitári</li><br>
 	   <li><a href="https://www.nxp.com/docs/en/data-sheet/MFRC522.pdf">RC522 datasheet</a></li><br>
-	   <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár free verzie projektu pod MIT licenciou</a></li><br>
-     	   <li><a href="https://sk.wikipedia.org/wiki/MIT_licencia">MIT licencia</a></li>
-	   <hr><h2>Zdrojový kód - HTTPS</h2><hr>
+	   <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár free verzie projektu pod MIT licenciou</a></li>
+	    <hr><h2>Zdrojový kód - Offline tester</h2><hr>
+<pre style="background-color:#48C9B0;">
+/*|----------------------------------------------------------|*/
+/*|SKETCH PRE TEST RFID CITACKY RC522 S ESP8266              |*/
+/*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
+/*|EMAIL: martinius96@gmail.com                              |*/
+/*|Doska: NodeMCU v3 Lolin (v2 compatible)                   |*/
+/*|CORE: 2.3.0                                               |*/
+/*|WEB: https://arduino.php5.sk                              |*/
+/*|----------------------------------------------------------|*/
+#include &lt;SPI.h&gt;
+#include &lt;RFID.h&gt;
+#define SS_PIN 4
+#define RST_PIN 5
+RFID rfid(SS_PIN, RST_PIN); 
+unsigned long kod;
+
+void setup(){ 
+  Serial.begin(9600);
+  SPI.begin(); 
+  rfid.init();
+}
+
+void loop(){
+  if (rfid.isCard()) {
+    if (rfid.readCardSerial()) {
+      Serial.println(" ");
+      Serial.println("Kod karty ziskany: ");
+      kod = 10000*rfid.serNum[4]+1000*rfid.serNum[3]+100*rfid.serNum[2]+10*rfid.serNum[1]+rfid.serNum[0];
+      Serial.println(kod);
+      String kodik = String(kod);        
+    }
+  }
+  rfid.halt();
+}
+</pre>
+<hr><h2>Zdrojový kód - HTTPS protokol - ONLINE</h2><hr>
 <pre style="background-color:#4cd137;">
 /*|----------------------------------------------------------|*/
 /*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU               |*/
@@ -156,7 +188,7 @@ void loop(){
 	rfid.halt();
 }
 </pre>
-	  <hr><h2>Zdrojový kód - HTTP</h2><hr>
+	  <hr><h2>Zdrojový kód - HTTP protokol - ONLINE</h2><hr>
 <pre style="background-color:#e84118;">
 /*|----------------------------------------------------------|*/
 /*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU               |*/
