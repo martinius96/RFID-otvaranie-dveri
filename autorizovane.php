@@ -7,11 +7,13 @@ include("connect.php");
 		<th style="width: 50%;">Číslo karty</th>
 	</tr>
 <?php
- 	$karty = mysqli_query($con,"SELECT * FROM autorizovane ORDER BY id DESC") or die(mysqli_error($con));
+	$karty = mysqli_query($con,"SELECT * FROM autorizovane ORDER BY id DESC") or die(mysqli_error($con));
 		while($line = mysqli_fetch_assoc($karty)){
 			echo "<tr>";
-				$casik = date('d. M H:i:s',strtotime($line['time']));			
-       echo "<td><i>". $casik . "</i></td>";
-				  echo '<td><i>' . $line['cislo_karty'] .'</i></td>';
+			$casik = date('d. M H:i:s',strtotime($line['time']));			
+       			echo "<td><i>". $casik . "</i></td>";
+			echo '<td><i>' . $line['cislo_karty'] .'</i></td>';
 			echo "</tr>";
-		}  ?> </tbody></table>
+}  
+?> 
+</table>
