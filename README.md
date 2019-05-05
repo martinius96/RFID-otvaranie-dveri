@@ -89,5 +89,5 @@
 
 * Nulák, resp. GND (AC/DC) je pripojený na zdroj po celú dobu prevádzky
 
-# Obrázkové zapojenie pre DC zdroj solenoidu
-![Schéma](https://i.nahraj.to/f/2gIA.png)
+# Schéma zapojenia
+![Schéma](https://i.imgur.com/j9wciSz.png)
