@@ -65,7 +65,7 @@
     <!-- Page Content -->
     <div class="container">
 	 <hr><h2>Zapojenie</h2><hr>
-	 	 <img src="https://i.nahraj.to/f/2gIA.png" style="display: block; max-width: 100%; height: auto;">
+	 <img src="https://i.imgur.com/j9wciSz.png" style="display: block; max-width: 100%; height: auto;">
 	   <hr><h2>Projekt</h2><hr>
 	   <li><a href="https://github.com/esp8266/Arduino/">Návod na inštaláciu NodeMCU do ArduinoIDE</a></li><br>
 	   <li><a href="http://www.handsontec.com/pdf_learn/esp8266-V10.pdf">NodeMCU v1.0 (v3, v2) datasheet</a></li><br>
