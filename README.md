@@ -7,9 +7,8 @@
 | V reálnom čase vidí priloženie karty s výsledkom overenia  | Pri overeni sú mu odistené dvere na 5 sekúnd|
 | Historicky vidí 100 posledných priložení  | Pri neoverení používateľa sa jazýček nevtiahne  |
 | Jedným klikutím môže schváliť už priloženú kartu  | Používateľ o overení/neoverení nie je informovaný (led/buzzer)|
-| Manuálne zadanie adresy karty  | Používateľ použije bankomatovú kartu, ISIC kartu, spĺňajú štandard ISO/IEC 14443 A|
 | Odstránenie karty jedným kliknutím  |  Informovanie používateľa o výsleku overenia cez diódu/buzzer (len platená verzia) |
-| Grafická reprezentácia prístupov  |  |
+| Grafická reprezentácia prístupov  | Používateľ použije bankomatovú kartu, ISIC kartu, spĺňajú štandard ISO/IEC 14443 A|
 | Štatistika RFID vrátnika  |  |
 | Vidí zdrojový kód pre NodeMCU  |  |
 | Prihlásenie/odhlásenie (len platená verzia)  |   |
