@@ -1,9 +1,13 @@
+<?php
+$stranka = "Pridat";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php 
 include("connect.php");
 ?>
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Webové rozhranie RFID vrátnika pre pridanie karty do systému pre overenie vstupujúceho.">
@@ -22,8 +26,11 @@ include("connect.php");
     })(document);
     smartlook('init', 'db50efe9fff280a17db52b82be221240cbbd3dbe');
 </script>
+
   </head>
+
   <body>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
@@ -32,34 +39,13 @@ include("connect.php");
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.php">Prehľad
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="pridat.php">Pridať kartu</a>
-			               <span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="odobrat.php">Odobrať kartu</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="grafy.php">Grafy</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link" href="program.php">Program</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="statistika.php">Štatistika</a>
-            </li>
-		  <li class="nav-item" id="right">
-            <a href="https://www.paypal.me/chlebovec" class="btn btn-success" role="button" style="border-radius: 25px;"><img src="https://image.flaticon.com/icons/svg/888/888870.svg" width=32px height=32px>Podpora</a>
-            </li>
-          </ul>
+         <?php
+            	include("menu.php");
+            ?>
         </div>
       </div>
     </nav>
+
     <!-- Page Content -->
     <div class="container">
       <div class="row">
@@ -76,9 +62,11 @@ include("connect.php");
         </div>
       </div>
     </div>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
   </body>
   <script>
        setInterval(function(){
@@ -93,4 +81,5 @@ include("connect.php");
     });
 },800);   
 </script>
+
 </html>

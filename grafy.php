@@ -1,3 +1,6 @@
+<?php
+$stranka = "Grafy";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php 
@@ -15,14 +18,6 @@ include("connect.php");
     <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
- <script type="text/javascript">
-    window.smartlook||(function(d) {
-    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
-    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
-    c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
-    })(document);
-    smartlook('init', 'db50efe9fff280a17db52b82be221240cbbd3dbe');
-</script>
 
   </head>
        <?php 
@@ -77,31 +72,9 @@ $jsonTable = json_encode($table);
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.php">Prehľad
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pridat.php">Pridať kartu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="odobrat.php">Odobrať kartu</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="grafy.php">Grafy</a>
-            </li>
-			 <li class="nav-item">
-              <a class="nav-link" href="program.php">Program</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="statistika.php">Štatistika</a>
-            </li>
-		  <li class="nav-item" id="right">
-            <a href="https://www.paypal.me/chlebovec" class="btn btn-success" role="button" style="border-radius: 25px;"><img src="https://image.flaticon.com/icons/svg/888/888870.svg" width=32px height=32px>Podpora</a>
-            </li>
-          </ul>
+        <?php
+            	include("menu.php");
+            ?>
         </div>
       </div>
     </nav>

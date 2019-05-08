@@ -1,3 +1,6 @@
+<?php
+$stranka = "Program";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,40 +35,20 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.php">Prehľad
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pridat.php">Pridať kartu</a>
-			               <span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="odobrat.php">Odobrať kartu</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="grafy.php">Grafy</a>
-            </li>
-			<li class="nav-item active">
-              <a class="nav-link" href="program.php">Program</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="statistika.php">Štatistika</a>
-            </li>
-            <li class="nav-item" id="right">
-            <a href="https://www.paypal.me/chlebovec" class="btn btn-success" role="button" style="border-radius: 25px;"><img src="https://image.flaticon.com/icons/svg/888/888870.svg" width=32px height=32px>Podpora</a>
-            </li>
-            
-          </ul>
+         <?php
+            	include("menu.php");
+            ?>
         </div>
       </div>
     </nav>
 
     <!-- Page Content -->
     <div class="container">
+    <div class="alert alert-success">
+  <center><strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a></center>
+</div>
 	 <hr><h2>Zapojenie</h2><hr>
-	 <img src="https://i.imgur.com/j9wciSz.png" style="display: block; max-width: 100%; height: auto;">
+	 	 <img src="https://i.imgur.com/j9wciSz.png" style="display: block; max-width: 100%; height: auto;">
 	   <hr><h2>Projekt</h2><hr>
 	   <li><a href="https://github.com/esp8266/Arduino/">Návod na inštaláciu NodeMCU do ArduinoIDE</a></li><br>
 	   <li><a href="http://www.handsontec.com/pdf_learn/esp8266-V10.pdf">NodeMCU v1.0 (v3, v2) datasheet</a></li><br>
@@ -127,7 +110,7 @@ const char * password = "HesloWifiSiete";
 const char * host = "arduino.php5.sk"; //bez https a www
 const int httpsPort = 443; //https port
 const int rele = 16; //GPIO16 == D0
-const char * fingerprint = "b0 6d 7f 8c 98 78 8e 6e 0a 57 a8 2f 7e d1 40 2a 1e 3f 48 f7"; // odtlacok HTTPS cert
+const char * fingerprint = "‎‎b0 6d 7f 8c 98 78 8e 6e 0a 57 a8 2f 7e d1 40 2a 1e 3f 48 f7; // odtlacok HTTPS cert
 #define SS_PIN 4
 #define RST_PIN 5
 RFID rfid(SS_PIN, RST_PIN); 

@@ -1,22 +1,21 @@
 <?php
-$stranka = "Stats";
+$stranka = "Zapojenie";
 ?>
 <!DOCTYPE html>
-<?php include("connect.php"); ?>
 <html lang="en">
   <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Štatistika pre RFID vrátnika. Počet autorizovaných a neautorizovaných kariet">
-    <meta name="keywords" content="internet, esp32, esp, espressif, rfid, rc522, vrátnik, brána, vstup, kontrola, štatistika">
+  <meta name="description" content="Zapojenie elektroniky - ESP8266, RFID čítačky RC522 a relé s ovládaním bezpečnostného solenoid jazýčka.">
+    <meta name="keywords" content="zapojenie, arduino, arduinoide, nodemcu, esp8266, čip, iot, rfid, vrátnik, rc522, relé, solenoid, dvere, jazýček, ovládanie, internet">
     <meta name="author" content="Martin Chlebovec">
     <meta name="robots" content="index, follow">
-    <title>RFID vrátnik - štatistika vstupov</title>
+    <title>RFID vrátnik - ESP8266 - Zapojenie</title>
      <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-     <script type="text/javascript">
+    <script type="text/javascript">
     window.smartlook||(function(d) {
     var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
     var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
@@ -24,15 +23,8 @@ $stranka = "Stats";
     })(document);
     smartlook('init', 'db50efe9fff280a17db52b82be221240cbbd3dbe');
 </script>
-
   </head>
-  <?php 
-  $vsetky = mysqli_query($con,"SELECT * from `pokusy`") or die (mysqli_error($con));
-  $vsetky_vstup = mysqli_query($con,"SELECT * from `pokusy` WHERE `vysledok` = 1") or die (mysqli_error($con));
-  $vsetky_stop = mysqli_query($con,"SELECT * from `pokusy` WHERE `vysledok` = 0") or die (mysqli_error($con));
-  $autorizovane = mysqli_query($con,"SELECT * from `autorizovane`") or die (mysqli_error($con));
-  $neautorizovane = mysqli_query($con,"SELECT * from `neautorizovane`") or die (mysqli_error($con));
-  ?>
+
   <body>
 
     <!-- Navigation -->
@@ -55,13 +47,9 @@ $stranka = "Stats";
     <div class="alert alert-success">
   <center><strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a></center>
 </div>
-  <center><h2>Štatistika RFID vrátnika</h2></center>
-    <li><b>Počet záznamov: </b><?php echo mysqli_num_rows($vsetky); ?></li>
-    <li><b>Počet vstupov: </b><?php echo mysqli_num_rows($vsetky_vstup); ?></li>
-    <li><b>Počet zamietnutí: </b><?php echo mysqli_num_rows($vsetky_stop); ?></li>
-    <li><b>Počet autorizovaných kariet: </b><?php echo mysqli_num_rows($autorizovane); ?></li>
-    <li><b>Počet neautorizovaných kariet: </b><?php echo mysqli_num_rows($neautorizovane); ?></li>
-      </div>
+	 <hr><h2>Zapojenie</h2><hr>
+	 	 <img src="https://i.imgur.com/j9wciSz.png" style="display: block; max-width: 100%; height: auto;">
+	   </div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
