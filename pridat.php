@@ -4,7 +4,6 @@
 include("connect.php");
 ?>
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Webové rozhranie RFID vrátnika pre pridanie karty do systému pre overenie vstupujúceho.">
@@ -23,11 +22,8 @@ include("connect.php");
     })(document);
     smartlook('init', 'db50efe9fff280a17db52b82be221240cbbd3dbe');
 </script>
-
   </head>
-
   <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
@@ -64,26 +60,10 @@ include("connect.php");
         </div>
       </div>
     </nav>
-
     <!-- Page Content -->
     <div class="container">
       <div class="row">
-	<?php   if(isset($_POST['odoslat'])){
-    $cislo = mysqli_real_escape_string($con, $_POST['cislo']);
-    $cislo = htmlspecialchars( $cislo, ENT_QUOTES );
-    $cislo = trim( $cislo );
-    if($cislo==""){
-    echo '<div class="alert alert-danger" style="width:100%;">
-  <strong>Pozor!</strong> Neplatný kód karty! Opakujte pokus!
-</div>';
-    }else{
-    $ins = mysqli_query($con,"INSERT INTO `autorizovane` (`cislo_karty`) VALUES ('$cislo')") or die (mysqli_error($con));
-    echo '<div class="alert alert-success" style="width:100%;">
-  <strong>Zapísané!</strong> Manuálny kód karty zapísaný do systému!
-</div>';
-    }
-} ?>
-        <div class="col-lg-12 text-center">
+    <div class="col-lg-12 text-center">
         <div class="alert alert-success">
   <strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a>
 </div>
@@ -93,23 +73,12 @@ include("connect.php");
 		<div id="autorizovane"></div>
 		<hr><b>Neautorizované karty</b><hr>
 		<div id="neautorizovane"></div>
-		
-		<hr><b>Manuálne pridať kartu</b><hr>
-		 <form method="post"ction="<?php echo $_SERVER['PHP_SELF']; ?>" >
-  <fieldset>
-    <input type="number" min=0 max=99999999999999 name="cislo"><br>
-  <input type="submit" class="btn btn-success" name="odoslat" value="Zapísať">
-  </fieldset>
-</form>
-
         </div>
       </div>
     </div>
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
   </body>
   <script>
        setInterval(function(){
@@ -124,5 +93,4 @@ include("connect.php");
     });
 },800);   
 </script>
-
 </html>
