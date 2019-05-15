@@ -1,5 +1,7 @@
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
+* Vzorové zdrojové kódy pre ESP8266 komunikujú priamo s touto webovou lokalitou
+* Možnosť ihneď vyskúšať po zapojení čítačky a nahratí programu funkčnosť
 
 # Systém ponúka 2 typy užívateľov projektu
 | Administrátor <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width="64" height="64"> | Používateľ <img src="https://www.flaticon.com/premium-icon/icons/svg/1610/1610320.svg" width="64" height="64"> |
