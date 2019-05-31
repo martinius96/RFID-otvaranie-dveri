@@ -1,6 +1,4 @@
-```html
-<h4><font color="red">Nakoľko sa množia prípady odstránenia znakov MIT licencie zo stiahnutých projektov, budú následujúce porušenia licencie hlásené príslušnému úradu</font></h4>
-```
+**Nakoľko sa množia prípady odstránenia znakov MIT licencie zo stiahnutých projektov, budú následujúce porušenia licencie hlásené príslušnému úradu**
 
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
