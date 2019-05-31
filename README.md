@@ -1,4 +1,6 @@
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Nakoľko sa množia prípady odstránenia znakov MIT licencie zo stiahnutých projektov, budú tieto a následujúce porušenia licencie hlásené príslušnému úradu`
+```html
+<h4><font color="red">Nakoľko sa množia prípady odstránenia znakov MIT licencie zo stiahnutých projektov, budú následujúce porušenia licencie hlásené príslušnému úradu</font></h4>
+```
 
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
