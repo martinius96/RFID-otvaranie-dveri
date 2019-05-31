@@ -1,5 +1,4 @@
-<div background="red" width="200" height="64">
-  </div>
+<font color="red">This is some text!</font>
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
 * Vzorové zdrojové kódy pre ESP8266 komunikujú priamo s touto webovou lokalitou
