@@ -1,4 +1,7 @@
-<font color="red">This is some text!</font>
+```diff
++ this will be highlighted in green
+- this will be highlighted in red
+```
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
 * Vzorové zdrojové kódy pre ESP8266 komunikujú priamo s touto webovou lokalitou
