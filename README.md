@@ -1,6 +1,5 @@
-```diff
-- Nakoľko sa množia prípady odstránenia znakov MIT licencie zo stiahnutých projektov, budú tieto a následujúce porušenia licencie hlásené príslušnému úradu
-```
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Nakoľko sa množia prípady odstránenia znakov MIT licencie zo stiahnutých projektov, budú tieto a následujúce porušenia licencie hlásené príslušnému úradu`
+
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
 * Vzorové zdrojové kódy pre ESP8266 komunikujú priamo s touto webovou lokalitou
