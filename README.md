@@ -1,6 +1,5 @@
 ```diff
-+ this will be highlighted in green
-- this will be highlighted in red
+- Nakoľko sa množia prípady odstránenia znakov MIT licencie zo stiahnutých projektov, budú tieto a následujúce porušenia licencie hlásené príslušnému úradu
 ```
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
