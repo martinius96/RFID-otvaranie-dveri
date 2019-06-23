@@ -12,14 +12,14 @@ $zmazat = mysqli_query($con,"DELETE FROM pokusy WHERE date(time) < CURDATE() - I
 if($kod!=""){
 // VOLITELNE (zmenu aplikovat i v programe NodeMCU)if($origin=="Lolin"){
 // VOLITELNE (zmenu aplikovat i v programe NodeMCU)if($topsecret=="topsecret"){
- $register1 = mysqli_query($con,"SELECT * FROM `autorizovane` WHERE `cislo_karty`='$kod'") or die(mysqli_error($con));
- 	 if(mysqli_num_rows($register1) < 1){
-	 	 $ins7 = mysqli_query($con,"INSERT INTO `pokusy` (`cislo_karty`,`vysledok`) VALUES ('$kod',0)") or die (mysqli_error($con));
-		 echo "NO";
-		 $register2 = mysqli_query($con,"SELECT * FROM `neautorizovane` WHERE `cislo_karty`='$kod'") or die(mysqli_error($con));
-		  if(mysqli_num_rows($register2) < 1){
-		  	$ins7 = mysqli_query($con,"INSERT INTO `neautorizovane` (`cislo_karty`) VALUES ('$kod')") or die (mysqli_error($con));
-		  }
+	$register1 = mysqli_query($con,"SELECT * FROM `autorizovane` WHERE `cislo_karty`='$kod'") or die(mysqli_error($con));
+ 	if(mysqli_num_rows($register1) < 1){
+		$ins7 = mysqli_query($con,"INSERT INTO `pokusy` (`cislo_karty`,`vysledok`) VALUES ('$kod',0)") or die (mysqli_error($con));
+		echo "NO";
+		$register2 = mysqli_query($con,"SELECT * FROM `neautorizovane` WHERE `cislo_karty`='$kod'") or die(mysqli_error($con));
+		if(mysqli_num_rows($register2) < 1){
+			$ins7 = mysqli_query($con,"INSERT INTO `neautorizovane` (`cislo_karty`) VALUES ('$kod')") or die (mysqli_error($con));
+		}
 	 }else{
 	 	$ins7 = mysqli_query($con,"INSERT INTO `pokusy` (`cislo_karty`,`vysledok`) VALUES ('$kod',1)") or die (mysqli_error($con));
 		echo "OK";
