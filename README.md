@@ -1,3 +1,4 @@
+# RFID vrátnik postavený na ESP8266 a online webovom rozhraní s databázou
 **Nakoľko sa množia prípady odstránenia znakov MIT licencie zo stiahnutých projektov, budú následujúce porušenia licencie hlásené príslušnému úradu**
 
 # Stránka projektu
