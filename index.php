@@ -56,8 +56,9 @@ include("connect.php");
        <div id="full"></div>
         </div>
       </div>
+      <center><footer style="background: #D35400;"><font color="white">Vytvoril a držitelom MIT licencie je: </font><a href="https://www.facebook.com/martin.s.chlebovec"><font color="white">Martin Chlebovec</font></a></footer></center>
     </div>
-
+    
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

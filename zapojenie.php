@@ -50,6 +50,7 @@ $stranka = "Zapojenie";
 	 <hr><h2>Zapojenie</h2><hr>
 	 	 <img src="https://i.imgur.com/j9wciSz.png" style="display: block; max-width: 100%; height: auto;">
 	   </div>
+     <center><footer style="background: #D35400;"><font color="white">Vytvoril a držitelom MIT licencie je: </font><a href="https://www.facebook.com/martin.s.chlebovec"><font color="white">Martin Chlebovec</font></a></footer></center>
     </div>
 
     <!-- Bootstrap core JavaScript -->

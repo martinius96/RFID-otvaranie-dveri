@@ -62,6 +62,7 @@ $stranka = "Stats";
     <li><b>Počet autorizovaných kariet: </b><?php echo mysqli_num_rows($autorizovane); ?></li>
     <li><b>Počet neautorizovaných kariet: </b><?php echo mysqli_num_rows($neautorizovane); ?></li>
       </div>
+      <center><footer style="background: #D35400;"><font color="white">Vytvoril a držitelom MIT licencie je: </font><a href="https://www.facebook.com/martin.s.chlebovec"><font color="white">Martin Chlebovec</font></a></footer></center>
     </div>
 
     <!-- Bootstrap core JavaScript -->

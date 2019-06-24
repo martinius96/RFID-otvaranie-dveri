@@ -61,6 +61,7 @@ include("connect.php");
 		<div id="neautorizovane"></div>
         </div>
       </div>
+      <center><footer style="background: #D35400;"><font color="white">Vytvoril a držitelom MIT licencie je: </font><a href="https://www.facebook.com/martin.s.chlebovec"><font color="white">Martin Chlebovec</font></a></footer></center>
     </div>
 
     <!-- Bootstrap core JavaScript -->
