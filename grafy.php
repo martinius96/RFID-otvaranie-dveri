@@ -88,7 +88,7 @@ $jsonTable = json_encode($table);
   <strong>Verzia zdarma</strong> Vytvoril: <a href="https://www.facebook.com/martin.s.chlebovec">Martin Chlebovec</a>
 </div>
  <div class="col-md-12">
-      <div id="chart_div" style="display: block; width: 100%; height: 300px;"></div>
+      <div id="chart_div" style="display: block; width: 100%; height: 500px;"></div>
   </div>
        
         </div>
