@@ -1,5 +1,5 @@
 # RFID vrátnik postavený na ESP8266 a online webovom rozhraní s databázou
-**Nakoľko sa množia prípady odstránenia znakov MIT licencie zo stiahnutých projektov, budú následujúce porušenia licencie hlásené príslušnému úradu**
+**Z dôvodu nedodržania licencie MIT viacerými používateľmi nie je webové rozhranie projektu ďalej dostupné!**
 
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
