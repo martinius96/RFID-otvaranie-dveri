@@ -1,6 +1,6 @@
 # RFID vrátnik s ESP8266
 **Nakoľko rada používateľov systému nerešpektuje licenciu projektu a práva na copyright autora, ktoré odstraňujú, webové rozhranie projektu už nebude dostupné na stiahnutie!**
-* MIT licencia v plnom znení: https://sk.wikipedia.org/wiki/Massachusetts_Institute_of_Technology
+* MIT licencia v plnom znení: https://en.wikipedia.org/wiki/MIT_License
 
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
