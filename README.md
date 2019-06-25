@@ -1,5 +1,5 @@
 # RFID vrátnik s ESP8266
-**Z dôvodu nedodržania licencie MIT viacerými používateľmi nie je webové rozhranie projektu ďalej dostupné!**
+**Nakoľko rada používateľov systému nerešpektuje licenciu projektu a práva na copyright autora, ktoré odstraňujú, webové rozhranie projektu už nebude dostupné na stiahnutie!**
 * MIT licencia v plnom znení: https://sk.wikipedia.org/wiki/Massachusetts_Institute_of_Technology
 
 # Stránka projektu
