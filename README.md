@@ -1,4 +1,4 @@
-# RFID vrátnik postavený na ESP8266 a online webovom rozhraní s databázou
+# RFID vrátnik s ESP8266
 **Z dôvodu nedodržania licencie MIT viacerými používateľmi nie je webové rozhranie projektu ďalej dostupné!**
 * MIT licencia v plnom znení: https://sk.wikipedia.org/wiki/Massachusetts_Institute_of_Technology
 
