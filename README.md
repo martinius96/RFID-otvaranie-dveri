@@ -53,7 +53,7 @@
 
 # Inštalácia systému
 * Stiahnuť repozitár v .zip archíve z Githubu
-* Súbor priečinka sql importovať do vašej MySQL databázy - štruktúru, alebo štruktúru + vzorové dáta
+* <s>Súbor priečinka sql importovať do vašej MySQL databázy - štruktúru, alebo štruktúru + vzorové dáta</s>
 * V súbore connect.php nastaviť vaše údaje na databázu (umiestnenie, user, heslo, meno_db)
 *  **(Win 10)** src priečinok skopírovať do: C:/Moje Dokumenty/Arduino/libraries/rfid
 *  **(Win XP/Vista/7)** src priečinok skopírovať do: C:/Program Files/Arduino/libraries/rfid
