@@ -1,10 +1,11 @@
 # RFID vrátnik s ESP8266
-**Nakoľko rada používateľov systému nerešpektuje licenciu projektu a práva na copyright autora, ktoré odstraňujú, webové rozhranie projektu už nebude dostupné na stiahnutie!**
+**Z dôvodu viacnásobného porušenia autorskej licencie nie je webové rozhranie možné stiahnuť do vyriešenia podaní.**
 * MIT licencia v plnom znení: https://en.wikipedia.org/wiki/MIT_License
 
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
-* Vzorové zdrojové kódy pre ESP8266 komunikujú priamo s touto webovou lokalitou
+* Informácie o projekte: https://arduino.php5.sk/rfid-system.php 
+* Vzorové zdrojové kódy pre ESP8266 komunikujú priamo s touto webovou lokalitou po HTTP/HTTPS protokole
 * Možnosť ihneď vyskúšať po zapojení čítačky a nahratí programu pre odtestovanie funkčnosti
 
 # Systém ponúka 2 typy užívateľov projektu
