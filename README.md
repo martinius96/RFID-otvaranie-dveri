@@ -59,9 +59,9 @@
 *  **(Win 10)** src priečinok skopírovať do: C:/Moje Dokumenty/Arduino/libraries/rfid
 *  **(Win XP/Vista/7)** src priečinok skopírovať do: C:/Program Files/Arduino/libraries/rfid
 * <s>Web súbory nahrať na FTP server (kompatibilné s PHP 5, aj PHP 7)</s>
-* v zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, meno webservera, cestu
+* v zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti
 * Nahrať program, používať Arduino core 2.3.0, **verzia 2.5.0 (najnovšia) je nekompatibilná** pre HTTPS fingerpeint!
-* Zakúpiť si webové rozhranie na: martinius96@gmail.com
+* Zakúpiť si webové rozhranie na: martinius96@gmail.com, obsahuje dokumentáciu, rozšírenú funkcionalitu
 * Hotovo
 
 # Webové rozhranie v prevádzke:
