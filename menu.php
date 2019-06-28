@@ -10,9 +10,6 @@
             <li class="nav-item <?php if($stranka=="Odobrat"){ echo 'active';}?>"">
               <a class="nav-link" href="odobrat.php">Odobrať kartu</a>
             </li>
-            <li class="nav-item <?php if($stranka=="Grafy"){ echo 'active';}?>">
-              <a class="nav-link" href="grafy.php">Grafy</a>
-            </li>
 			     <li class="nav-item <?php if($stranka=="Program"){ echo 'active';}?>">
               <a class="nav-link" href="program.php">Program</a>
             </li>
