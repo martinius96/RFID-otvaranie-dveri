@@ -1,5 +1,5 @@
 # RFID vrátnik s ESP8266
-**Z dôvodu viacnásobného porušenia autorskej licencie nie je webové rozhranie možné stiahnuť do vyriešenia podaní.**
+**Z dôvodu viacnásobného porušenia autorskej licencie sú odteraz projekty monitorované. Staihnutím a používaním projektu s tým súhlasíte a zaväzujete sa k dodržiavaniu autorského práva. V prípade porušenia si uvedomujete právne následky.**
 * MIT licencia v plnom znení: https://en.wikipedia.org/wiki/MIT_License
 
 # Stránka projektu
@@ -54,12 +54,12 @@
 
 # Inštalácia systému
 * Stiahnuť repozitár v .zip archíve z Githubu
-* <s>Súbor priečinka sql importovať do vašej MySQL databázy - štruktúru, alebo štruktúru + vzorové dáta</s>
-* <s>V súbore connect.php nastaviť vaše údaje na databázu (umiestnenie, user, heslo, meno_db)</s>
+* Súbor priečinka sql importovať do vašej MySQL databázy - štruktúru, alebo štruktúru + vzorové dáta
+* V súbore connect.php nastaviť vaše údaje na databázu (umiestnenie, user, heslo, meno_db)
 *  **(Win 10)** src priečinok skopírovať do: C:/Moje Dokumenty/Arduino/libraries/rfid
 *  **(Win XP/Vista/7)** src priečinok skopírovať do: C:/Program Files/Arduino/libraries/rfid
-* <s>Web súbory nahrať na FTP server (kompatibilné s PHP 5, aj PHP 7)</s>
-* v zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti
+* Web súbory nahrať na FTP server (kompatibilné s PHP 5, aj PHP 7)
+* v zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, údaje na váš server
 * Nahrať program, používať Arduino core 2.3.0, **verzia 2.5.0 (najnovšia) je nekompatibilná** pre HTTPS fingerpeint!
 * Zakúpiť si webové rozhranie na: martinius96@gmail.com, obsahuje dokumentáciu, rozšírenú funkcionalitu
 * Hotovo
