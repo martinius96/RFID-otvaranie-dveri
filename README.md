@@ -1,4 +1,4 @@
-# RFID vrátnik s ESP8266
+# RFID vrátnik s ESP8266 (NodeMCU)
 **Z dôvodu viacnásobného porušenia autorskej licencie sú odteraz projekty monitorované. Stiahnutím a používaním projektu s tým súhlasíte a zaväzujete sa k dodržiavaniu autorského práva. V prípade porušenia si uvedomujete právne následky.**
 * MIT licencia v plnom znení: https://en.wikipedia.org/wiki/MIT_License
 
