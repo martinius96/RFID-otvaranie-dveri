@@ -45,6 +45,9 @@ $stranka = "Zapojenie";
     <!-- Page Content -->
     <div class="container">
 	 <hr><h2>Zapojenie</h2><hr>
+   <b>Stiahnuť: </b>
+   <li>.sch - <a href="eagle/rfid_otvaranie_dveri.sch"><img src="https://d2.alternativeto.net/dist/icons/eaglecad_116263.png?width=128&height=128&mode=crop&upscale=false" width="32px" height="32px" title="Autodesk Eagle" alt="Autodesk Eagle"></a></li>
+   <li>.dxf - <a href="eagle/rfid_otvaranie_dveri.dxf"><img src="https://www.shareicon.net/data/256x256/2017/06/21/887531_file_512x512.png" width="32px" height="32px" title="CAD - AutoCAD, SoliCAD, ProgeCAD" alt="CAD - AutoCAD, SoliCAD, ProgeCAD"></a></li>
 	 	 <img src="https://i.imgur.com/j9wciSz.png" style="display: block; max-width: 100%; height: auto;">
 	   </div>
      <?php 
