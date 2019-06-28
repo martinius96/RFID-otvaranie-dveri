@@ -66,11 +66,11 @@
 
 # Webové rozhranie v prevádzke:
 * Hlavný prehľad (real-time vstupy s výsledkom overenia)
-![Hlavný prehľad](https://i.nahraj.to/f/2afM.PNG)
-* Prehľad neautorizovaných a autorizovaných kariet( s možnosťou autorizovania jedným tlačidlom)
-![Autorizované karty](https://i.nahraj.to/f/2afL.PNG)
-* Grafická reprezentácia overení za 7 dní s výsledok 1 - overený, 0 - neoverený
-![Grafická reprezentácia overení](https://i.nahraj.to/f/2gPU.PNG)
+![Hlavný prehľad](https://i.imgur.com/5GWfg6v.png)
+* Pridanie autorizovaných kariet jedným kliknutím
+![Pridanie autorizovaných kariet jedným kliknutím](https://i.imgur.com/kGZjK1P.png)
+* Štatistika RFID vrátnika
+![Štatistika RFID vrátnika](https://i.imgur.com/TVMfmeQ.png)
 
 # Zapojenie komponentov
 | RC522 | NodeMCU |
