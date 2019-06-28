@@ -1,5 +1,5 @@
 # RFID vrátnik s ESP8266
-**Z dôvodu viacnásobného porušenia autorskej licencie sú odteraz projekty monitorované. Staihnutím a používaním projektu s tým súhlasíte a zaväzujete sa k dodržiavaniu autorského práva. V prípade porušenia si uvedomujete právne následky.**
+**Z dôvodu viacnásobného porušenia autorskej licencie sú odteraz projekty monitorované. Stiahnutím a používaním projektu s tým súhlasíte a zaväzujete sa k dodržiavaniu autorského práva. V prípade porušenia si uvedomujete právne následky.**
 * MIT licencia v plnom znení: https://en.wikipedia.org/wiki/MIT_License
 
 # Stránka projektu
