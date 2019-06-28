@@ -55,11 +55,11 @@
 # Inštalácia systému
 * Stiahnuť repozitár v .zip archíve z Githubu
 * Súbor priečinka sql importovať do vašej MySQL databázy - štruktúru, alebo štruktúru + vzorové dáta
-* V súbore connect.php nastaviť vaše údaje na databázu (umiestnenie, user, heslo, meno_db)
+* V súbore connect.php nastaviť vaše údaje na databázu (umiestnenie (localhost/external), user, heslo, meno_db)
 *  **(Win 10)** src priečinok skopírovať do: C:/Moje Dokumenty/Arduino/libraries/rfid
 *  **(Win XP/Vista/7)** src priečinok skopírovať do: C:/Program Files/Arduino/libraries/rfid
 * Web súbory nahrať na FTP server (kompatibilné s PHP 5, aj PHP 7)
-* v zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, údaje na váš server
+* V zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, údaje na váš server
 * Nahrať program, používať Arduino core 2.3.0, **verzia 2.5.0 (najnovšia) je nekompatibilná** pre HTTPS fingerpeint!
 * Zakúpiť si webové rozhranie na: martinius96@gmail.com, obsahuje dokumentáciu, rozšírenú funkcionalitu
 * Hotovo
