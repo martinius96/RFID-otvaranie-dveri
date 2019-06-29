@@ -16,7 +16,7 @@
 | Historicky vidí 100 posledných priložení  | Pri neoverení používateľa sa jazýček nevtiahne  |
 | Jedným klikutím môže schváliť už priloženú kartu  | Používateľ o overení/neoverení nie je informovaný (led/buzzer)|
 | Odstránenie karty jedným kliknutím  |  Informovanie používateľa o výsleku overenia cez diódu/buzzer (len platená verzia) |
-| Grafická reprezentácia prístupov  | Používateľ použije bankomatovú kartu, ISIC kartu, spĺňajú štandard ISO/IEC 14443 A|
+| Grafická reprezentácia prístupov  | Používateľ použije Mifare tag, bankomatovú kartu, ISIC kartu, spĺňajú štandard ISO/IEC 14443 A|
 | Štatistika RFID vrátnika  |  |
 | Vidí zdrojový kód pre NodeMCU  |  |
 | Prihlásenie/odhlásenie (len platená verzia)  |   |
@@ -26,7 +26,7 @@
 
 * Overenie kariet a prístupu cez web do objektu
 * Čítačka prečíta kartu štandardu ISO/IEC 14443 A, jej MAC adresu odošle na web, kde sa overí a odpovie sa OK/NO
-* Možno použiť ISIC karty, bankomatové, zamestnanecké karty
+* Možno použiť Mifare tagy, ISIC karty, bankomatové, zamestnanecké karty, náramky i kľúčenky, ktoré spĺňajú štandard ISO/EIC 14443 A
 * V prípade odpovede OK NodeMCU aktivuje jazýček, čím je možné dvere otvoriť. 
 * Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, elmg. jazýček sa vtiahne
 # Podpora projektu
