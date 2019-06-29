@@ -1,3 +1,5 @@
+-- Export vyhotovil: Martin Chlebovec
+-- email: martinius96@gmail.com
 -- phpMyAdmin SQL Dump
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
