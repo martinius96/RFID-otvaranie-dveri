@@ -71,7 +71,7 @@ include("connect.php");
 <div class="col-lg-4"> 
 <center><b>Podmienky použitia projektu:</b></center> 
 <div class="alert alert-danger">
-<li><b>Uvedenie autora pôvodného projektu (t.j. ponechanie spodnej lišty, meta tagu autora).</b></li>
+<li><b>Uvedenie autora pôvodného projektu (t.j. ponechanie spodnej lišty, meta tagu autora projektu).</b></li>
 </div>   
 </div>  
 <div class="col-lg-12">
