@@ -106,7 +106,7 @@ const char * password = "HesloWifiSiete";
 const char * host = "arduino.php5.sk"; //bez https a www
 const int httpsPort = 443; //https port
 const int rele = 16; //GPIO16 == D0
-const char * fingerprint = "‎‎b0 6d 7f 8c 98 78 8e 6e 0a 57 a8 2f 7e d1 40 2a 1e 3f 48 f7; // odtlacok HTTPS cert
+const char * fingerprint = "b0 6d 7f 8c 98 78 8e 6e 0a 57 a8 2f 7e d1 40 2a 1e 3f 48 f7; // odtlacok HTTPS cert
 #define SS_PIN 4
 #define RST_PIN 5
 RFID rfid(SS_PIN, RST_PIN); 
@@ -117,6 +117,7 @@ void setup(){
   	SPI.begin(); 
   	rfid.init();
   	pinMode(rele, OUTPUT);
+	digitalWrite(rele, HIGH); //hotfix
 	WiFi.begin(ssid, password);
   	while (WiFi.status() != WL_CONNECTED) {
     		delay(500);
