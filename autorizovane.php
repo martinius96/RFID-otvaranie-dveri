@@ -14,6 +14,6 @@ include("connect.php");
        			echo "<td><i>". $casik . "</i></td>";
 			echo '<td><i>' . $line['cislo_karty'] .'</i></td>';
 			echo "</tr>";
-}  
+		}  
 ?> 
 </table>
