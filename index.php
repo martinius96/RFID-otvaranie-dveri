@@ -12,6 +12,7 @@ include("connect.php");
     <meta name="description" content="RFID vrátnik založený na čítačke RC522 a mikrokontroléri NodeMCU s čipom ESP82666-12E.">
     <meta name="keywords" content="rfid, vrátnik, dochádzka, systém, prístup, odmietnutie, otvorenie, dvere, solenoid, relé, esp8266, nodemcu, jazýček, kľučka">
     <meta name="author" content="Martin Chlebovec">
+    <meta property="fb:admins" content="100001242570317">
     <meta name="robots" content="index, follow">
     <title>RFID vrátnik - ESP8266</title>
     <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
