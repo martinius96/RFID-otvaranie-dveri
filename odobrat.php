@@ -2,7 +2,7 @@
 $stranka = "Odobrat";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <?php 
 include("connect.php");
 ?>
@@ -77,7 +77,7 @@ include("connect.php");
 	$.get('autorizovaneodobrat.php', function(data){
         $('#aut').html(data)
     });
-},800);   
+},1500);   
 </script>
 
 </html>
