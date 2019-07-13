@@ -81,7 +81,7 @@ include("connect.php");
 	$.get('neautorizovane.php', function(data){
         $('#neautorizovane').html(data)
     });
-},800);   
+},1500);   
 </script>
 
 </html>
