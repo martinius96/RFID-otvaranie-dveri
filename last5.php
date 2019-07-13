@@ -1,13 +1,15 @@
 <?php 
 include("connect.php");
 ?>
-    <table style="width: 100%;" border="1">
-									 <tr>
-									 <th style="width: 33.33%;">Čas</th>
-									 <th style="width: 33.33%;">Kľúčenka</th>
-									 <th style="width: 33.33%;">Výsledok</th>
-									 
-									 </tr>
+<table style="width: 100%;" border="1">
+	<thead>
+		<tr>
+			<th style="width: 33.33%;">Čas</th>
+			<th style="width: 33.33%;">Kľúčenka</th>
+			<th style="width: 33.34%;">Výsledok</th>
+		</tr>
+	</thead>
+  	<tbody>
 <?php
  	$karty = mysqli_query($con,"SELECT * FROM pokusy ORDER BY id DESC LIMIT 5") or die(mysqli_error($con));
 		while($line = mysqli_fetch_assoc($karty)){
@@ -25,4 +27,6 @@ include("connect.php");
 				  echo '<td bgcolor="#E74C3C"><i>' . $vysledok .'</i></td>';
 				}		
 			echo "</tr>";
-		}  ?> </tbody></table>
+		}  ?> 
+	</tbody>
+</table>
