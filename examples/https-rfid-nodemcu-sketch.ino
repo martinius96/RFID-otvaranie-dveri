@@ -27,6 +27,7 @@ void setup(){
   	SPI.begin(); 
   	rfid.init();
   	pinMode(rele, OUTPUT);
+	digitalWrite(rele, HIGH); //hotfix
 	WiFi.begin(ssid, password);
   	while (WiFi.status() != WL_CONNECTED) {
     		delay(500);
