@@ -12,7 +12,7 @@
 byte mac[] = { 0xAA, 0xBB, 0xCC, 0x81, 0x7B, 0x4A };
 const char * host = "www.arduino.php5.sk";
 IPAddress ip(192, 168, 1, 254);
-#define SS_PIN 4
+#define SS_PIN 6
 #define RST_PIN 5
 RFID rfid(SS_PIN, RST_PIN);
 unsigned long kod;
