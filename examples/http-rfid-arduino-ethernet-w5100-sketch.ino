@@ -20,6 +20,7 @@ const int rele = 3; //D3
 EthernetClient client;
 void setup() {
   pinMode(rele, OUTPUT);
+  digitalWrite(rele, HIGH); //hotfix
   SPI.begin();
   rfid.init();
   if (Ethernet.begin(mac) == 0) {
