@@ -2,7 +2,7 @@
 /*|SKETCH PRE TEST RFID CITACKY RC522 S ESP8266              |*/
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
-/*|DOSKA: NodeMCU v3 Lolin (v2 compatible)                   |*/
+/*|DOSKA: NodeMCU, Arduino Uno, Mega, Nano                   |*/
 /*|CORE: 2.3.0                                               |*/
 /*|WEB: https://arduino.php5.sk                              |*/
 /*|LICENCIA: MIT                                             |*/
