@@ -26,7 +26,7 @@
               <a class="nav-link" href="zapojenie.php">Zapojenie</a>
             </li>
             <li class="nav-item <?php if($stranka=="Licencia"){ echo 'active';}?>">
-              <a class="nav-link" href="licencia.php"><font color="red"><b>Licencia</b></font></a>
+              <a class="nav-link btn btn-info" href="licencia.php" role="button">Licencia</a>
             </li>
              <li class="nav-item" id="right">
             <a href="https://www.paypal.me/chlebovec" class="btn btn-success" role="button" style="border-radius: 25px;"><img src="https://image.flaticon.com/icons/svg/888/888870.svg" width=32px height=32px>Podpora</a>
