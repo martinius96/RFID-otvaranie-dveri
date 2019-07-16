@@ -96,7 +96,7 @@
 | COM  | - |
 | NC  | 12/24 DC/AC |
 
-* Nulák, resp. GND podľa typu obvodu (AC/DC) je pripojený na zdroj po celú dobu prevádzky
+* Nulák, respektíve GND podľa typu obvodu (AC/DC) je pripojený na zdroj po celú dobu prevádzky solenoid jazýčka.
 
 # Schéma zapojenia
 ![Schéma](https://i.imgur.com/j9wciSz.png)
