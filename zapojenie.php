@@ -59,7 +59,7 @@ $stranka = "Zapojenie";
    <li>Formát .dxf - <a href="eagle/rfid_otvaranie_dveri_uno.dxf"><img src="http://www.iconninja.com/files/424/698/454/file-document-extension-cad-format-page-icon.png" width="32px" height="32px" title="CAD - AutoCAD, SoliCAD, ProgeCAD" alt="CAD - AutoCAD, SoliCAD, ProgeCAD"></a></li>
    <hr>
    <li>Formát .scr - <a href="eagle/rfid_otvaranie_dveri_uno.scr"><img src="https://cdn0.iconfinder.com/data/icons/flat-design-database-set-3/24/script-128.png" width="32px" height="32px" title="NetScript" alt="NetScript"></a></li>  
-     </div>
+    <hr></div>
      <?php 
       include("footer.php");
       ?>
