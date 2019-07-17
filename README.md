@@ -134,7 +134,7 @@
 | GND  | GND |
 | IN  | D17 |
 
-#
+# Zapojenie relé a solenoid jazyčkového zámku
 | Relé | Solenoid |
 |:-----|--------:|
 | NO | IN |
