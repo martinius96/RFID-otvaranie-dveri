@@ -71,6 +71,7 @@ void loop(){
   				if (line == "OK"){
 	 				digitalWrite(rele, LOW); //invertovane spinane rele active LOW
 	 				delay(5500);              //cas otvorenia dveri
+					digitalWrite(rele, HIGH); //zatvor zamok
   				}else if (line == "NO") {
     					digitalWrite(rele,HIGH);
 				}
