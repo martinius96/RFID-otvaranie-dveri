@@ -35,6 +35,12 @@
 # Hardvér
 * ![NodeMCU](https://arduino.php5.sk/images/nodemcuv3.jpg)NodeMCU (v2, alebo v3)
 * ![Basekit](https://arduino.php5.sk/images/basekit.jpg)Basekit (možný iba pri V3, možnosť využiť napájanie na 6-24V)
+#
+* ![Arduino Uno](https://s3-ap-northeast-1.amazonaws.com/switch-science-intl/contents/small/789_201602_102_tBuTiHx.jpg)Arduino Uno
+* ![Ethernet W5100](https://arduino.php5.sk/images/ethernetshield.jpg)Ethernet shield W5100
+#
+* ![ESP32 DevKit](http://www.robotop.lv/1802-home/nodemcu-esp-32-v11.jpg)ESP32 DevKit v1 - v4
+#
 * ![RC522](https://rukminim1.flixcart.com/image/128/128/learning-toy/m/b/e/grab-em-rfid-rc522-spi-original-imaehszrwtx9gshm.jpeg?q=70)Čítačka RC522 na 13.56 MHz pre štandard ISO/IEC 14443 A
 * ![13.56MHz](https://mi4.rightinthebox.com/images/128x128/201307/rpqwut1374140279910.jpg)Kompatibilné karty a kľúčenky
 * ![1-kanálové elmg. relé](https://rukminim1.flixcart.com/image/128/128/jlfh6kw0/learning-toy/2/z/f/single-channel-5v-relay-module-sunrobotics-original-imaf8k84asferu9r.jpeg?q=70)SRD-05VDC-SL-C (elmg. relé 1-kanálové)
