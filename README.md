@@ -16,8 +16,8 @@
 | Historicky vidí 100 posledných priložení  | Pri neoverení používateľa sa jazýček nevtiahne  |
 | Jedným kliknutím môže schváliť už (skôr) priloženú kartu  | Používateľ o overení/neoverení nie je informovaný (led/buzzer)|
 | Odstránenie karty jedným kliknutím  |  Informovanie používateľa o výsledku overenia cez diódu/buzzer (len platená verzia) |
-| Grafická reprezentácia prístupov  | Používateľ použije Mifare tag, bankomatovú kartu, ISIC kartu, spĺňajú štandard ISO/IEC 14443 A|
-| Štatistika RFID vrátnika  |  |
+| Grafická reprezentácia prístupov  | Používateľ použije Mifare tag, bankomatovú kartu, ISIC kartu, náramok, ktorý spĺňa štandard ISO/IEC 14443 A|
+| Štatistika RFID vrátnika  | Prihlásenia používateľa do aplikácie (len platená verzia) |
 | Vidí zdrojový kód pre NodeMCU  |  |
 | Prihlásenie/odhlásenie (len platená verzia)  |   |
 | Priradenie mien, fotografií ku kartám (len platená verzia)  |  |
