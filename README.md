@@ -104,5 +104,11 @@
 
 * Nulák, respektíve GND podľa typu obvodu (AC/DC) je pripojený na zdroj po celú dobu prevádzky solenoid jazýčka.
 
-# Schéma zapojenia
-![Schéma](https://i.imgur.com/j9wciSz.png)
+# Schéma zapojenia ESP8266 (NodeMCU)
+![Schéma NodeMCU](https://i.imgur.com/j9wciSz.png)
+
+# Schéma zapojenia Arduino Uno + Ethernet W5100
+![Schéma Arduino + Ethernet W5100](https://i.imgur.com/7IuhBJy.png)
+
+# Schéma zapojenia ESP32
+![Schéma ESP32](https://i.imgur.com/oR0RjWB.png)
