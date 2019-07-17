@@ -1,11 +1,11 @@
-# RFID vrátnik s ESP8266 (NodeMCU)
+# RFID vrátnik s mikrokontrolérom ESP8266, ESP32, Arduino + Ethernet
 **Z dôvodu viacnásobného porušenia autorskej licencie sú odteraz projekty monitorované. Stiahnutím a používaním projektu s tým súhlasíte a zaväzujete sa k dodržiavaniu autorského práva. V prípade porušenia si uvedomujete právne následky.**
 * MIT licencia v plnom znení: https://en.wikipedia.org/wiki/MIT_License
 
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
 * Informácie o projekte: https://arduino.php5.sk/rfid-system.php 
-* Vzorové zdrojové kódy pre ESP8266 komunikujú priamo s touto webovou lokalitou po HTTP/HTTPS protokole
+* Vzorové zdrojové kódy pre ESP8266, ESP32, Arduino + Ethernet komunikujú priamo s touto webovou lokalitou po HTTP/HTTPS protokole
 * Možnosť ihneď vyskúšať po zapojení čítačky a nahratí programu pre odtestovanie funkčnosti
 
 # Systém ponúka 2 typy užívateľov projektu
@@ -27,9 +27,9 @@
 * Overenie kariet a prístupu cez web do objektu
 * Čítačka prečíta kartu štandardu ISO/IEC 14443 A, jej MAC adresu odošle na web, kde sa overí a odpovie sa OK/NO
 * Možno použiť Mifare tagy, ISIC karty, bankomatové, zamestnanecké karty, náramky i kľúčenky, ktoré spĺňajú štandard ISO/EIC 14443 A
-* V prípade odpovede OK NodeMCU aktivuje jazýček, čím je možné dvere otvoriť. 
-* Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, elektromagnetický jazýček (solenoid) sa vtiahne
-# Podpora projektu
+* V prípade odpovede OK mikrokontróler aktivuje jazýček, čím je možné dvere otvoriť. 
+* Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, elektromagnetický jazýček (solenoid) sa vtiahne pri stlačení kľučky
+# Podpora projektu pre širšiu dostupnosť a pridanie nových funkcionalít
 * https://www.paypal.me/chlebovec
 
 # Hardvér
@@ -65,9 +65,11 @@
 *  **(Win 10)** src priečinok skopírovať do: C:/Moje Dokumenty/Arduino/libraries/rfid
 *  **(Win XP/Vista/7)** src priečinok skopírovať do: C:/Program Files/Arduino/libraries/rfid
 * Web súbory nahrať na FTP server (kompatibilné s PHP 5, aj PHP 7)
-* V zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, údaje na váš webserver
-* Nahrať program, používať Arduino core 2.3.0, **verzia 2.5.0 (najnovšia) je nekompatibilná** pre HTTPS fingerprint!
-* Zakúpiť si webové rozhranie na: martinius96@gmail.com, obsahuje dokumentáciu, rozšírenú funkcionalitu
+* V zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, údaje na váš webserver, rovnako i pre ESP32/Arduino
+* Nahrať program, používať Arduino core 2.3.0 (pre NodeMCU), **verzia 2.5.0 (najnovšia) je nekompatibilná** pre HTTPS fingerprint!
+* Pre Arduino, ESP32 je možné použiť aj nanovšie knižnice pre HTTP, HTTPS spojenia
+* Program pre Arduino je plne kompatibilný medzi Arduino Uno, Nano, Mega 1280/2560
+* **Môžete si zakúpiť webové rozhranie na: martinius96@gmail.com, obsahuje dokumentáciu, rozšírenú funkcionalitu, support**
 * Hotovo
 
 # Webové rozhranie v prevádzke:
@@ -87,7 +89,7 @@
 | MISO | D6 (GPIO12) |
 | MOSI | D7 (GPIO13) |
 | SCK  | D5 (GPIO14) |
-| SDA  | D2 (GPIO4) |
+| SDA/SS  | D2 (GPIO4) |
 | IRQ  | Nezapája sa |
 
 | Relé | NodeMCU |
@@ -96,6 +98,43 @@
 | GND  | GND |
 | IN  | D0 (GPIO16) |
 
+# Zapojenie komponentov (Arduino + Ethernet W5100)
+| RC522 | Arduino |
+|:-----|--------:|
+| 3.3V | 3.3V    |
+| RST  | D5 |
+| GND  | GND |
+| MISO | D12 |
+| MOSI | D11 |
+| SCK  | D13 |
+| SDA/SS  | D6 |
+| IRQ  | Nezapája sa |
+
+| Relé | Arduino |
+|:-----|--------:|
+| 5V | 5V |
+| GND  | GND |
+| IN  | D4 (NO SD CARD) |
+
+# Zapojenie komponentov (ESP32)
+| RC522 | ESP32 |
+|:-----|--------:|
+| 3.3V | 3.3V    |
+| RST  | D22 |
+| GND  | GND |
+| MISO | D19 |
+| MOSI | D23 |
+| SCK  | D18 |
+| SDA/SS  | D21 |
+| IRQ  | Nezapája sa |
+
+| Relé | ESP32 |
+|:-----|--------:|
+| 5V | 5V VIN  |
+| GND  | GND |
+| IN  | D17 |
+
+#
 | Relé | Solenoid |
 |:-----|--------:|
 | NO | IN |
