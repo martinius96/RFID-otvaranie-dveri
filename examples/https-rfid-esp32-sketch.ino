@@ -13,8 +13,8 @@
 #include <RFID.h>
 const char * ssid = "wifi_meno";
 const char * password = "wifi_heslo";
-const char * host = "www.arduino.php5.sk";
-const int httpPort = 80; //http port
+const char * host = "arduino.php5.sk";
+const int httpsPort = 443; //http port
 const int rele = 17;
 #define SS_PIN 21
 #define RST_PIN 22
@@ -85,7 +85,7 @@ void loop() {
       Serial.println(kod);
       String kodik = String(kod);
       client.stop();
-      if (client.connect(host, httpPort)) {
+      if (client.connect(host, httpsPort)) {
         String url = "/rfid/karta.php?kod=" + kodik;
         //String url = "/rfid/karta.php?kod="+kodik+"&origin=ESP32";
         //String url = "/rfid/karta.php?kod="+kodik+"&origin=ESP32&topsecret=topsecret";
