@@ -16,7 +16,7 @@ extern "C" {
 #include "wpa2_enterprise.h"
 }
 
-tatic const char* ssid = "eduroam";
+static const char* ssid = "eduroam";
 static const char* identity = "anonymous@example.com";
 static const char* username = "id@example.com";
 static const char* password = "password";
