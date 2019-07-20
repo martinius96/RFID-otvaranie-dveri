@@ -49,14 +49,29 @@ $stranka = "Program";
 	   <li><a href="http://www.handsontec.com/pdf_learn/esp8266-V10.pdf">NodeMCU v1.0 (v3, v2) datasheet</a></li><br>
 	   <li><a href="https://www.nxp.com/docs/en/data-sheet/MFRC522.pdf">RC522 datasheet</a></li><br>
 	   <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár so zdrojovými kódmi pre webstránku, ESP8266 a RFID čítačku RC522</a></li>
-	    <hr><h2>Zdrojový kód - Offline tester</h2><hr>
+	  <hr><h2>Zdrojové kódy s pripojením na: https://arduino.php5.sk/rfid</h2><hr>
+    <h3>Arduino + Ethernet</h3>
+    <li>Arduino + Ethernet W5100<a href="examples/http-ethernet-w5100.ino"><img src="http://www.multipecastec.com.br/loja/img/thumb/ethernet-shield-wiznet-w5100-para-arduino_3464.jpg" width="48px" height="48px" title="Ethernet W5100" alt="Ethernet W5100" border-radius="50px"></a></li>  
+    <li>Arduino + Ethernet W5500<a href="examples/http-ethernet-w5500.ino"><img src="https://cdn.instructables.com/FAT/YMPE/JHQJS5HZ/FATYMPEJHQJS5HZ.LARGE.jpg" width="48px" height="48px" title="Ethernet W5500" alt="Ethernet W5500" border-radius="50px"></a></li> 
+    <h3>ESP8266 (NodeMCU)</h3>
+    <li>HTTP (PSK)<a href="examples/http-esp8266-psk.ino"><img src="https://0.allegroimg.com/s128/03b7c4/b538b7284cdf8e5fad55bcad8b10/Modul-WiFi-NodeMCU-V3-ESP8266-ESP-12E-Arduino" width="48px" height="48px" title="NodeMCU v3 Lolin" alt="NodeMCU v3 Lolin" border-radius="50px"></a></li>  
+    <li>HTTPS (PSK)<a href="examples/https-esp8266-psk.ino"><img src="https://0.allegroimg.com/s128/03b7c4/b538b7284cdf8e5fad55bcad8b10/Modul-WiFi-NodeMCU-V3-ESP8266-ESP-12E-Arduino" width="48px" height="48px" title="NodeMCU v3 Lolin" alt="NodeMCU v3 Lolin" border-radius="50px"></a></li>  
+    <hr>
+    <li>HTTP (802.1X)<a href="examples/http-esp8266-eduroam.ino"><img src="https://0.allegroimg.com/s128/03b7c4/b538b7284cdf8e5fad55bcad8b10/Modul-WiFi-NodeMCU-V3-ESP8266-ESP-12E-Arduino" width="48px" height="48px" title="NodeMCU v3 Lolin" alt="NodeMCU v3 Lolin" border-radius="50px"></a></li>  
+    <li>HTTPS (802.1X)<a href="examples/https-esp8266-eduroam.ino"><img src="https://0.allegroimg.com/s128/03b7c4/b538b7284cdf8e5fad55bcad8b10/Modul-WiFi-NodeMCU-V3-ESP8266-ESP-12E-Arduino" width="48px" height="48px" title="NodeMCU v3 Lolin" alt="NodeMCU v3 Lolin" border-radius="50px"></a></li>  
+    <h3>ESP32 (Devkit)</h3>
+    <li>HTTP (PSK)<a href="examples/http-esp32-psk.ino"><img src="https://a.allegroimg.com/s128/0333a2/0e99076c4dfe84c6e6632f4759e0" width="48px" height="48px" title="ESP32 DevKit" alt="ESP32 DevKit" border-radius="50px"></a></li>  
+    <li>HTTPS (PSK)<a href="examples/https-esp32-psk.ino"><img src="https://a.allegroimg.com/s128/0333a2/0e99076c4dfe84c6e6632f4759e0" width="48px" height="48px" title="ESP32 DevKit" alt="ESP32 DevKit" border-radius="50px"></a></li>  
+    <hr>
+    <li>HTTP (802.1X)<a href="examples/http-esp32-eduroam.ino"><img src="https://a.allegroimg.com/s128/0333a2/0e99076c4dfe84c6e6632f4759e0" width="48px" height="48px" title="ESP32 DevKit" alt="ESP32 DevKit" border-radius="50px"></a></li>  
+    <li>HTTPS (802.1X)<a href="examples/https-esp32-eduroam.ino"><img src="https://a.allegroimg.com/s128/0333a2/0e99076c4dfe84c6e6632f4759e0" width="48px" height="48px" title="ESP32 DevKit" alt="ESP32 DevKit" border-radius="50px"></a></li>
+    <hr><h2>Zdrojový kód - Offline tester</h2><hr>
 <pre style="background-color:#3498DB;">
 /*|----------------------------------------------------------|*/
-/*|SKETCH PRE TEST RFID CITACKY RC522 S ESP8266              |*/
+/*|SKETCH PRE TEST RFID CITACKY RC522                        |*/
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
-/*|DOSKA: NodeMCU v3 Lolin (v2 compatible)                   |*/
-/*|CORE: 2.3.0                                               |*/
+/*|DOSKA: ESP8266 (NodeMCU), ESP32, Arduino                  |*/
 /*|WEB: https://arduino.php5.sk                              |*/
 /*|LICENCIA: MIT                                             |*/
 /*|----------------------------------------------------------|*/
@@ -86,247 +101,11 @@ void loop(){
   rfid.halt();
 }
 </pre>
-<hr><h2>Zdrojový kód - HTTPS protokol (ESP8266) - ONLINE</h2><hr>
-<pre style="background-color:#2ECC71;">
-/*|----------------------------------------------------------|*/
-/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU               |*/
-/*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
-/*|EMAIL: martinius96@gmail.com                              |*/
-/*|DOSKA: NodeMCU v3 Lolin (v2 compatible)                   |*/
-/*|CORE: 2.3.0                                               |*/
-/*|WEB: https://arduino.php5.sk                              |*/
-/*|LICENCIA: MIT                                             |*/
-/*|----------------------------------------------------------|*/
-#include &lt;ESP8266WiFi.h&gt;
-#include &lt;WiFiClientSecure.h&gt;
-#include &lt;SPI.h&gt;
-#include &lt;RFID.h&gt;
-const char * ssid = "MenoWifiSiete";
-const char * password = "HesloWifiSiete";
-const char * host = "arduino.php5.sk"; //bez https a www
-const int httpsPort = 443; //https port
-const int rele = 16; //GPIO16 == D0
-const char * fingerprint = "‎‎b0 6d 7f 8c 98 78 8e 6e 0a 57 a8 2f 7e d1 40 2a 1e 3f 48 f7; // odtlacok HTTPS cert
-#define SS_PIN 4
-#define RST_PIN 5
-RFID rfid(SS_PIN, RST_PIN); 
-unsigned long kod;
-WiFiClientSecure client; //HTTPS client
-void setup(){ 
-	Serial.begin(9600);
-  	SPI.begin(); 
-  	rfid.init();
-  	pinMode(rele, OUTPUT);
-    digitalWrite(rele, HIGH); //hotfix
-	WiFi.begin(ssid, password);
-  	while (WiFi.status() != WL_CONNECTED) {
-    		delay(500);
-    		Serial.print(".");
-  	}
-	Serial.println("");
-  	Serial.println("WiFi uspesne pripojene");
-  	Serial.println("IP adresa: ");
-  	Serial.println(WiFi.localIP());
-  	Serial.println("Ready");
-}
 
-void loop(){
-  	if (WiFi.status() != WL_CONNECTED) {
-    		WiFi.begin(ssid, password);
-  	}
-  	while (WiFi.status() != WL_CONNECTED) {
-    		delay(500);
-    		Serial.print(".");
-  	}
-  	if (rfid.isCard()) {
-    		if (rfid.readCardSerial()) {
-      			Serial.println(" ");
-      			Serial.println("Card found");
-      			kod = 10000*rfid.serNum[4]+1000*rfid.serNum[3]+100*rfid.serNum[2]+10*rfid.serNum[1]+rfid.serNum[0];
-      			Serial.println(kod);
-      			String kodik = String(kod);
-      			client.stop();      
-      			if (client.connect(host, httpsPort)) {
-        			String url = "/rfid/karta.php?kod="+kodik;
-        			client.print(String("GET ") + url + " HTTP/1.0\r\n" + "Host: " + host + "\r\n" + "User-Agent: NodeMCU\r\n" + "Connection: close\r\n\r\n");
-      				while (client.connected()) {
-        				String line = client.readStringUntil('\n');
-        				if (line == "\r") {
-          					break;
-        				}	
-      				}
-  				String line = client.readStringUntil('\n');
-  				if (line == "OK"){
-	 				digitalWrite(rele, LOW); //invertovane spinane rele active LOW
-	 				delay(5500);              //cas otvorenia dveri
-					digitalWrite(rele, HIGH); //zatvor zamok
-  				}else if (line == "NO") {
-    					digitalWrite(rele,HIGH);
-				}
-  			}
-          }
-    	}
-	rfid.halt();
-}
-</pre>
-	  <hr><h2>Zdrojový kód - HTTP protokol (ESP8266) - ONLINE</h2><hr>
-<pre style="background-color:#A93226;">
-/*|----------------------------------------------------------|*/
-/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU               |*/
-/*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
-/*|EMAIL: martinius96@gmail.com                              |*/
-/*|DOSKA: NodeMCU v3 Lolin (v2 compatible)                   |*/
-/*|CORE: 2.3.0                                               |*/
-/*|WEB: https://arduino.php5.sk                              |*/
-/*|LICENCIA: MIT                                             |*/
-/*|----------------------------------------------------------|*/
-#include &lt;ESP8266WiFi.h&gt;
-#include &lt;SPI.h&gt;
-#include &lt;RFID.h&gt;
-const char * ssid = "MenoWifiSiete";
-const char * password = "HesloWifiSiete";
-const char * host = "www.arduino.php5.sk"; 
-const int httpPort = 80; //http port
-const int rele = 16; //GPIO16 == D0
-#define SS_PIN 4
-#define RST_PIN 5
-RFID rfid(SS_PIN, RST_PIN); 
-unsigned long kod;
-WiFiClient client;
-void setup(){ 
-    Serial.begin(9600);
-    SPI.begin(); 
-    rfid.init();
-    pinMode(rele, OUTPUT);
-    digitalWrite(rele, HIGH); //hotfix
-    WiFi.begin(ssid, password);
-    while (WiFi.status() != WL_CONNECTED) {
-        delay(500);
-        Serial.print(".");
-    }
-    Serial.println("");
-    Serial.println("WiFi uspesne pripojene");
-    Serial.println("IP adresa: ");
-    Serial.println(WiFi.localIP());
-    Serial.println("Ready");
-}
-
-void loop(){
-  if (WiFi.status() != WL_CONNECTED) {
-    WiFi.begin(ssid, password);
-    }
-    while (WiFi.status() != WL_CONNECTED) {
-        delay(500);
-        Serial.print(".");
-    }
-    if (rfid.isCard()) {
-        if (rfid.readCardSerial()) {
-            Serial.println(" ");
-            Serial.println("Card found");
-            kod = 10000*rfid.serNum[4]+1000*rfid.serNum[3]+100*rfid.serNum[2]+10*rfid.serNum[1]+rfid.serNum[0];
-            Serial.println(kod);
-            String kodik = String(kod);
-            client.stop();
-            if (client.connect(host, httpPort)) {
-              String url = "/rfid/karta.php?kod="+kodik;
-              client.print(String("GET ") + url + " HTTP/1.0\r\n" + "Host: " + host + "\r\n" + "User-Agent: NodeMCU\r\n" + "Connection: close\r\n\r\n");
-              while (client.connected()) {
-                String line = client.readStringUntil('\n');
-                if (line == "\r") {
-                    break;
-                }
-              }
-          String line = client.readStringUntil('\n');
-          if (line == "OK"){
-          digitalWrite(rele, LOW); //invertovane spinane rele active LOW
-          delay(5500);              //cas otvorenia dveri
-	  digitalWrite(rele, HIGH); //zatvor zamok
-            }else if (line == "NO") {
-                digitalWrite(rele,HIGH);
-          }
-        }
-            }
-      }
-
-    rfid.halt();
-}
-	</pre>
-<hr><h2>Zdrojový kód - HTTP protokol (Arduino + Ethernet W5100) - ONLINE</h2><hr>
-<pre style="background-color:#A569BD;">
-/*|----------------------------------------------------------|*/
-/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU               |*/
-/*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
-/*|EMAIL: martinius96@gmail.com                              |*/
-/*|Doska: Arduino Uno (Nano, Mega) + Wiznet W5100 (Ethernet) |*/
-/*|WEB: https://arduino.php5.sk                              |*/
-/*|----------------------------------------------------------|*/
-#include &lt;RFID.h>
-#include &lt;SPI.h>
-#include &lt;Ethernet.h>
-byte mac[] = { 0xAA, 0xBB, 0xCC, 0x81, 0x7B, 0x4A };
-const char * host = "www.arduino.php5.sk";
-IPAddress ip(192, 168, 1, 254);
-#define SS_PIN 6
-#define RST_PIN 5
-RFID rfid(SS_PIN, RST_PIN);
-unsigned long kod;
-const int rele = 3; //D3
-EthernetClient client;
-void setup() {
-  pinMode(rele, OUTPUT);
-  digitalWrite(rele, HIGH); //hotfix
-  SPI.begin();
-  rfid.init();
-  if (Ethernet.begin(mac) == 0) {
-    Ethernet.begin(mac, ip);
-  }
-  Serial.begin(115200);
-  Serial.println("Ready");
-}
-
-void loop() {
-  if (Ethernet.begin(mac) == 0) {
-    Ethernet.begin(mac, ip);
-  }
-  if (rfid.isCard()) {
-    if (rfid.readCardSerial()) {
-      Serial.println(" ");
-      Serial.println("Card found");
-      kod = 10000 * rfid.serNum[4] + 1000 * rfid.serNum[3] + 100 * rfid.serNum[2] + 10 * rfid.serNum[1] + rfid.serNum[0];
-      Serial.println(kod);
-      String kodik = String(kod);
-      client.stop();
-      if (client.connect(host, 80)) {
-        String url = "/rfid/karta.php?kod=" + kodik;
-        //String url = "/rfid/karta.php?kod="+kodik+"&origin=Ethernet";
-        //String url = "/rfid/karta.php?kod="+kodik+"&origin=Ethernet&topsecret=topsecret";
-        client.print(String("GET ") + url + " HTTP/1.0\r\n" + "Host: " + host + "\r\n" + "User-Agent: Ethernet\r\n" + "Connection: close\r\n\r\n");
-        while (client.connected()) {
-          String line = client.readStringUntil('\n');
-          if (line == "\r") {
-            break;
-          }
-        }
-        String line = client.readStringUntil('\n');
-        if (line == "OK") {
-          digitalWrite(rele, LOW); //invertovane spinane rele active LOW
-          delay(5500);              //cas otvorenia dveri
-	  digitalWrite(rele, HIGH); //zatvor zamok
-        } else if (line == "NO") {
-          digitalWrite(rele, HIGH);
-        }
-      }
-    }
-  }
-
-  rfid.halt();
-}
-</pre>    
       </div>
      <?php 
       include("footer.php");
       ?>
-     </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
