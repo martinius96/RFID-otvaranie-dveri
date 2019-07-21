@@ -1,7 +1,5 @@
 # RFID vrátnik s mikrokontrolérom ESP8266, ESP32, Arduino + Ethernet
-**Z dôvodu viacnásobného porušenia autorskej licencie sú odteraz projekty monitorované. Stiahnutím a používaním projektu s tým súhlasíte a zaväzujete sa k dodržiavaniu autorského práva. V prípade porušenia si uvedomujete právne následky.**
-* MIT licencia v plnom znení: https://en.wikipedia.org/wiki/MIT_License
-
+**Používaním projektu sa osoba zaväzuje k dodržiavaniu zmluvných podmienok MIT licencie, pod ktorou je projekt šírený! Uvedomuje si riziká, obmedzenia a svoje povinnosti. Všeobecne o MIT licencii: https://sk.wikipedia.org/wiki/MIT_licencia**
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
 * Informácie o projekte: https://arduino.php5.sk/rfid-system.php 
