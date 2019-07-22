@@ -1,5 +1,7 @@
 # RFID vrátnik s mikrokontrolérom ESP8266, ESP32, Arduino + Ethernet
 **Používaním projektu sa osoba zaväzuje k dodržiavaniu zmluvných podmienok MIT licencie, pod ktorou je projekt šírený! Uvedomuje si riziká, obmedzenia a svoje povinnosti. Všeobecne o MIT licencii: https://sk.wikipedia.org/wiki/MIT_licencia**
+# Podpora projektu pre širšiu dostupnosť a pridanie nových funkcionalít
+* https://www.paypal.me/chlebovec
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
 * Informácie o projekte: https://arduino.php5.sk/rfid-system.php 
@@ -27,8 +29,6 @@
 * Možno použiť Mifare tagy, ISIC karty, bankomatové, zamestnanecké karty, náramky i kľúčenky, ktoré spĺňajú štandard ISO/EIC 14443 A
 * V prípade odpovede OK mikrokontróler aktivuje jazýček, čím je možné dvere otvoriť. 
 * Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, elektromagnetický jazýček (solenoid) sa vtiahne pri stlačení kľučky
-# Podpora projektu pre širšiu dostupnosť a pridanie nových funkcionalít
-* https://www.paypal.me/chlebovec
 
 # Hardvér
 * ![NodeMCU](https://arduino.php5.sk/images/nodemcuv3.jpg)**NodeMCU (v2, alebo v3)**
