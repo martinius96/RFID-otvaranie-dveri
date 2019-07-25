@@ -50,7 +50,7 @@ $stranka = "Program";
 	   <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár so zdrojovými kódmi pre webstránku, ESP8266 a RFID čítačku RC522</a></li>
 	  <hr><h2>Zdrojové kódy s pripojením na: https://arduino.php5.sk/rfid</h2><hr>
     <h3>Arduino + Ethernet</h3>
-    <li>Arduino + Ethernet W5100<a href="examples/http-ethernet-w5100.ino"><img src="http://www.multipecastec.com.br/loja/img/thumb/ethernet-shield-wiznet-w5100-para-arduino_3464.jpg" width="48px" height="48px" title="Ethernet W5100" alt="Ethernet W5100" border-radius="50px"></a></li>  
+    <li>Arduino + Ethernet W5100<a href="examples/http-ethernet-w5100.ino"><img src="https://images.ua.prom.st/553985637_w128_h128_cid2424009_pid346622822-69b058aa.jpg" width="48px" height="48px" title="Ethernet W5100" alt="Ethernet W5100" border-radius="50px"></a></li>  
     <li>Arduino + Ethernet W5500<a href="examples/http-ethernet-w5500.ino"><img src="https://cdn.instructables.com/FAT/YMPE/JHQJS5HZ/FATYMPEJHQJS5HZ.LARGE.jpg" width="48px" height="48px" title="Ethernet W5500" alt="Ethernet W5500" border-radius="50px"></a></li> 
     <h3>ESP8266 (NodeMCU)</h3>
     <li>HTTP (PSK)<a href="examples/http-esp8266-psk.ino"><img src="https://0.allegroimg.com/s128/03b7c4/b538b7284cdf8e5fad55bcad8b10/Modul-WiFi-NodeMCU-V3-ESP8266-ESP-12E-Arduino" width="48px" height="48px" title="NodeMCU v3 Lolin" alt="NodeMCU v3 Lolin" border-radius="50px"></a></li>  
