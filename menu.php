@@ -31,8 +31,11 @@
             <li class="nav-item <?php if($stranka=="Nastavenia"){ echo 'active';}?>">
               <a class="nav-link" href="nastavenia.php">Nastavenia</a>
             </li>
-            <li class="nav-item <?php if($stranka=="Licencia"){ echo 'active';}?>">
-              <a class="nav-link btn btn-info" href="licencia.php" role="button">Licencia</a>
+             <li class="nav-item <?php if($stranka=="Licencia"){ echo 'active';}?>">
+              <a class="nav-link" href="licencia.php">Licencia</a>
+            </li>
+            <li class="nav-item <?php if($stranka=="Informacie"){ echo 'active';}?>">
+              <a class="nav-link" href="informacie.php">Informácie</a>
             </li>
              <li class="nav-item" id="right">
             <a href="https://www.paypal.me/chlebovec" class="btn btn-success" role="button" style="border-radius: 25px;"><img src="https://image.flaticon.com/icons/svg/888/888870.svg" width=32px height=32px>Podpora</a>
