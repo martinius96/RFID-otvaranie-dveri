@@ -1,5 +1,5 @@
 <?php
-$stranka = "Licencia";
+$stranka = "Evidencia";
 ?>
 <!DOCTYPE html>
 <html lang="en">
