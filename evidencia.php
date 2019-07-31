@@ -34,7 +34,7 @@ include("connect.php");
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
-       <a class="navbar-brand" href="index.php">RFID vrátnik</a>
+      <a class="navbar-brand" href="index.php">RFID vrátnik</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -77,7 +77,7 @@ if (isset($_POST["mesacny_report"])) {
 </div>';  
 }  
       ?>
-<h3>Evidencia zamestnancov - autorizované karty</h3>
+<h3>Evidencia nových zamestnancov - autorizované karty</h3>
 <hr>
 <form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 <table style="width: 100%;" border="1">
@@ -101,7 +101,7 @@ if (isset($_POST["mesacny_report"])) {
     <hr>
     <center><input type="submit" name="autorizovany_submit" class="btn btn-success" value="Upraviť autorizovaných zamestnancov"></center>
     </form>
-    <h3>Evidencia zamestnancov - neautorizované karty</h3>
+    <h3>Evidencia nových zamestnancov - neautorizované karty</h3>
 <hr>
 <form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 <table style="width: 100%;" border="1">
@@ -123,12 +123,7 @@ if (isset($_POST["mesacny_report"])) {
 			echo "</tr>";
 		}  ?> </tbody></table>
      <center><input type="submit" name="neautorizovany_submit" class="btn btn-danger" value="Upraviť neautorizovaných zamestnancov"></center>
-    </form>
-   <h3>Evidencia zamestnancov - reporty</h3> 
-  <div class="row"><div class="col-lg-4"><center><form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"><input type="submit" name="denny_report" class="btn btn-success" value="Denný report"></form></center></div>
-  <div class="col-lg-4"><center><form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"><input type="submit" name="tyzdenny_report" class="btn btn-warning" value="Týždenný report"></form></center></div>
-  <div class="col-lg-4"><center><form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"><input type="submit" name="mesacny_report" class="btn btn-primary" value="Mesačný report"></form></center></div></div>
-  <hr>
+    </form><hr>
  </div>
 
        </div>   
