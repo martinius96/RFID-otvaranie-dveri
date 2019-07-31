@@ -28,6 +28,9 @@
             <li class="nav-item <?php if($stranka=="Evidencia"){ echo 'active';}?>">
               <a class="nav-link" href="evidencia.php">Evidencia</a>
             </li>
+            <li class="nav-item <?php if($stranka=="Nastavenia"){ echo 'active';}?>">
+              <a class="nav-link" href="nastavenia.php">Nastavenia</a>
+            </li>
             <li class="nav-item <?php if($stranka=="Licencia"){ echo 'active';}?>">
               <a class="nav-link btn btn-info" href="licencia.php" role="button">Licencia</a>
             </li>
