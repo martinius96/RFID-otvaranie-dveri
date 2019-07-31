@@ -5,38 +5,45 @@
 <!--  / ____ \ |__| |  | | | |__| | | \ \ _     | |  | |/ ____ \| | \ \  | |   _| |_| |\  |     | |____| |  | | |____| |____| |_) | |__| | \  /  | |___| |____ -->
 <!-- /_/    \_\____/   |_|  \____/|_|  \_(_)    |_|  |_/_/    \_\_|  \_\ |_|  |_____|_| \_|      \_____|_|  |_|______|______|____/ \____/   \/   |______\_____|-->                                                                                                                                                                                                                                                                                                              
 <ul class="navbar-nav ml-auto">
-            <li class="nav-item <?php if($stranka=="Index"){ echo 'active';}?>">
-              <a class="nav-link" href="index.php">Prehľad
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item <?php if($stranka=="Pridat"){ echo 'active';}?>">
-              <a class="nav-link" href="pridat.php">Pridať kartu</a>
-            </li>
-            <li class="nav-item <?php if($stranka=="Odobrat"){ echo 'active';}?>"">
-              <a class="nav-link" href="odobrat.php">Odobrať kartu</a>
-            </li>
-			     <li class="nav-item <?php if($stranka=="Program"){ echo 'active';}?>">
-              <a class="nav-link" href="program.php">Program</a>
-            </li>
-            <li class="nav-item <?php if($stranka=="Stats"){ echo 'active';}?>">
-              <a class="nav-link" href="statistika.php">Štatistika</a>
-            </li>
-            <li class="nav-item <?php if($stranka=="Zapojenie"){ echo 'active';}?>">
-              <a class="nav-link" href="zapojenie.php">Zapojenie</a>
-            </li>
-            <li class="nav-item <?php if($stranka=="Evidencia"){ echo 'active';}?>">
-              <a class="nav-link" href="evidencia.php">Evidencia</a>
-            </li>
-            <li class="nav-item <?php if($stranka=="Nastavenia"){ echo 'active';}?>">
-              <a class="nav-link" href="nastavenia.php">Nastavenia</a>
-            </li>
-             <li class="nav-item <?php if($stranka=="Licencia"){ echo 'active';}?>">
-              <a class="nav-link" href="licencia.php">Licencia</a>
-            </li>
-            <li class="nav-item <?php if($stranka=="Informacie"){ echo 'active';}?>">
-              <a class="nav-link" href="informacie.php">Informácie</a>
-            </li>
+            
+            <div class="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+      Správa prístupov
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item nav-item <?php if($stranka=="Index"){ echo 'active';}?>" href="index.php">Prehľad</a>
+      <a class="dropdown-item nav-item <?php if($stranka=="Pridat"){ echo 'active';}?>" href="pridat.php">Pridať kartu</a>
+      <a class="dropdown-item nav-item <?php if($stranka=="Odobrat"){ echo 'active';}?>" href="odobrat.php">Odstrániť kartu</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+      Hardvér a softvér
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item nav-item <?php if($stranka=="Program"){ echo 'active';}?>" href="program.php">Program</a>
+      <a class="dropdown-item nav-item <?php if($stranka=="Zapojenie"){ echo 'active';}?>" href="zapojenie.php">Zapojenie</a>
+      <a class="dropdown-item nav-item <?php if($stranka=="Licencia"){ echo 'active';}?>" href="licencia.php">Licencia</a>
+      <a class="dropdown-item nav-item <?php if($stranka=="Informacie"){ echo 'active';}?>" href="informacie.php">Informácie</a>
+    </div>
+  </div>
+   <div class="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+      Zamestnanci
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item nav-item <?php if($stranka=="Evidencia"){ echo 'active';}?>" href="evidencia.php">Evidencia</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+      RFID vrátnik
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item nav-item <?php if($stranka=="Stats"){ echo 'active';}?>" href="statistika.php">Štatistika</a>
+      <a class="dropdown-item nav-item <?php if($stranka=="Nastavenia"){ echo 'active';}?>" href="nastavenia.php">Nastavenia</a>
+    </div>
+  </div>
              <li class="nav-item" id="right">
             <a href="https://www.paypal.me/chlebovec" class="btn btn-success" role="button" style="border-radius: 25px;"><img src="https://image.flaticon.com/icons/svg/888/888870.svg" width=32px height=32px>Podpora</a>
             </li>
