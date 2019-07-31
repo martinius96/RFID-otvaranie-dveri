@@ -51,7 +51,6 @@ include("connect.php");
       <div class="row">
     <div class="col-lg-12">
    <?php 
-      include("odkaz.php");
       if (isset($_POST["autorizovany_submit"])) {
     echo '<div class="alert alert-danger">
   <strong>Nepovolená akcia!</strong> Možnosť upravovať mená zamestnancov k autorizovaným kartám s fotografiami je možné vykonať iba v platenej verzii. - pri záujme: <b>martinius96@gmail.com</b>
