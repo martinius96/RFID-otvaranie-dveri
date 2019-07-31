@@ -5,9 +5,8 @@
 <!--  / ____ \ |__| |  | | | |__| | | \ \ _     | |  | |/ ____ \| | \ \  | |   _| |_| |\  |     | |____| |  | | |____| |____| |_) | |__| | \  /  | |___| |____ -->
 <!-- /_/    \_\____/   |_|  \____/|_|  \_(_)    |_|  |_/_/    \_\_|  \_\ |_|  |_____|_| \_|      \_____|_|  |_|______|______|____/ \____/   \/   |______\_____|-->                                                                                                                                                                                                                                                                                                              
 <ul class="navbar-nav ml-auto">
-            
-            <div class="dropdown">
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+<div class="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px;">
       Správa prístupov
     </button>
     <div class="dropdown-menu">
@@ -17,7 +16,7 @@
     </div>
   </div>
   <div class="dropdown">
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px;">
       Hardvér a softvér
     </button>
     <div class="dropdown-menu">
@@ -28,7 +27,7 @@
     </div>
   </div>
    <div class="dropdown">
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px;">
       Zamestnanci
     </button>
     <div class="dropdown-menu">
@@ -36,7 +35,7 @@
     </div>
   </div>
   <div class="dropdown">
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px;">
       RFID vrátnik
     </button>
     <div class="dropdown-menu">
@@ -44,7 +43,7 @@
       <a class="dropdown-item nav-item <?php if($stranka=="Nastavenia"){ echo 'active';}?>" href="nastavenia.php">Nastavenia</a>
     </div>
   </div>
-             <li class="nav-item" id="right">
+   <li class="nav-item" id="right">
             <a href="https://www.paypal.me/chlebovec" class="btn btn-success" role="button" style="border-radius: 25px;"><img src="https://image.flaticon.com/icons/svg/888/888870.svg" width=32px height=32px>Podpora</a>
             </li>
           </ul>
