@@ -114,7 +114,6 @@ input:checked + .slider:before {
       <div class="row">
     <div class="col-lg-12">
    <?php 
-      include("odkaz.php");
       if (isset($_POST["odosli_nastavenia"])) {
     echo '<div class="alert alert-danger">
   <strong>Nepovolená akcia!</strong> Možnosť upravovať nastavenia je možné iba v platenej verzii projektu - pri záujme: <b>martinius96@gmail.com</b>
