@@ -50,7 +50,6 @@ include("connect.php");
       <div class="row">
     <div class="col-lg-12">
    <?php 
-      include("odkaz.php");
 if (isset($_POST["detail_zamestnanca"])) {
     echo '<div class="alert alert-danger">
   <strong>Nepovolená akcia!</strong> Možnosť zobraziť detail zamestnanca s možnosťou jeho úprav je obsahom platenej verzie projektu - pri záujme: <b>martinius96@gmail.com</b>
