@@ -34,6 +34,7 @@
     <div class="dropdown-menu">
       <a class="dropdown-item nav-item <?php if($stranka=="Evidencia"){ echo 'active';}?>" href="evidencia.php">Evidencia</a>
       <a class="dropdown-item nav-item <?php if($stranka=="Reporty"){ echo 'active';}?>" href="reporty.php">Reporty</a>
+      <a class="dropdown-item nav-item <?php if($stranka=="Detail"){ echo 'active';}?>" href="detail.php">Detail zamestnanca</a>
     </div>
   </div>
   <div class="dropdown">
