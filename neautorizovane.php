@@ -15,9 +15,9 @@ include("connect.php");
 		while($line = mysqli_fetch_assoc($karty)){
 			echo "<tr>";
 			$casik = date('d. M H:i:s',strtotime($line['time']));			
-       echo "<td><i>". $casik . "</i></td>";
-				  echo '<td><i>' . $line['cislo_karty'] .'</i></td>';
-				 echo "<td><a href='pridaj.php?".$line['cislo_karty']."' class='btn btn-success'>Pridať</a></td>";
+      			echo "<td><i>". $casik . "</i></td>";
+			echo '<td><i>' . $line['cislo_karty'] .'</i></td>';
+			echo "<td><a href='pridaj.php?".$line['cislo_karty']."' class='btn btn-success'>Pridať</a></td>";
 			echo "</tr>";
 		}  ?> 
 	</tbody>
