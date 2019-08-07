@@ -72,7 +72,9 @@ void loop(){
 					digitalWrite(rele, HIGH); //zatvor zamok
   					}else if (line == "NO") {
     						digitalWrite(rele,HIGH);
-					}
+					} else{
+          Serial.println("Prosim pockajte s dalsim overenim karty 5 sekund!");
+          }  
   			}
           	}
     	}
