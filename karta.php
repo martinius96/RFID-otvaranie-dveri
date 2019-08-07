@@ -3,7 +3,7 @@ include("connect.php");
 $kod = mysqli_real_escape_string($con, $_GET['kod']);
 $kod = trim( $kod );
 $kod = hexdec(hash('crc32b', $kod));
-//$zmazat = mysqli_query($con,"DELETE FROM pokusy WHERE date(time) < CURDATE() - INTERVAL 1 MINUTE") or die(mysqli_error($con));
+// $zmazat = mysqli_query($con,"DELETE FROM pokusy WHERE date(time) < CURDATE() - INTERVAL 1 MINUTE") or die(mysqli_error($con));
 // VOLITELNE (zmenu aplikovat i v programe NodeMCU) $origin = mysqli_real_escape_string($con, $_GET['origin']);
 // VOLITELNE (zmenu aplikovat i v programe NodeMCU) $origin = trim( $origin );
 
