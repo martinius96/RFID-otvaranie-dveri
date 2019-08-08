@@ -1,0 +1,61 @@
+# NetScript
+# 
+# Exported from rozrobene_rfid_uno.sch at 16. 7. 2019 21:02
+# 
+# EAGLE Version 9.0.1 Copyright (c) 1988-2018 Autodesk, Inc.
+# 
+Change Class 0;
+Signal 'N$1'      'M1'       'J1.9' \
+                  'RFID_READER' 'SS' \
+                  ;
+Change Class 0;
+Signal 'N$2'      'M1'       'J1.4' \
+                  'NAPAJANIE' '1' \
+                  ;
+Change Class 0;
+Signal 'N$4'      'M1'       'J1.8' \
+                  'RFID_READER' 'RST' \
+                  ;
+Change Class 0;
+Signal 'N$5'      'M1'       'J2.2' \
+                  'RFID_READER' 'GND' \
+                  ;
+Change Class 0;
+Signal 'N$6'      'M1'       'J1.15' \
+                  'RFID_READER' 'MISO' \
+                  ;
+Change Class 0;
+Signal 'N$7'      'M1'       'J1.14' \
+                  'RFID_READER' 'MOSI' \
+                  ;
+Change Class 0;
+Signal 'N$8'      'M1'       'J2.4' \
+                  'NAPAJANIE' '3' \
+                  ;
+Change Class 0;
+Signal 'N$9'      'M1'       'J1.7' \
+                  'NAPAJANIE' '2' \
+                  ;
+Change Class 0;
+Signal 'N$10'     'M1'       'J2.15' \
+                  'RFID_READER' 'SCK' \
+                  ;
+Change Class 0;
+Signal 'N$11'     'L'        '1' \
+                  'RELE'     'SWOPEN' \
+                  ;
+Change Class 0;
+Signal 'N$12'     'N'        '1' \
+                  'SOLENOID' '1' \
+                  ;
+Change Class 0;
+Signal 'N$13'     'RELE'     'SWCLOSED' \
+                  'SOLENOID' '2' \
+                  ;
+Change Class 0;
+Signal 'N$14'     'M1'       'J2.14' \
+                  'RFID_READER' '3V3' \
+                  ;
+Change Class 0;
+Signal 'VIN'      'M1'       'J2.1' \
+                  ;
