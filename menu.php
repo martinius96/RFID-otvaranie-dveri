@@ -5,22 +5,21 @@
 <!--  / ____ \ |__| |  | | | |__| | | \ \ _     | |  | |/ ____ \| | \ \  | |   _| |_| |\  |     | |____| |  | | |____| |____| |_) | |__| | \  /  | |___| |____ -->
 <!-- /_/    \_\____/   |_|  \____/|_|  \_(_)    |_|  |_/_/    \_\_|  \_\ |_|  |_____|_| \_|      \_____|_|  |_|______|______|____/ \____/   \/   |______\_____|-->                                                                                                                                                                                                                                                                                                              
 <ul class="navbar-nav ml-auto">
-            
-            <div class="dropdown">
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px;">
+   <div class="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px; background-color: #D35400;">
       Správa prístupov
     </button>
-    <div class="dropdown-menu">
+    <div class="dropdown-menu" style="background-color: #C0392B;">
       <a class="dropdown-item nav-item <?php if($stranka=="Index"){ echo 'active';}?>" href="index.php">Prehľad</a>
       <a class="dropdown-item nav-item <?php if($stranka=="Pridat"){ echo 'active';}?>" href="pridat.php">Pridať kartu</a>
       <a class="dropdown-item nav-item <?php if($stranka=="Odobrat"){ echo 'active';}?>" href="odobrat.php">Odstrániť kartu</a>
     </div>
   </div>
   <div class="dropdown">
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px;">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px; background-color: #D35400;">
       Hardvér a softvér
     </button>
-    <div class="dropdown-menu">
+    <div class="dropdown-menu" style="background-color: #C0392B;">
       <a class="dropdown-item nav-item <?php if($stranka=="Program"){ echo 'active';}?>" href="program.php">Program</a>
       <a class="dropdown-item nav-item <?php if($stranka=="Zapojenie"){ echo 'active';}?>" href="zapojenie.php">Zapojenie</a>
       <a class="dropdown-item nav-item <?php if($stranka=="Licencia"){ echo 'active';}?>" href="licencia.php">Licencia</a>
@@ -28,20 +27,20 @@
     </div>
   </div>
    <div class="dropdown">
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px;">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px; background-color: #D35400;">
       Zamestnanci
     </button>
-    <div class="dropdown-menu">
+    <div class="dropdown-menu" style="background-color: #C0392B;">
       <a class="dropdown-item nav-item <?php if($stranka=="Evidencia"){ echo 'active';}?>" href="evidencia.php">Evidencia</a>
       <a class="dropdown-item nav-item <?php if($stranka=="Reporty"){ echo 'active';}?>" href="reporty.php">Reporty</a>
       <a class="dropdown-item nav-item <?php if($stranka=="Detail"){ echo 'active';}?>" href="detail.php">Detail zamestnanca</a>
     </div>
   </div>
-  <div class="dropdown">
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px;">
+  <div class="dropdown">                                                                                          
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px; background-color: #D35400;">
       RFID vrátnik
     </button>
-    <div class="dropdown-menu">
+    <div class="dropdown-menu" style="background-color: #C0392B;">
       <a class="dropdown-item nav-item <?php if($stranka=="Stats"){ echo 'active';}?>" href="statistika.php">Štatistika</a>
       <a class="dropdown-item nav-item <?php if($stranka=="Nastavenia"){ echo 'active';}?>" href="nastavenia.php">Nastavenia</a>
     </div>
