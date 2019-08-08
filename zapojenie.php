@@ -29,7 +29,7 @@ $stranka = "Zapojenie";
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
-      <a class="navbar-brand" href="index.php">RFID vrátnik</a>
+       <a class="navbar-brand" href="index.php">RFID vrátnik</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,23 +49,23 @@ $stranka = "Zapojenie";
   <hr><h2>Zapojenie - ESP32</h2>
    <img src="https://i.imgur.com/HKHrsEO.png" style="display: block; max-width: 100%; height: auto;" title="RFID vrátnik - schéma ESP32" alt="RFID vrátnik - schéma ESP32">
    <b>Dostupné na stiahnutie (ESP8266): </b>
-   <li>Formát .sch - <a href="eagle/rfid_otvaranie_dveri.sch"><img src="https://d2.alternativeto.net/dist/icons/eaglecad_116263.png?width=128&height=128&mode=crop&upscale=false" width="32px" height="32px" title="Autodesk Eagle - ESP8266 (NodeMCU)" alt="Autodesk Eagle - ESP8266 (NodeMCU)"></a></li>
+   <li>Formát .sch - <a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/eagle/ESP8266/rfid_vratnik_esp8266.sch"><img src="https://d2.alternativeto.net/dist/icons/eaglecad_116263.png?width=128&height=128&mode=crop&upscale=false" width="32px" height="32px" title="Autodesk Eagle - ESP8266 (NodeMCU)" alt="Autodesk Eagle - ESP8266 (NodeMCU)"></a></li>
    <hr>
-   <li>Formát .dxf - <a href="eagle/rfid_otvaranie_dveri.dxf"><img src="http://www.iconninja.com/files/424/698/454/file-document-extension-cad-format-page-icon.png" width="32px" height="32px" title="CAD - AutoCAD, SoliCAD, ProgeCAD - ESP8266 (NodeMCU)" alt="CAD - AutoCAD, SoliCAD, ProgeCAD - ESP8266 (NodeMCU)"></a></li>
+   <li>Formát .dxf - <a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/eagle/ESP8266/rfid_vratnik_esp8266.dxf"><img src="http://www.iconninja.com/files/424/698/454/file-document-extension-cad-format-page-icon.png" width="32px" height="32px" title="CAD - AutoCAD, SoliCAD, ProgeCAD - ESP8266 (NodeMCU)" alt="CAD - AutoCAD, SoliCAD, ProgeCAD - ESP8266 (NodeMCU)"></a></li>
    <hr>
-   <li>Formát .scr - <a href="eagle/rfid_otvaranie_dveri.scr"><img src="https://cdn0.iconfinder.com/data/icons/flat-design-database-set-3/24/script-128.png" width="32px" height="32px" title="NetScript - ESP8266 (NodeMCU)" alt="NetScript - ESP8266 (NodeMCU)"></a></li>
+   <li>Formát .scr - <a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/eagle/ESP8266/rfid_vratnik_esp8266.scr"><img src="https://cdn0.iconfinder.com/data/icons/flat-design-database-set-3/24/script-128.png" width="32px" height="32px" title="NetScript - ESP8266 (NodeMCU)" alt="NetScript - ESP8266 (NodeMCU)"></a></li>
    <b>Dostupné na stiahnutie (Arduino + Ethernet W5100): </b>
-   <li>Formát .sch - <a href="eagle/rfid_otvaranie_dveri_uno.sch"><img src="https://d2.alternativeto.net/dist/icons/eaglecad_116263.png?width=128&height=128&mode=crop&upscale=false" width="32px" height="32px" title="Autodesk Eagle - Arduino + Ethernet" alt="Autodesk Eagle - Arduino + Ethernet"></a></li>
+   <li>Formát .sch - <a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/eagle/Arduino/rfid_vratnik_arduino.sch"><img src="https://d2.alternativeto.net/dist/icons/eaglecad_116263.png?width=128&height=128&mode=crop&upscale=false" width="32px" height="32px" title="Autodesk Eagle - Arduino + Ethernet" alt="Autodesk Eagle - Arduino + Ethernet"></a></li>
    <hr>
-   <li>Formát .dxf - <a href="eagle/rfid_otvaranie_dveri_uno.dxf"><img src="http://www.iconninja.com/files/424/698/454/file-document-extension-cad-format-page-icon.png" width="32px" height="32px" title="CAD - AutoCAD, SoliCAD, ProgeCAD - Arduino + Ethernet" alt="CAD - AutoCAD, SoliCAD, ProgeCAD - Arduino + Ethernet"></a></li>
+   <li>Formát .dxf - <a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/eagle/Arduino/rfid_vratnik_arduino.dxf"><img src="http://www.iconninja.com/files/424/698/454/file-document-extension-cad-format-page-icon.png" width="32px" height="32px" title="CAD - AutoCAD, SoliCAD, ProgeCAD - Arduino + Ethernet" alt="CAD - AutoCAD, SoliCAD, ProgeCAD - Arduino + Ethernet"></a></li>
    <hr>
-   <li>Formát .scr - <a href="eagle/rfid_otvaranie_dveri_uno.scr"><img src="https://cdn0.iconfinder.com/data/icons/flat-design-database-set-3/24/script-128.png" width="32px" height="32px" title="NetScript - Arduino + Ethernet" alt="NetScript - Arduino + Ethernet"></a></li>  
+   <li>Formát .scr - <a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/eagle/Arduino/rfid_vratnik_arduino.dxf"><img src="https://cdn0.iconfinder.com/data/icons/flat-design-database-set-3/24/script-128.png" width="32px" height="32px" title="NetScript - Arduino + Ethernet" alt="NetScript - Arduino + Ethernet"></a></li>  
    <b>Dostupné na stiahnutie (ESP32): </b>
-   <li>Formát .sch - <a href="eagle/rfid_otvaranie_dveri_esp32.sch"><img src="https://d2.alternativeto.net/dist/icons/eaglecad_116263.png?width=128&height=128&mode=crop&upscale=false" width="32px" height="32px" title="Autodesk Eagle - ESP32" alt="Autodesk Eagle - ESP32"></a></li>
+   <li>Formát .sch - <a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/eagle/ESP32/rfid_vratnik_esp32.sch"><img src="https://d2.alternativeto.net/dist/icons/eaglecad_116263.png?width=128&height=128&mode=crop&upscale=false" width="32px" height="32px" title="Autodesk Eagle - ESP32" alt="Autodesk Eagle - ESP32"></a></li>
    <hr>
-   <li>Formát .dxf - <a href="eagle/rfid_otvaranie_dveri_esp32.dxf"><img src="http://www.iconninja.com/files/424/698/454/file-document-extension-cad-format-page-icon.png" width="32px" height="32px" title="CAD - AutoCAD, SoliCAD, ProgeCAD - ESP32" alt="CAD - AutoCAD, SoliCAD, ProgeCAD - ESP32"></a></li>
+   <li>Formát .dxf - <a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/eagle/ESP32/rfid_vratnik_esp32.dxf"><img src="http://www.iconninja.com/files/424/698/454/file-document-extension-cad-format-page-icon.png" width="32px" height="32px" title="CAD - AutoCAD, SoliCAD, ProgeCAD - ESP32" alt="CAD - AutoCAD, SoliCAD, ProgeCAD - ESP32"></a></li>
    <hr>
-   <li>Formát .scr - <a href="eagle/rfid_otvaranie_dveri_esp32.scr"><img src="https://cdn0.iconfinder.com/data/icons/flat-design-database-set-3/24/script-128.png" width="32px" height="32px" title="NetScript - ESP32" alt="NetScript - ESP32"></a></li>
+   <li>Formát .scr - <a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/eagle/ESP32/rfid_vratnik_esp32.scr"><img src="https://cdn0.iconfinder.com/data/icons/flat-design-database-set-3/24/script-128.png" width="32px" height="32px" title="NetScript - ESP32" alt="NetScript - ESP32"></a></li>
    <hr></div>
      <?php 
       include("footer.php");
