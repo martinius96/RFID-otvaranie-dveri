@@ -49,25 +49,18 @@ $stranka = "Program";
 	   <li><a href="https://www.nxp.com/docs/en/data-sheet/MFRC522.pdf">RC522 datasheet</a></li><br>
 	   <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár so zdrojovými kódmi pre webstránku, ESP8266 a RFID čítačku RC522</a></li>
 	  <hr><h2>Zdrojové kódy s pripojením na: https://arduino.php5.sk/rfid</h2><hr>
-    <h3>Arduino + Ethernet</h3>
-    <li>Arduino + Ethernet W5100<a href="examples/http-ethernet-w5100.ino"><img src="https://images.ua.prom.st/553985637_w128_h128_cid2424009_pid346622822-69b058aa.jpg" width="48px" height="48px" title="Ethernet W5100" alt="Ethernet W5100" border-radius="50px"></a></li>  
-    <li>Arduino + Ethernet W5500<a href="examples/http-ethernet-w5500.ino"><img src="https://cdn.instructables.com/FAT/YMPE/JHQJS5HZ/FATYMPEJHQJS5HZ.LARGE.jpg" width="48px" height="48px" title="Ethernet W5500" alt="Ethernet W5500" border-radius="50px"></a></li> 
-    <h3>ESP8266 (NodeMCU)</h3>
-    <li>HTTP (PSK)<a href="examples/http-esp8266-psk.ino"><img src="https://0.allegroimg.com/s128/03b7c4/b538b7284cdf8e5fad55bcad8b10/Modul-WiFi-NodeMCU-V3-ESP8266-ESP-12E-Arduino" width="48px" height="48px" title="NodeMCU v3 Lolin" alt="NodeMCU v3 Lolin" border-radius="50px"></a></li>  
-    <li>HTTPS (PSK)<a href="examples/https-esp8266-psk.ino"><img src="https://0.allegroimg.com/s128/03b7c4/b538b7284cdf8e5fad55bcad8b10/Modul-WiFi-NodeMCU-V3-ESP8266-ESP-12E-Arduino" width="48px" height="48px" title="NodeMCU v3 Lolin" alt="NodeMCU v3 Lolin" border-radius="50px"></a></li>  
-    <hr>
-    <li>HTTP (802.1X)<a href="examples/http-esp8266-eduroam.ino"><img src="https://0.allegroimg.com/s128/03b7c4/b538b7284cdf8e5fad55bcad8b10/Modul-WiFi-NodeMCU-V3-ESP8266-ESP-12E-Arduino" width="48px" height="48px" title="NodeMCU v3 Lolin" alt="NodeMCU v3 Lolin" border-radius="50px"></a></li>  
-    <li>HTTPS (802.1X)<a href="examples/https-esp8266-eduroam.ino"><img src="https://0.allegroimg.com/s128/03b7c4/b538b7284cdf8e5fad55bcad8b10/Modul-WiFi-NodeMCU-V3-ESP8266-ESP-12E-Arduino" width="48px" height="48px" title="NodeMCU v3 Lolin" alt="NodeMCU v3 Lolin" border-radius="50px"></a></li>  
-    <h3>ESP32 (Devkit)</h3>
-    <li>HTTP (PSK)<a href="examples/http-esp32-psk.ino"><img src="https://a.allegroimg.com/s128/0333a2/0e99076c4dfe84c6e6632f4759e0" width="48px" height="48px" title="ESP32 DevKit" alt="ESP32 DevKit" border-radius="50px"></a></li>  
-    <li>HTTPS (PSK)<a href="examples/https-esp32-psk.ino"><img src="https://a.allegroimg.com/s128/0333a2/0e99076c4dfe84c6e6632f4759e0" width="48px" height="48px" title="ESP32 DevKit" alt="ESP32 DevKit" border-radius="50px"></a></li>  
-    <hr>
-    <li>HTTP (802.1X)<a href="examples/http-esp32-eduroam.ino"><img src="https://a.allegroimg.com/s128/0333a2/0e99076c4dfe84c6e6632f4759e0" width="48px" height="48px" title="ESP32 DevKit" alt="ESP32 DevKit" border-radius="50px"></a></li>  
-    <li>HTTPS (802.1X)<a href="examples/https-esp32-eduroam.ino"><img src="https://a.allegroimg.com/s128/0333a2/0e99076c4dfe84c6e6632f4759e0" width="48px" height="48px" title="ESP32 DevKit" alt="ESP32 DevKit" border-radius="50px"></a></li>
-    <hr><h2>Zdrojový kód - Offline tester</h2><hr>
+    <div class="alert alert-info">
+	    <strong>Dostupné na Githube:</strong> <a href="https://github.com/martinius96/RFID-otvaranie-dveri/tree/master/examples">Repozitár</a>
+</div>
+<b>Dostupné technológie:</b>
+<li>Ethernet</li>
+<li>WiFi</li>
+<li>Lora</li>
+<li>SigFox</li>
+<hr><h2>Zdrojový kód - Offline tester</h2><hr>
 <pre style="background-color:#3498DB;">
 /*|----------------------------------------------------------|*/
-/*|SKETCH PRE TEST RFID CITACKY RC522                        |*/
+/*|SKETCH PRE TEST RFID CITACKY RC522   (HARDWARE SPI)       |*/
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
 /*|DOSKA: ESP8266 (NodeMCU), ESP32, Arduino                  |*/
