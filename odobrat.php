@@ -57,6 +57,7 @@ include("connect.php");
       <div id="last5"></div>
 		<b>Autorizované karty</b>
 		<div id="aut"></div>
+	      <hr>
         </div>
       </div>
      <?php 
