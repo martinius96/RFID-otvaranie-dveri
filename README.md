@@ -37,7 +37,7 @@
 * ![Arduino Uno](https://s3-ap-northeast-1.amazonaws.com/switch-science-intl/contents/small/789_201602_102_tBuTiHx.jpg)**Arduino Uno**
 * ![Ethernet W5100](https://arduino.php5.sk/images/ethernetshield.jpg)Ethernet shield W5100
 * ![Ethernet W5500](https://cdn.instructables.com/FAT/YMPE/JHQJS5HZ/FATYMPEJHQJS5HZ.LARGE.jpg)Ethernet modul W5500
-* ![LoRa](https://cdn.shopify.com/s/files/1/2187/3161/products/RAK811_LoRa_LoRAWAN_module_based_on_SX1276_868_915MHz_up_to_3km_range_128x.png?v=1535900353)SX1276
+* ![LoRa](https://cdn.shopify.com/s/files/1/2187/3161/products/RAK811_LoRa_LoRAWAN_module_based_on_SX1276_868_915MHz_up_to_3km_range_128x.png?v=1535900353)LoRa (Semtech SX1276/77/78/79)
 * ![Sigfox modem](https://docid81hrs3j1.cloudfront.net/contents/small/5373_001_5wQsjlY.jpeg)Sigfox modem
 #
 * ![ESP32 DevKit](http://www.robotop.lv/1802-home/nodemcu-esp-32-v11.jpg)**ESP32 DevKit v1 - v4**
