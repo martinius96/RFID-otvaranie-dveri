@@ -16,15 +16,15 @@ include("connect.php");
 			echo "<tr>";
 			$casik = date('d. M H:i:s',strtotime($line['time']));	
 			if($line['vysledok']==1){
-				echo '<td bgcolor="#2ECC71"><i>'. $casik . '</i></td>';	
-				echo '<td bgcolor="#2ECC71"><i>' . $line['cislo_karty']. '</i></td>';
+				echo '<td bgcolor="#2ECC71"><i>'. htmlspecialchars($casik). '</i></td>';	
+				echo '<td bgcolor="#2ECC71"><i>' . htmlspecialchars($line['cislo_karty']). '</i></td>';
 				$vysledok = "Úspešné overenie";
-				echo '<td bgcolor="#2ECC71"><i>' . $vysledok .'</i></td>';
+				echo '<td bgcolor="#2ECC71"><i>' . htmlspecialchars($vysledok) .'</i></td>';
 			}else{
-				echo '<td bgcolor="#E74C3C"><i>'. $casik . '</i></td>';	
-				echo '<td bgcolor="#E74C3C"><i>' . $line['cislo_karty']. '</i></td>';
+				echo '<td bgcolor="#E74C3C"><i>'. htmlspecialchars($casik) . '</i></td>';	
+				echo '<td bgcolor="#E74C3C"><i>' . htmlspecialchars($line['cislo_karty']). '</i></td>';
 				$vysledok = "Neúspešné overenie";
-				echo '<td bgcolor="#E74C3C"><i>' . $vysledok .'</i></td>';
+				echo '<td bgcolor="#E74C3C"><i>' . htmlspecialchars($vysledok) .'</i></td>';
 			}		
 	echo "</tr>";
 		}  ?> 
