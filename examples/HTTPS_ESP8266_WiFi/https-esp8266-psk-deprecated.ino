@@ -1,5 +1,5 @@
 /*|----------------------------------------------------------|*/
-/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU               |*/
+/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU  (NEFUNGUJE)  |*/
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
 /*|FB: https://www.facebook.com/martin.s.chlebovec           |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
