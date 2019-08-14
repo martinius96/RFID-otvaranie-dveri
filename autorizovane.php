@@ -11,8 +11,8 @@ include("connect.php");
 		while($line = mysqli_fetch_assoc($karty)){
 			echo "<tr>";
 			$casik = date('d. M H:i:s',strtotime($line['time']));			
-       			echo "<td><i>". $casik . "</i></td>";
-			echo '<td><i>' . $line['cislo_karty'] .'</i></td>';
+       			echo "<td><i>". htmlspecialchars($casik) . "</i></td>";
+			echo '<td><i>' . htmlspecialchars($line['cislo_karty']) .'</i></td>';
 			echo "</tr>";
 		}  
 ?> 
