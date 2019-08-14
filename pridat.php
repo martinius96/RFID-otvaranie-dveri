@@ -58,6 +58,7 @@ include("connect.php");
 		<div id="autorizovane"></div>
 		<hr><b>Neautorizované karty</b><hr>
 		<div id="neautorizovane"></div>
+	      <hr>
         </div>
       </div>
       <?php 
