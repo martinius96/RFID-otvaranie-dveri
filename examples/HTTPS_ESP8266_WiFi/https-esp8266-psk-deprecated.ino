@@ -1,12 +1,12 @@
-/*|----------------------------------------------------------|*/
-/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU  (NEFUNGUJE)  |*/
-/*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
-/*|FB: https://www.facebook.com/martin.s.chlebovec           |*/
-/*|EMAIL: martinius96@gmail.com                              |*/
-/*|Doska: NodeMCU v3 Lolin (v2 compatible)                   |*/
-/*|CORE: 2.3.0                                               |*/
-/*|WEB: https://arduino.php5.sk                              |*/
-/*|----------------------------------------------------------|*/
+/*|-----------------------------------------------------------------------------|*/
+/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU  (NEFUNGUJE PRE DOMENU PHP5.sk)  |*/
+/*|VYHOTOVIL: MARTIN CHLEBOVEC                                                  |*/
+/*|FB: https://www.facebook.com/martin.s.chlebovec                              |*/
+/*|EMAIL: martinius96@gmail.com                                                 |*/
+/*|Doska: NodeMCU v3 Lolin (v2 compatible)                                      |*/
+/*|CORE: 2.3.0                                                                  |*/
+/*|WEB: https://arduino.php5.sk                                                 |*/
+/*|-----------------------------------------------------------------------------|*/
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
 #include <SPI.h>
