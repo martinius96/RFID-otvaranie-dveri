@@ -5,7 +5,8 @@
 <!--  / ____ \ |__| |  | | | |__| | | \ \ _     | |  | |/ ____ \| | \ \  | |   _| |_| |\  |     | |____| |  | | |____| |____| |_) | |__| | \  /  | |___| |____ -->
 <!-- /_/    \_\____/   |_|  \____/|_|  \_(_)    |_|  |_/_/    \_\_|  \_\ |_|  |_____|_| \_|      \_____|_|  |_|______|______|____/ \____/   \/   |______\_____|-->                                                                                                                                                                                                                                                                                                              
 <ul class="navbar-nav ml-auto">
-   <div class="dropdown">
+            
+            <div class="dropdown">
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px; background-color: #D35400;">
       Správa prístupov
     </button>
@@ -26,13 +27,12 @@
       <a class="dropdown-item nav-item <?php if($stranka=="Informacie"){ echo 'active';}?>" href="informacie.php">Informácie</a>
     </div>
   </div>
-   <div class="dropdown">
+   <div class="dropdown"ÿ
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px; background-color: #D35400;">
       Zamestnanci
     </button>
     <div class="dropdown-menu" style="background-color: #C0392B;">
       <a class="dropdown-item nav-item <?php if($stranka=="Evidencia"){ echo 'active';}?>" href="evidencia.php">Evidencia</a>
-      <a class="dropdown-item nav-item <?php if($stranka=="Reporty"){ echo 'active';}?>" href="reporty.php">Reporty</a>
       <a class="dropdown-item nav-item <?php if($stranka=="Detail"){ echo 'active';}?>" href="detail.php">Detail zamestnanca</a>
     </div>
   </div>
