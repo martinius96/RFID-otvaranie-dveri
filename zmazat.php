@@ -8,6 +8,10 @@
  	    if(mysqli_num_rows($over) > 0){
           $zmaz = mysqli_query($con,"DELETE FROM `autorizovane` WHERE `cislo_karty`='".$cislo_karty."'") or die(mysqli_error($con));
       } 
+      $over2 = mysqli_query($con,"SELECT * FROM `zamestnanci` WHERE `cislo_karty`='$cislo_karty'") or die(mysqli_error($con));
+ 	    if(mysqli_num_rows($over2) > 0){
+          $zmaz2 = mysqli_query($con,"DELETE FROM `zamestnanci` WHERE `cislo_karty`='".$cislo_karty."'") or die(mysqli_error($con));
+      } 
   }
   header("Location: odobrat.php");
 ?>
