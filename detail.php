@@ -56,18 +56,23 @@ if (isset($_POST["detail_zamestnanca"])) {
 </div>';  
 }
 ?>
-  <h3>Detail zamestnancov</h3> 
-  <hr>
-  <table style="width: 100%;" border="1">
+  <h3>Detail už evidovaných zamestnancov</h3>
+<hr>
+<table style="width: 100%;" border="1">
 									 <tr>
-									 <th style="width: 50%;">Meno a priezvisko</th>
-									 <th style="width: 50%;">Detail</th>
-                   </tr>
-                   <tr><td>Peter Novák</td><td><form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"><input type="submit" name="detail_zamestnanca" class="btn btn-success" value="Detail zamestnanca"></form></td></tr>
-                   <tr><td>John Smith</td><td><form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"><input type="submit" name="detail_zamestnanca" class="btn btn-success" value="Detail zamestnanca"></form></td></tr>
-                   <tr><td>Ľubomír Beňo</td><td><form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"><input type="submit" name="detail_zamestnanca" class="btn btn-success" value="Detail zamestnanca"></form></td></tr>
-                   <tr><td>Ján Roša</td><td><form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"><input type="submit" name="detail_zamestnanca" class="btn btn-success" value="Detail zamestnanca"></form></td></tr>
-                   </table>
+									 <th style="width: 33.33%;">Číslo karty</th>
+									 <th style="width: 33.33%;">Meno zamestnanca</th>
+                   							 <th style="width: 33.33%;">Akcia</th>
+ 									 </tr>
+<?php
+ 	$karty = mysqli_query($con,"SELECT * FROM zamestnanci WHERE meno != 'Neevidovaný' ORDER BY id DESC") or die(mysqli_error($con));
+		while($line = mysqli_fetch_assoc($karty)){
+			echo "<tr>";
+				  echo '<td><i>' . htmlspecialchars($line['cislo_karty']) .'</i></td>';
+          echo '<td><i>' . htmlspecialchars($line['meno']) .'</i></td>';
+          echo "<td><a href='upravit.php?".htmlspecialchars($line['cislo_karty'])."' class='btn btn-danger'>Upraviť</a></td>";
+			echo "</tr>";
+		}  ?> </tbody></table>
  </div>
 
        </div>   
