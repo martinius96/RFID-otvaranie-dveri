@@ -1,13 +1,11 @@
--- Export vyhotovil: Martin Chlebovec
--- email: martinius96@gmail.com
 -- phpMyAdmin SQL Dump
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: localhost:3306
--- Čas generovania: Pi 01.Feb 2019, 12:13
--- Verzia serveru: 5.7.24-27-log
--- Verzia PHP: 7.3.1-1+0~20190113101756.25+stretch~1.gbp15aaa9
+-- Čas generovania: So 24.Aug 2019, 02:07
+-- Verzia serveru: 5.7.26-29-log
+-- Verzia PHP: 7.3.4-2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -61,6 +59,19 @@ CREATE TABLE `pokusy` (
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Štruktúra tabuľky pre tabuľku `zamestnanci`
+--
+
+CREATE TABLE `zamestnanci` (
+  `id` int(11) NOT NULL,
+  `cislo_karty` text NOT NULL,
+  `meno` text NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Kľúče pre exportované tabuľky
 --
@@ -84,6 +95,12 @@ ALTER TABLE `pokusy`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexy pre tabuľku `zamestnanci`
+--
+ALTER TABLE `zamestnanci`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT pre exportované tabuľky
 --
 
@@ -103,6 +120,12 @@ ALTER TABLE `neautorizovane`
 -- AUTO_INCREMENT pre tabuľku `pokusy`
 --
 ALTER TABLE `pokusy`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pre tabuľku `zamestnanci`
+--
+ALTER TABLE `zamestnanci`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
