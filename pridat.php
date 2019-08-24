@@ -50,6 +50,9 @@ include("connect.php");
     <div class="container">
       <div class="row">
     <div class="col-lg-12">
+     <?php 
+      include("odkaz.php");
+      ?>
       </div>
       <div class="col-lg-12 text-center">
 		<center><b>Posledných 5 interakcií</b></center>
@@ -58,12 +61,9 @@ include("connect.php");
 		<div id="autorizovane"></div>
 		<hr><b>Neautorizované karty</b><hr>
 		<div id="neautorizovane"></div>
-	      <hr>
+    <hr>
         </div>
       </div>
-      <?php 
-      include("footer.php");
-      ?>
        </div>
 
     <!-- Bootstrap core JavaScript -->
@@ -71,6 +71,19 @@ include("connect.php");
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
+      <script>
+  $(function() {
+  $.get('last5.php', function(data){
+        $('#last5').html(data)
+    });
+	 $.get('autorizovane.php', function(data){
+        $('#autorizovane').html(data)
+    });
+	$.get('neautorizovane.php', function(data){
+        $('#neautorizovane').html(data)
+    });
+  });
+  </script>
   <script>
        setInterval(function(){
   $.get('last5.php', function(data){
@@ -82,7 +95,7 @@ include("connect.php");
 	$.get('neautorizovane.php', function(data){
         $('#neautorizovane').html(data)
     });
-},1500);   
+},15000);   
 </script>
 
 </html>
