@@ -36,9 +36,6 @@ include("connect.php");
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-         <?php
-            	include("menu.php");
-            ?>
         </div>
       </div>
     </nav>
