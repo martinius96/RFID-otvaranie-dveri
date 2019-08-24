@@ -1,9 +1,3 @@
-<!--          _    _ _______ ____  _____         __  __          _____ _______ _____ _   _        _____ _    _ _      ______ ____   ______      ________ _____ -->
-<!--     /\  | |  | |__   __/ __ \|  __ \ _     |  \/  |   /\   |  __ \__   __|_   _| \ | |      / ____| |  | | |    |  ____|  _ \ / __ \ \    / /  ____/ ____|-->
-<!--    /  \ | |  | |  | | | |  | | |__) (_)    | \  / |  /  \  | |__) | | |    | | |  \| |     | |    | |__| | |    | |__  | |_) | |  | \ \  / /| |__ | |     -->
-<!--   / /\ \| |  | |  | | | |  | |  _  /       | |\/| | / /\ \ |  _  /  | |    | | | . ` |     | |    |  __  | |    |  __| |  _ <| |  | |\ \/ / |  __|| |     -->
-<!--  / ____ \ |__| |  | | | |__| | | \ \ _     | |  | |/ ____ \| | \ \  | |   _| |_| |\  |     | |____| |  | | |____| |____| |_) | |__| | \  /  | |___| |____ -->
-<!-- /_/    \_\____/   |_|  \____/|_|  \_(_)    |_|  |_/_/    \_\_|  \_\ |_|  |_____|_| \_|      \_____|_|  |_|______|______|____/ \____/   \/   |______\_____|-->                                                                                                                                                                                                                                                                                                              
 <ul class="navbar-nav ml-auto">
             
             <div class="dropdown">
@@ -27,7 +21,7 @@
       <a class="dropdown-item nav-item <?php if($stranka=="Informacie"){ echo 'active';}?>" href="informacie.php">Informácie</a>
     </div>
   </div>
-   <div class="dropdown"ÿ
+   <div class="dropdown">
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="border-radius: 50px; background-color: #D35400;">
       Zamestnanci
     </button>
