@@ -50,80 +50,25 @@ include("connect.php");
     <div class="container">
       <div class="row">
     <div class="col-lg-12">
-   <?php 
-      if (isset($_POST["autorizovany_submit"])) {
-    echo '<div class="alert alert-danger">
-  <strong>Nepovolená akcia!</strong> Možnosť upravovať mená zamestnancov k autorizovaným kartám s fotografiami je možné vykonať iba v platenej verzii. - pri záujme: <b>martinius96@gmail.com</b>
-</div>';  
-} 
-if (isset($_POST["neautorizovany_submit"])) {
-    echo '<div class="alert alert-danger">
-  <strong>Nepovolená akcia!</strong> Možnosť upravovať mená zamestnancov k neautorizovaným kartám s fotografiami je možné vykonať iba v platenej verzii. - pri záujme: <b>martinius96@gmail.com</b>
-</div>';  
-}  
-if (isset($_POST["denny_report"])) {
-    echo '<div class="alert alert-danger">
-  <strong>Nepovolená akcia!</strong> Možnosť tlačiť reporty do .csv / .pdf / konkrétneho zamestnanca je možné iba v platenej verzii - pri záujme: <b>martinius96@gmail.com</b>
-</div>';  
-}
-if (isset($_POST["tyzdenny_report"])) {
-    echo '<div class="alert alert-danger">
-  <strong>Nepovolená akcia!</strong> Možnosť tlačiť reporty do .csv / .pdf / konkrétneho zamestnanca je možné iba v platenej verzii - pri záujme: <b>martinius96@gmail.com</b>
-</div>';  
-} 
-if (isset($_POST["mesacny_report"])) {
-    echo '<div class="alert alert-danger">
-  <strong>Nepovolená akcia!</strong> Možnosť tlačiť reporty do .csv / .pdf / konkrétneho zamestnanca je možné iba v platenej verzii - pri záujme: <b>martinius96@gmail.com</b>
-</div>';  
-}  
-      ?>
-<h3>Evidencia nových zamestnancov - autorizované karty</h3>
+<h3>Evidencia nových zamestnancov</h3>
 <hr>
-<form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 <table style="width: 100%;" border="1">
 									 <tr>
-									 <th style="width: 25%;">Autorizované od</th>
-									 <th style="width: 25%;">Číslo karty</th>
-									 <th style="width: 25%;">Meno zamestnanca</th>
-                   <th style="width: 25%;">Fotografia zamestnanca</th>
+									 <th style="width: 33.33%;">Číslo karty</th>
+									 <th style="width: 33.33%;">Meno zamestnanca</th>
+                   <th style="width: 33.33%;">Akcia</th>
  </tr>
 <?php
- 	$karty = mysqli_query($con,"SELECT * FROM autorizovane ORDER BY id DESC") or die(mysqli_error($con));
+ 	$karty = mysqli_query($con,"SELECT * FROM zamestnanci WHERE meno = 'Neevidovaný' ORDER BY id DESC") or die(mysqli_error($con));
 		while($line = mysqli_fetch_assoc($karty)){
 			echo "<tr>";
-				$casik = date('d. M H:i:s',strtotime($line['time']));			
-       echo "<td><i>". $casik . "</i></td>";
-				  echo '<td><i>' . $line['cislo_karty'] .'</i></td>';
-				  echo "<td><input type='text' name='meno_zamestnanca'></td>";
-          echo "<td><input type='file' name='fotografia_zamestnanca_autorizovane'></td>";
+				  echo '<td><i>' . htmlspecialchars($line['cislo_karty']) .'</i></td>';
+          echo '<td><i>' . htmlspecialchars($line['meno']) .'</i></td>';
+          echo "<td><a href='vytvorit.php?".htmlspecialchars($line['cislo_karty'])."' class='btn btn-danger'>Vytvoriť</a></td>";
 			echo "</tr>";
 		}  ?> </tbody></table>
     <hr>
-    <center><input type="submit" name="autorizovany_submit" class="btn btn-success" value="Upraviť autorizovaných zamestnancov"></center>
-    </form>
-    <h3>Evidencia nových zamestnancov - neautorizované karty</h3>
-<hr>
-<form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-<table style="width: 100%;" border="1">
-									 <tr>
-									 <th style="width: 25%;">Neautorizované od</th>
-									 <th style="width: 25%;">Číslo karty</th>
-									 <th style="width: 25%;">Meno zamestnanca</th>
-                   <th style="width: 25%;">Fotografia zamestnanca</th>
- </tr>
-<?php
- 	$karty = mysqli_query($con,"SELECT * FROM neautorizovane GROUP BY cislo_karty") or die(mysqli_error($con));
-		while($line = mysqli_fetch_assoc($karty)){
-			echo "<tr>";
-			$casik = date('d. M H:i:s',strtotime($line['time']));			
-       echo "<td><i>". $casik . "</i></td>";
-				  echo '<td><i>' . $line['cislo_karty'] .'</i></td>';
-				 echo "<td><input type='text' name='meno_zamestnanca_neautorizovane'></td>";
-         echo "<td><input type='file' name='fotografia_zamestnanca_neautorizovane'></td>";
-			echo "</tr>";
-		}  ?> </tbody></table>
-     <center><input type="submit" name="neautorizovany_submit" class="btn btn-danger" value="Upraviť neautorizovaných zamestnancov"></center>
-    </form><hr>
+   
  </div>
 
        </div>   
