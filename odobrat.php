@@ -2,7 +2,7 @@
 $stranka = "Odobrat";
 ?>
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <?php 
 include("connect.php");
 ?>
@@ -34,7 +34,7 @@ include("connect.php");
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
-     <a class="navbar-brand" href="index.php">RFID vrátnik</a>
+ <a class="navbar-brand" href="index.php">RFID vrátnik</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,7 +57,7 @@ include("connect.php");
       <div id="last5"></div>
 		<b>Autorizované karty</b>
 		<div id="aut"></div>
-	      <hr>
+    <hr>
         </div>
       </div>
      <?php 
@@ -70,6 +70,16 @@ include("connect.php");
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
+        <script>
+  $(function() {
+   $.get('last5.php', function(data){
+        $('#last5').html(data)
+    });
+	$.get('autorizovaneodobrat.php', function(data){
+        $('#aut').html(data)
+    });
+  });
+  </script>
 <script>
        setInterval(function(){
   $.get('last5.php', function(data){
@@ -78,7 +88,7 @@ include("connect.php");
 	$.get('autorizovaneodobrat.php', function(data){
         $('#aut').html(data)
     });
-},1500);   
+},15000);   
 </script>
 
 </html>
