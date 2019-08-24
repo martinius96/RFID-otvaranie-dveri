@@ -44,9 +44,6 @@ include("connect.php");
     <div class="container">
       <div class="row">
     <div class="col-lg-12">
-   <?php 
-      include("odkaz.php");
-      ?>
 <h3>Úprava zamestnanca</h3>
 <hr>
 <?php
@@ -60,8 +57,8 @@ include("connect.php");
               $zapis = mysqli_query($con,"UPDATE `zamestnanci` SET `meno`='".$meno."' WHERE `cislo_karty`='".$cislo_karty."'") or die(mysqli_error($con));
               echo '<div class="alert alert-success"><strong>Meno zamestnanca úspešne pozmenené!</strong></div><br><center><a href="index.php" class="btn btn-danger" role="button">Späť na prehľad</a></center>';
        }
- $zamestnanec = mysqli_query($con,"SELECT * FROM `zamestnanci` WHERE `cislo_karty`='$cislo_karty'") or die(mysqli_error($con));
- $line = mysqli_fetch_assoc($zamestnanec);
+    $zamestnanec = mysqli_query($con,"SELECT * FROM `zamestnanci` WHERE `cislo_karty`='$cislo_karty'") or die(mysqli_error($con));
+    $line = mysqli_fetch_assoc($zamestnanec);
  	    if(mysqli_num_rows($zamestnanec) < 1){
        echo '<center><h3>Nesprávne, neúplné, neplatné ID karty!</h3></center>';
        }else{ 
