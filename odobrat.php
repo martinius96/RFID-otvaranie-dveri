@@ -18,6 +18,9 @@ include("connect.php");
     <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
      <script type="text/javascript">
     window.smartlook||(function(d) {
     var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
@@ -25,11 +28,10 @@ include("connect.php");
     c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
     })(document);
     smartlook('init', 'db50efe9fff280a17db52b82be221240cbbd3dbe');
-</script>
-
+</script>    
   </head>
 
-  <body>
+  <body onload="myFunction()">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -57,6 +59,7 @@ include("connect.php");
       <div id="last5"></div>
 		<b>Autorizované karty</b>
 		<div id="aut"></div>
+    <h1 id="demo"></h1>
     <hr>
         </div>
       </div>
@@ -64,11 +67,6 @@ include("connect.php");
       include("footer.php");
       ?>
      </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
   </body>
         <script>
   $(function() {
