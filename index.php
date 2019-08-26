@@ -53,8 +53,8 @@ include("connect.php");
         <div class="col-lg-12">
       </div>
       <div class="col-lg-12 text-center">
+        <h1 id="demo"></h1>
        <div id="full"></div>
-       <h1 id="demo"></h1>
         </div>
       </div>
       <?php 
