@@ -14,7 +14,7 @@ $stranka = "Program";
      <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <!-- Bootstrap core JavaScript -->
+   <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
      <script type="text/javascript">
@@ -55,6 +55,7 @@ $stranka = "Program";
     <div class="alert alert-info">
 	    <strong>Dostupné na Githube:</strong> <a href="https://github.com/martinius96/RFID-otvaranie-dveri/tree/master/examples">Repozitár</a>
 </div>
+ <h1 id="demo"></h1>
 <b>Dostupné technológie:</b>
 <li>Ethernet</li>
 <li>WiFi</li>
@@ -101,11 +102,6 @@ void loop(){
      <?php 
       include("footer.php");
       ?>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  </body>
+ </body>
 
 </html>
