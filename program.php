@@ -46,20 +46,29 @@ $stranka = "Program";
 
     <!-- Page Content -->
     <div class="container">
-	   <hr><h2>Projekt</h2><hr>
-	   <li><a href="https://github.com/esp8266/Arduino/">Návod na inštaláciu NodeMCU do ArduinoIDE</a></li><br>
-	   <li><a href="http://www.handsontec.com/pdf_learn/esp8266-V10.pdf">NodeMCU v1.0 (v3, v2) datasheet</a></li><br>
-	   <li><a href="https://www.nxp.com/docs/en/data-sheet/MFRC522.pdf">RC522 datasheet</a></li><br>
-	   <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár so zdrojovými kódmi pre webstránku, ESP8266 a RFID čítačku RC522</a></li>
-	  <hr><h2>Zdrojové kódy s pripojením na: https://arduino.php5.sk/rfid</h2><hr>
-    <div class="alert alert-info">
+   <hr><h2>Projekt</h2><hr>
+     <b>Datasheety:</b>
+	   <li><a href="https://github.com/esp8266/Arduino/">Návod na inštaláciu NodeMCU do ArduinoIDE (V spodnej časti README)</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/ATmega328P.pdf">ATmega328P datasheet</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/ESP32-WROOM-32.pdf">ESP32-WROOM-32 datasheet</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/ESP8266-12E.pdf">ESP8266-12E datasheet</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/NodeMCU.pdf">NodeMCU (v2) datasheet</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/RFID-RC522.pdf">RFID RC522 datasheet</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/SRD-05VDC-SL-C-rele.pdf">SRD-05VDC-SL-C datasheet</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/WISOL-SFM10R1-SigFox.pdf">WISOL-SFM10R1 datasheet</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/Wiznet-W5100.pdf">Ethernet Wiznet W5100 datasheet</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/Wiznet-W5500.pdf">Ethernet Wiznet W5500 datasheet</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/Semtech-SX1276_77_78_79-LoRa.pdf">Semtech - SX1276 (77/78/79) datasheet</a></li><br>
+	   <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár so zdrojovými kódmi pre webstránku, ESP8266 a RFID čítačku RC522 (v súhľade s dodržaním LICENCIE a podmienok)</a></li>
+	  <hr><b>Zdrojové kódy s pripojením na: https://arduino.php5.sk/rfid</b><hr>
+    <div class="alert alert-success">
 	    <strong>Dostupné na Githube:</strong> <a href="https://github.com/martinius96/RFID-otvaranie-dveri/tree/master/examples">Repozitár</a>
 </div>
  <h1 id="demo"></h1>
 <b>Dostupné technológie:</b>
 <li>Ethernet</li>
 <li>WiFi</li>
-<li>Lora</li>
+<li>LoRa</li>
 <li>SigFox</li>
 <hr><h2>Zdrojový kód - Offline tester</h2><hr>
 <pre style="background-color:#3498DB;">
