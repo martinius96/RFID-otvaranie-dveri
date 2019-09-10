@@ -78,6 +78,9 @@ include("connect.php");
   </div>   
 </div>  
 <div class="col-lg-12">
+  <div class="alert alert-danger">
+<li>Prevádzkovateľ projektu sa zaväzuje k dodržiavaniu MIT licencie stiahnutím a prevádzkovaním projektu! V prípade porušenia licencie si plne uvedomuje právne následky pri porušení licencie, autorstva.</li>
+</div> 
 <hr><h3>Znenie licencie projektu - RFID vrátnik:</h3><hr>
        <pre>
 The MIT License (MIT)
