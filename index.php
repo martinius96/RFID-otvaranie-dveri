@@ -55,6 +55,7 @@ include("connect.php");
       <div class="col-lg-12 text-center">
         <h1 id="demo"></h1>
        <div id="full"></div>
+        <hr>
         </div>
       </div>
       <?php 
