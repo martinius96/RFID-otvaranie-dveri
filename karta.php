@@ -1,5 +1,7 @@
 <?php 
 include("connect.php");
+//PRE ZAMEDZENIE POUŽIVANIA JEDNEJ Z METÓD ZAKOMENTOVAŤ DANÝ BLOK
+//MOŽNO POUŽIT ĎALŠIE METÓDY: PUT, DELETE, PATCH...
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$kod = mysqli_real_escape_string($con, $_POST['kod']);
 }else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
