@@ -31,9 +31,9 @@ void loop() {
     Serial.print("Sila signalu: ");
     Serial.println(LoRa.packetRssi());
   }
-/*|-------------------------------|*/
-/*|DALSIE SPRACOVANIE             |*/
-/*|ODOSLANIE DO DATABAZY          |*/
-/*|ODOSLANIE INOU TECHNOLOGIOU    |*/
-/*|-------------------------------|*/
+/*|----------------------------------------------------------|*/
+/*|DALSIE SPRACOVANIE                                        |*/
+/*|ODOSLANIE DO DATABAZY                                     |*/
+/*|ODOSLANIE INOU TECHNOLOGIOU - WiFi / Ethernet / Sigfox    |*/
+/*|----------------------------------------------------------|*/
 }
