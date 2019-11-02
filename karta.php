@@ -1,6 +1,10 @@
 <?php 
 include("connect.php");
-$kod = mysqli_real_escape_string($con, $_GET['kod']);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	$kod = mysqli_real_escape_string($con, $_POST['kod']);
+}else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+	$kod = mysqli_real_escape_string($con, $_GET['kod']);
+}
 $kod = trim( $kod );
 if (is_numeric($kod)){
   $kod = hexdec(hash('crc32b', $kod));
