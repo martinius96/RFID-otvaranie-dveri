@@ -71,7 +71,7 @@
 *  **(Win XP/Vista/7)** src priečinok skopírovať do: C:/Program Files/Arduino/libraries/rfid
 * Web súbory nahrať na FTP server (kompatibilné s PHP 5, aj PHP 7)
 * V zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, údaje na váš webserver, rovnako i pre ESP32/Arduino
-* Nahrať program, používať Arduino core 2.3.0 (pre NodeMCU), **verzia 2.5.0 (najnovšia) je nekompatibilná** pre HTTPS fingerprint!
+* Nahrať program, používať Arduino core 2.5.0/2.5.2 (pre NodeMCU), **verzia 2.3.0 (doteraz používaná) je nekompatibilná** pre HTTPS fingerprint!
 * Pre Arduino, ESP32 je možné použiť aj nanovšie knižnice pre HTTP, HTTPS spojenia
 * Program pre Arduino je plne kompatibilný medzi Arduino Uno, Nano, Mega 1280/2560
 * **Môžete si zakúpiť webové rozhranie na: martinius96@gmail.com, obsahuje dokumentáciu, rozšírenú funkcionalitu, support**
