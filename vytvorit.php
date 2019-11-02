@@ -57,13 +57,13 @@ include("connect.php");
               $meno = mysqli_real_escape_string($con, $_POST['meno']);
               $meno = htmlspecialchars($meno);
               $meno = trim($meno);
-      if($meno==""){
-      echo '<div class="alert alert-success"><strong>Meno zamestnanca nemôže byť prázdne! Ak chcete umiestniť do neevidovaných, použite meno <b>Neevidovaný</b></strong></div>';
-      }else{
-              $zapis = mysqli_query($con,"UPDATE `zamestnanci` SET `meno`='".$meno."' WHERE `cislo_karty`='".$cislo_karty."'") or die(mysqli_error($con));
-              echo '<div class="alert alert-success"><strong>Meno zamestnanca úspešne pozmenené!</strong></div><br><center><a href="index.php" class="btn btn-danger" role="button">Späť na prehľad</a></center>';
+                 if($meno==""){
+                echo '<div class="alert alert-danger"><strong>Meno zamestnanca nemôže byť prázdne! Zápis zakázaný!</strong></div>';
+              }else{
+                $zapis = mysqli_query($con,"UPDATE `zamestnanci` SET `meno`='".$meno."' WHERE `cislo_karty`='".$cislo_karty."'") or die(mysqli_error($con));
+                echo '<div class="alert alert-success"><strong>Meno zamestnanca úspešne pozmenené!</strong></div><br><center><a href="index.php" class="btn btn-danger" role="button">Späť na prehľad</a></center>';
+              }
       }
-    }
  $zamestnanec = mysqli_query($con,"SELECT * FROM `zamestnanci` WHERE `cislo_karty`='$cislo_karty'") or die(mysqli_error($con));
  $line = mysqli_fetch_assoc($zamestnanec);
  	    if(mysqli_num_rows($zamestnanec) < 1){
@@ -71,7 +71,7 @@ include("connect.php");
        }else{ 
        ?>
    <center><form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])."?".$cislo_karty;?>">
-    <b>Meno a priezvisko:</b> <br><input type="text" name="meno" value="<?php echo $line['meno']; ?>"><br>
+    <b>Meno a priezvisko:</b> <br><input type="text" name="meno" value="<?php echo $line['meno']; ?>" required><br>
     <input type="submit" class="btn btn-success" name="odoslat" value="Vytvoriť konto">
     </form></center>    
 <?php       
