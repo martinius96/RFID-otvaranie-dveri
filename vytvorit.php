@@ -57,9 +57,13 @@ include("connect.php");
               $meno = mysqli_real_escape_string($con, $_POST['meno']);
               $meno = htmlspecialchars($meno);
               $meno = trim($meno);
+      if($meno==""){
+      echo '<div class="alert alert-success"><strong>Meno zamestnanca nemôže byť prázdne! Ak chcete umiestniť do neevidovaných, použite meno <b>Neevidovaný</b></strong></div>';
+      }else{
               $zapis = mysqli_query($con,"UPDATE `zamestnanci` SET `meno`='".$meno."' WHERE `cislo_karty`='".$cislo_karty."'") or die(mysqli_error($con));
               echo '<div class="alert alert-success"><strong>Meno zamestnanca úspešne pozmenené!</strong></div><br><center><a href="index.php" class="btn btn-danger" role="button">Späť na prehľad</a></center>';
-       }
+      }
+    }
  $zamestnanec = mysqli_query($con,"SELECT * FROM `zamestnanci` WHERE `cislo_karty`='$cislo_karty'") or die(mysqli_error($con));
  $line = mysqli_fetch_assoc($zamestnanec);
  	    if(mysqli_num_rows($zamestnanec) < 1){
