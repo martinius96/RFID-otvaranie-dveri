@@ -83,14 +83,20 @@ void loop() {
       Serial.println("Card found");
       kod = 10000 * rfid.serNum[4] + 1000 * rfid.serNum[3] + 100 * rfid.serNum[2] + 10 * rfid.serNum[1] + rfid.serNum[0];
       Serial.println(kod);
-      String kodik = String(kod);
       client.stop();
+      String kodik = String(kod);
       String data = "kod=" + kodik;
+      String url = "/rfid/karta.php";
       if (client.connect(host, httpsPort)) {
-        String url = "/rfid/karta.php";
-        //String url = "/rfid/karta.php?kod="+kodik+"&origin=ESP32";
-        //String url = "/rfid/karta.php?kod="+kodik+"&origin=ESP32&topsecret=topsecret";
-        client.print(String("POST ") + url + " HTTP/1.0\r\n" + "Host: " + host + "\r\n" + "User-Agent: ESP32\r\n" + "Connection: close\r\n" + "Content-Type: application/x-www-form-urlencoded;Content-Length: " + data.length() + "\r\n\r\n" + data + "\r\n");
+        client.println("POST " + url + " HTTP/1.0");
+        client.println("Host: " + (String)host);
+        client.println("User-Agent: ESP32");
+        client.println("Connection: close");
+        client.println("Content-Type: application/x-www-form-urlencoded;");
+        client.print("Content-Length: ");
+        client.println(data.length());
+        client.println();
+        client.println(data);
         while (client.connected()) {
           String line = client.readStringUntil('\n');
           if (line == "\r") {
