@@ -1,4 +1,4 @@
-# RFID vrátnik s mikrokontrolérom ESP8266, ESP32, Arduino + Ethernet
+# RFID vrátnik s mikrokontrolérom ESP8266, ESP32
 **Používaním projektu sa osoba zaväzuje k dodržiavaniu zmluvných podmienok MIT licencie, pod ktorou je projekt šírený! Uvedomuje si riziká, obmedzenia a svoje povinnosti, rovnako tak i právne následky v prípade porušenia!**
 * ![MIT Licencia pre RFID vrátnika](https://i.imgur.com/8t7JHVy.png)
 # Podporte projekt pre pridanie nových funkcionalít
@@ -6,7 +6,7 @@
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
 * Informácie o projekte: https://arduino.php5.sk/rfid-system.php 
-* Vzorové zdrojové kódy pre ESP8266, ESP32, Arduino + Ethernet komunikujú priamo s touto webovou lokalitou po HTTP/HTTPS protokole
+* Vzorové zdrojové kódy pre ESP8266, ESP32 komunikujú priamo s touto webovou lokalitou po HTTP/HTTPS protokole
 * Možnosť ihneď vyskúšať po zapojení čítačky a nahratí programu pre odtestovanie funkčnosti
 
 # Systém ponúka 2 typy užívateľov projektu
@@ -36,8 +36,6 @@
 * ![Basekit](https://arduino.php5.sk/images/basekit.jpg)Basekit (možný iba pri V3, možnosť využiť napájanie na 6-24V)
 #
 * ![Arduino Uno](https://s3-ap-northeast-1.amazonaws.com/switch-science-intl/contents/small/789_201602_102_tBuTiHx.jpg)**Arduino Uno**
-* ![Ethernet W5100](https://arduino.php5.sk/images/ethernetshield.jpg)Ethernet shield W5100
-* ![Ethernet W5500](https://cdn.instructables.com/FAT/YMPE/JHQJS5HZ/FATYMPEJHQJS5HZ.LARGE.jpg)Ethernet modul W5500
 * ![LoRa](https://cdn.shopify.com/s/files/1/2187/3161/products/RAK811_LoRa_LoRAWAN_module_based_on_SX1276_868_915MHz_up_to_3km_range_128x.png?v=1535900353)LoRa (Semtech SX1276/77/78/79)
 * ![Sigfox modem](https://docid81hrs3j1.cloudfront.net/contents/small/5373_001_5wQsjlY.jpeg)Sigfox modem
 #
@@ -101,24 +99,6 @@
 | GND  | GND |
 | IN  | D0 (GPIO16) |
 
-# Zapojenie komponentov (Arduino + Ethernet W5100)
-| RC522 | Arduino |
-|:-----|--------:|
-| 3.3V | 3.3V    |
-| RST  | D5 |
-| GND  | GND |
-| MISO | D12 |
-| MOSI | D11 |
-| SCK  | D13 |
-| SDA/SS  | D6 |
-| IRQ  | Nezapája sa |
-
-| Relé | Arduino |
-|:-----|--------:|
-| 5V | 5V |
-| GND  | GND |
-| IN  | D4 (NO SD CARD) |
-
 # Zapojenie komponentov (ESP32)
 | RC522 | ESP32 |
 |:-----|--------:|
@@ -148,9 +128,6 @@
 
 # Schéma zapojenia ESP8266 (NodeMCU)
 ![Schéma NodeMCU](https://i.imgur.com/j9wciSz.png)
-
-# Schéma zapojenia Arduino Uno + Ethernet W5100
-![Schéma Arduino + Ethernet W5100](https://i.imgur.com/7IuhBJy.png)
 
 # Schéma zapojenia ESP32
 ![Schéma ESP32](https://i.imgur.com/oR0RjWB.png)
