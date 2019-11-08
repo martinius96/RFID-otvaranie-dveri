@@ -11,8 +11,8 @@
 #include <WiFiClientSecure.h>
 #include <SPI.h>
 #include <RFID.h>
-const char * ssid = "huawei-2929";
-const char * password = "chefrolet";
+const char * ssid = "WIFI_NAME";
+const char * password = "WIFI_PASSWORD";
 const char * host = "arduino.php5.sk";
 const int httpsPort = 443; //http port
 const int rele = 17;
