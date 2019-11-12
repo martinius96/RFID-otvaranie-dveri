@@ -61,8 +61,6 @@ $stranka = "Program";
      <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/RFID-RC522.pdf">RFID RC522 datasheet</a></li><br>
      <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/SRD-05VDC-SL-C-rele.pdf">SRD-05VDC-SL-C datasheet</a></li><br>
      <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/WISOL-SFM10R1-SigFox.pdf">WISOL-SFM10R1 datasheet</a></li><br>
-     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/Wiznet-W5100.pdf">Ethernet Wiznet W5100 datasheet</a></li><br>
-     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/Wiznet-W5500.pdf">Ethernet Wiznet W5500 datasheet</a></li><br>
      <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/Semtech-SX1276_77_78_79-LoRa.pdf">Semtech - SX1276 (77/78/79) datasheet</a></li><br>
  <h1 id="demo"></h1>
 <b>Dostupné technológie:</b>
