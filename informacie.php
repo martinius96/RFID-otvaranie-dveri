@@ -65,7 +65,7 @@ include("connect.php");
 <li>V sekcii pridať kartu môže administrátor jedným kliknutím potvrdiť kartu - autorizovať ju, ktorá bola priložená, no nebola zatiaľ autorizovaná.</li>
 <li>Okrem zobrazenia posledných 5 priložení karty vidí administrátor všetky neautorizované doteraz priložené karty a autorizované karty vrátane dátumov a časov ich autorizácie.</li>
 <li>V záložke Odobrania karty je možné deautozizovať autorizovanú kartu - karta nebude figurovať ani v zozname neautozizovaných kariet, bude tam pridelená automaticky až po jej priložení.</li>
-<li>V záložke Program môže administrátor nahliadnuť do schémy zapojenia RFID čítačky s vývojovou doskou NodeMCU s čipom ESP8266, prípadne aj iných platforiem - ESP32, či Arduino s Ethernet modulom. Administrátor môže nahliadnuť a stiahnuť si zdrojový kód, ktorý je dostupný pre túto webovú lokalitu.</li>
+<li>V záložke Program môže administrátor nahliadnuť do schémy zapojenia RFID čítačky s vývojovou doskou NodeMCU s čipom ESP8266, prípadne aj iných platforiem - ESP32, či Arduino s LoRa, Sigfox modulom. Administrátor môže nahliadnuť a stiahnuť si zdrojový kód, ktorý je dostupný pre túto webovú lokalitu.</li>
 <li>Pre lepšiu prenositeľnosť programu medzi jednotlivými platformami používajú zdrojové kódy hardvérové SPI vývody tejto zbernice, čím je program možné kombinovať na rôzne platformy bez nutnosti zásahu.</li>
 <li>Možnosť prihlásenia, odhlásenia adminsitrátora, zmeny prihlasovacích údajov, núdzové otvorenie dverí z webového prostredia v prípade straty karty, priradenie zamestnancov, mien, fotografií a tlačenie reportov je súčasťou platenej verzie projektu.</li>
 </div>
@@ -81,8 +81,8 @@ include("connect.php");
 </div>
 <hr>
 <li>Čítačka RC522 pracuje na frekvencii 13.56MHz, využíva SPI zbernicu pre rýchlu komunikáciu s mikrokontrolérom</li>
-<li>Implementačné demo využíva trojicu platforiem - ESP8266, ESP32, Arduino + Ethernet na prepojenie s touto čítačkou pre dosiahnutie optimálnej funkčnosti.</li>
-<li>Čítačka RC522 využíva už prelomený algoritmus Crypto-1, nie je preto vhodná pre zabezpečenie cenného majetku.</li>
+<li>Implementačné demo využíva trojicu platforiem - ESP8266, ESP32, Arduino + LoRa/Sigfox na prepojenie s touto čítačkou pre dosiahnutie optimálnej funkčnosti.</li>
+<li><b>Čítačka RC522 využíva už prelomený algoritmus Crypto-1, nie je preto vhodná pre zabezpečenie cenného majetku.</b></li>
 <li>Pre zvýšenie bezpečnosti tejto implementácie sa používa konverzia MAC adries na strane mikrokontroléru po načítaní, druhotná konverzia sa vykoná na strane webového servera, kedy je výsledná adresa karty hashuje algoritmom CRC32B, tento hash je uložený do databázy a reprezentuje danú kartu.</li>
 <li>Čítačka má vstavanú anténu, priloženie karty vie registrovať na cca. 3 centimetre od kontaktnej plochy. </li>
 <li>V kľúdovom stave čítačka spotrebuje 13mA pri 3.3V, pri načítavaní kariet (v prevádzke) je prúdovú odber na hranici 26mA pri 3.3V. </li>
