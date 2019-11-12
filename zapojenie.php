@@ -48,9 +48,7 @@ $stranka = "Zapojenie";
   <h1 id="demo"></h1>
   <hr><h2>Zapojenie - ESP8266</h2>
    <img src="https://i.imgur.com/j9wciSz.png" style="display: block; max-width: 100%; height: auto;" title="RFID vrátnik - schéma ESP8266" alt="RFID vrátnik - schéma ESP8266">
-   <hr><h2>Zapojenie - Arduino + Ethernet W5100</h2>
-   <img src="https://i.imgur.com/R4d2FvF.png" style="display: block; max-width: 100%; height: auto;" title="RFID vrátnik - schéma Arduino + W5100 Ethernet" alt="RFID vrátnik - schéma Arduino + W5100 Ethernet">
-  <hr><h2>Zapojenie - ESP32</h2>
+   <hr><h2>Zapojenie - ESP32</h2>
    <img src="https://i.imgur.com/HKHrsEO.png" style="display: block; max-width: 100%; height: auto;" title="RFID vrátnik - schéma ESP32" alt="RFID vrátnik - schéma ESP32">
    <hr>
    </div>
