@@ -1,7 +1,6 @@
 <?php 
   include("connect.php");
   $cislo_karty = mysqli_real_escape_string($con, $_SERVER['QUERY_STRING']);
-  $cislo_karty = htmlspecialchars($cislo_karty);
   $cislo_karty = trim($cislo_karty);
   if (is_numeric($cislo_karty)){
       $over = mysqli_query($con,"SELECT * FROM `autorizovane` WHERE `cislo_karty`='$cislo_karty'") or die(mysqli_error($con));
