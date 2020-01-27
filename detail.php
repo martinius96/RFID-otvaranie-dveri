@@ -77,6 +77,7 @@ if (isset($_POST["detail_zamestnanca"])) {
           echo "<td><a href='upravit.php?".htmlspecialchars($line['cislo_karty'])."' class='btn btn-danger'>Upraviť</a></td>";
 			echo "</tr>";
 		}  ?> </tbody></table>
+	      <hr>
  </div>
 
        </div>   
