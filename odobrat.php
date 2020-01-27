@@ -58,7 +58,7 @@ include("connect.php");
 		<center><b>Posledných 5 interakcií</b></center>
       <div id="last5"></div>
 		<b>Autorizované karty</b>
-		<div id="aut"></div>
+		<div id="aut"></div><hr>
     <h1 id="demo"></h1>
     <hr>
         </div>
