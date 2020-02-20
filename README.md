@@ -1,7 +1,7 @@
 # RFID vrátnik s mikrokontrolérom ESP8266, ESP32
 **Používaním projektu sa osoba zaväzuje k dodržiavaniu zmluvných podmienok MIT licencie, pod ktorou je projekt šírený! Uvedomuje si riziká, obmedzenia a svoje povinnosti, rovnako tak i právne následky v prípade porušenia!**
 * ![MIT Licencia pre RFID vrátnika](https://i.imgur.com/8t7JHVy.png)
-* Dňa 8. Nov bola podpora Arduina s Ethernet shieldmi ukončená
+* Dňa 21. Feb --> opätovne pridaná podpora Arduino + Ethernet W5100 kombinácie
 # Podporte projekt pre pridanie nových funkcionalít
 * https://www.paypal.me/chlebovec
 # Stránka projektu
@@ -37,6 +37,7 @@
 * ![Basekit](https://arduino.php5.sk/images/basekit.jpg)Basekit (možný iba pri V3, možnosť využiť napájanie na 6-24V)
 #
 * ![Arduino Uno](https://s3-ap-northeast-1.amazonaws.com/switch-science-intl/contents/small/789_201602_102_tBuTiHx.jpg)**Arduino Uno**
+* ![Ethernet W5100](https://s3.amazonaws.com/storage.wobiz.com/24/24605/images/Square/1503854801_df45e8e990ef7e3b39025df4a8b2a008.24605.jpeg)Ethernet W5100
 * ![LoRa](https://cdn.shopify.com/s/files/1/2187/3161/products/RAK811_LoRa_LoRAWAN_module_based_on_SX1276_868_915MHz_up_to_3km_range_128x.png?v=1535900353)LoRa (Semtech SX1276/77/78/79)
 * ![Sigfox modem](https://docid81hrs3j1.cloudfront.net/contents/small/5373_001_5wQsjlY.jpeg)Sigfox modem
 #
