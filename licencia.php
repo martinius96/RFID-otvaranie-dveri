@@ -51,7 +51,7 @@ include("connect.php");
     <div class="container">
       <div class="row">
     <div class="col-lg-12">
- <h1 id="demo"></h1>
+    <h1 id="demo"></h1>
 <h3>Licencia projektu</h3>
 <li>Projekt je šírený pod <a href="https://sk.wikipedia.org/wiki/MIT_licencia">MIT licenciou</a></li>
  </div>
@@ -71,21 +71,20 @@ include("connect.php");
 </div>   
 </div> 
 <div class="col-lg-4"> 
-<center><b>Podmienky použitia projektu:</b></center> 
+<center><b><font color="red">Podmienky použitia projektu:</font></b></center> 
 <div class="alert alert-danger">
-<li><b>Uvedenie autora pôvodného projektu (t.j. ponechanie spodnej lišty, meta tagu).</b></li><br>
-<li><b>V prípade porušenia licencie si prevádzkovateľ projektu plne uvedomuje právne následky!</b></li>
-  </div>   
+<li><b><font color="red">Uvedenie autora pôvodného projektu (t.j. ponechanie spodnej lišty).</font></b></li>
+</div>   
 </div>  
 <div class="col-lg-12">
-  <div class="alert alert-danger">
-<li>Prevádzkovateľ projektu sa zaväzuje k dodržiavaniu MIT licencie stiahnutím a prevádzkovaním projektu! V prípade porušenia licencie si plne uvedomuje právne následky pri porušení licencie, autorstva.</li>
-</div> 
+<div class="alert alert-danger">
+<li><font color="red"><b>Prevádzkovateľ projektu sa zaväzuje k dodržiavaniu MIT licencie stiahnutím a prevádzkovaním projektu! V prípade porušenia licencie si plne uvedomuje právne následky pri porušení licencie, autorstva.</b></font></li>
+</div>   
 <hr><h3>Znenie licencie projektu - RFID vrátnik:</h3><hr>
        <pre>
 The MIT License (MIT)
 
-Copyright (c) 2019 Martin Chlebovec
+Copyright (c) 2019-2020 Martin Chlebovec
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
