@@ -1,13 +1,13 @@
 # RFID vrátnik s mikrokontrolérom ESP8266, ESP32
 **Používaním projektu sa osoba zaväzuje k dodržiavaniu zmluvných podmienok MIT licencie, pod ktorou je projekt šírený! Uvedomuje si riziká, obmedzenia a svoje povinnosti, rovnako tak i právne následky v prípade porušenia!**
 * ![MIT Licencia pre RFID vrátnika](https://i.imgur.com/8t7JHVy.png)
-* Dňa 21. Feb --> opätovne pridaná podpora Arduino + Ethernet W5100 kombinácie
 # Podporte projekt pre pridanie nových funkcionalít
 * https://www.paypal.me/chlebovec
 # Stránka projektu
 * https://arduino.php5.sk/rfid/
 * Informácie o projekte: https://arduino.php5.sk/rfid-system.php 
 * Vzorové zdrojové kódy pre ESP8266, ESP32 komunikujú priamo s touto webovou lokalitou po HTTP/HTTPS protokole
+* Arduino s Ethernetom komunikuje po HTTP protokole
 * Možnosť ihneď vyskúšať po zapojení čítačky a nahratí programu pre odtestovanie funkčnosti
 
 # Systém ponúka 2 typy užívateľov projektu
@@ -83,6 +83,24 @@
 * Štatistika RFID vrátnika
 ![Štatistika RFID vrátnika](https://i.imgur.com/TVMfmeQ.png)
 
+# Zapojenie komponentov (Arduino)
+| RC522 | Arduino |
+|:-----|--------:|
+| 3.3V | 3.3V    |
+| RST  | D5 |
+| GND  | GND |
+| MISO | D12 |
+| MOSI | D11 |
+| SCK  | D3 |
+| SDA/SS  | D6 |
+| IRQ  | Nezapája sa |
+
+| Relé | Arduino |
+|:-----|--------:|
+| 5V | 5V  |
+| GND  | GND |
+| IN  | D3 |
+
 # Zapojenie komponentov (NodeMCU)
 | RC522 | NodeMCU |
 |:-----|--------:|
@@ -128,8 +146,11 @@
 
 * Nulák, respektíve GND podľa typu obvodu (AC/DC) je pripojený na zdroj po celú dobu prevádzky solenoid jazýčka.
 
+# Schéma zapojenia Arduino
+![Schéma Arduino - RFID vrátnik](https://i.imgur.com/DoPktzT.png
+
 # Schéma zapojenia ESP8266 (NodeMCU)
-![Schéma NodeMCU](https://i.imgur.com/j9wciSz.png)
+![Schéma NodeMCU - ESP8266 - RFID vrátnik](https://i.imgur.com/j9wciSz.png)
 
 # Schéma zapojenia ESP32
-![Schéma ESP32](https://i.imgur.com/oR0RjWB.png)
+![Schéma ESP32 - RFID vrátnik](https://i.imgur.com/oR0RjWB.png)
