@@ -21,7 +21,7 @@ include("connect.php");
 				echo '<td bgcolor="#2ECC71"><i>' . htmlspecialchars($vysledok) .'</i></td>';
         $zamestnanec = mysqli_query($con,"SELECT meno FROM `zamestnanci` WHERE `cislo_karty`='".$line['cislo_karty']."'") or die(mysqli_error($con));
         $line2 = mysqli_fetch_assoc($zamestnanec);
-        echo '<td bgcolor="#2ECC71"><i>' . htmlspecialchars($line2['meno']) . '</i></td>';
+        echo '<td bgcolor="#2ECC71"><b>' . htmlspecialchars($line2['meno']) . '</b></td>';
 			}else{
 				echo '<td bgcolor="#E74C3C"><i>'. htmlspecialchars($casik) . '</i></td>';	
 				echo '<td bgcolor="#E74C3C"><i>' . htmlspecialchars($line['cislo_karty']) . '</i></td>';
@@ -29,7 +29,7 @@ include("connect.php");
 				echo '<td bgcolor="#E74C3C"><i>' . htmlspecialchars($vysledok) .'</i></td>';
         $zamestnanec = mysqli_query($con,"SELECT meno FROM `zamestnanci` WHERE `cislo_karty`='".$line['cislo_karty']."'") or die(mysqli_error($con));
         $line2 = mysqli_fetch_assoc($zamestnanec);
-        echo '<td bgcolor="#E74C3C"><i>' . htmlspecialchars($line2['meno']) . '</i></td>';
+        echo '<td bgcolor="#E74C3C"><b>' . htmlspecialchars($line2['meno']) . '</b></td>';
 			}		
 	echo "</tr>";
 		}  ?> 
