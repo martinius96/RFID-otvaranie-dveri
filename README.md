@@ -91,7 +91,7 @@
 | GND  | GND |
 | MISO | D12 |
 | MOSI | D11 |
-| SCK  | D3 |
+| SCK  | D5 |
 | SDA/SS  | D6 |
 | IRQ  | Nezapája sa |
 
