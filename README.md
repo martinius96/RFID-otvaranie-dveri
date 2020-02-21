@@ -147,7 +147,7 @@
 * Nulák, respektíve GND podľa typu obvodu (AC/DC) je pripojený na zdroj po celú dobu prevádzky solenoid jazýčka.
 
 # Schéma zapojenia Arduino
-![Schéma Arduino - RFID vrátnik](https://i.imgur.com/DoPktzT.png]
+![Schéma Arduino + Ethernet - RFID vrátnik](https://i.imgur.com/DoPktzT.png)
 
 # Schéma zapojenia ESP8266 (NodeMCU)
 ![Schéma NodeMCU - ESP8266 - RFID vrátnik](https://i.imgur.com/j9wciSz.png)
