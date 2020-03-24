@@ -1,11 +1,10 @@
 /*|----------------------------------------------------------|*/
-/*|SKETCH PRE TEST RFID CITACKY RC522 S ESP8266              |*/
+/*|SKETCH PRE TEST RFID CITACKY RC522 s Arduinom             |*/
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
-/*|DOSKA: NodeMCU, Arduino Uno, Mega, Nano                   |*/
-/*|CORE: 2.3.0                                               |*/
 /*|WEB: https://arduino.php5.sk                              |*/
 /*|----------------------------------------------------------|*/
+
 #include <SPI.h>
 #include <RFID.h>
 #define SS_PIN 6
