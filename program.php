@@ -80,7 +80,7 @@ $stranka = "Program";
 /*|----------------------------------------------------------|*/
 #include &lt;SPI.h&gt;
 #include &lt;RFID.h&gt;
-#define SS_PIN 4
+#define SS_PIN 6
 #define RST_PIN 5
 RFID rfid(SS_PIN, RST_PIN); 
 unsigned long kod;
