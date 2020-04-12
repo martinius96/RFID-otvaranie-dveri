@@ -4,9 +4,6 @@ include("connect.php");
 //MOŽNO POUŽIT ĎALŠIE METÓDY: PUT, DELETE, PATCH...
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$kod = mysqli_real_escape_string($con, $_POST['kod']);
-}else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-	$kod = mysqli_real_escape_string($con, $_GET['kod']);
-}
 $kod = trim( $kod );
 if (is_numeric($kod)){
   $kod = hexdec(hash('crc32b', $kod));
@@ -48,4 +45,7 @@ if (is_numeric($kod)){
 }
 }else{
   echo "IP adresa záškodníka bola uložená do logu.";
+}
+}else{
+ echo "GET / PUT / DELETE METODA NIE JE PODPOROVANA!";
 }
