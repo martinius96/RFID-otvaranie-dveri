@@ -9,11 +9,11 @@ include("connect.php");
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="RFID vrátnik založený na čítačke RC522 a mikrokontroléri NodeMCU s čipom ESP82666-12E.">
-    <meta name="keywords" content="rfid, vrátnik, dochádzka, systém, prístup, odmietnutie, otvorenie, dvere, solenoid, relé, esp8266, nodemcu, jazýček, kľučka">
+    <meta name="description" content="RFID vrátnik založený na čítačke RC522 pracujúcej na frekvencii 13.56MHz. Prepojenie s mikrokontrolérmi Arduino, ESP32, ESP8266.">
+    <meta name="keywords" content="rfid, vrátnik, príchod, systém, prístup, odmietnutie, otvorenie, dvere, solenoid, relé, esp8266, nodemcu, jazýček, kľučka, arduino, ethernet, wifi, esp32">
     <meta name="author" content="Martin Chlebovec">
     <meta name="robots" content="index, follow">
-    <title>RFID vrátnik - ESP8266</title>
+    <title>RFID vrátnik - Arduino / ESP8266 / ESP32</title>
     <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
