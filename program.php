@@ -46,64 +46,25 @@ $stranka = "Program";
 
     <!-- Page Content -->
     <div class="container">
-	   <hr><h2>Projekt</h2><hr>
-      <hr><b>Zdrojové kódy projektu s pripojením na: https://arduino.php5.sk/rfid</b><hr>
-    <div class="alert alert-success">
-	    <strong>Zdrojové kódy pre mikrokontroléry dostupné na Github-e:</strong> <a href="https://github.com/martinius96/RFID-otvaranie-dveri/tree/master/examples">Repozitár</a><br>
-      <strong>Zdrojové kódy pre webstránku, celý projekt dostupné na Github-e:</strong> <a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár</a><br>
+	   <hr><h2>Projekt RFID otvárania dverí - vrátnika:</h2><hr>
+    <div class="alert alert-danger">
+	    <strong>Zdrojové kódy pre mikrokontroléry (Arduino, ESP8266, ESP32) dostupné na Github-e:</strong> <a href="https://github.com/martinius96/RFID-otvaranie-dveri/tree/master/examples">Repozitár</a><br>
+      <li>Projekt je vhodné najprv odtestovať offline prostredníctvom testera. Neskôr použiť program s pripojením na túto webovú lokalitu.</li>
+</div>
+<div class="alert alert-info">
+      <strong>Zdrojové kódy pre webstránku, celý projekt dostupné na Github-e pod MIT licenciou:</strong> <a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár</a><br>
 </div>
      <b>Datasheety:</b>
 	   <li><a href="https://github.com/esp8266/Arduino/">Návod na inštaláciu NodeMCU do ArduinoIDE (V spodnej časti README)</a></li><br>
-     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/ATmega328P.pdf">ATmega328P datasheet</a></li><br>
-     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/ESP32-WROOM-32.pdf">ESP32-WROOM-32 datasheet</a></li><br>
-     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/ESP8266-12E.pdf">ESP8266-12E datasheet</a></li><br>
-     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/NodeMCU.pdf">NodeMCU (v2) datasheet</a></li><br>
-     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/RFID-RC522.pdf">RFID RC522 datasheet</a></li><br>
-     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/SRD-05VDC-SL-C-rele.pdf">SRD-05VDC-SL-C datasheet</a></li><br>
-     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/WISOL-SFM10R1-SigFox.pdf">WISOL-SFM10R1 datasheet</a></li><br>
-     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/Semtech-SX1276_77_78_79-LoRa.pdf">Semtech - SX1276 (77/78/79) datasheet</a></li><br>
+     <li><a href="https://github.com/espressif/arduino-esp32">Návod na inštaláciu ESP32 do ArduinoIDE (V spodnej časti README)</a></li><br>
+          <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/Wiznet-W5100.pdf">Ethernet Wiznet W5100 datasheet</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/Wiznet-W5500.pdf">Ethernet Wiznet W5500 datasheet</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/RFID-RC522.pdf">RFID RC522 čítačka - datasheet</a></li><br>
+     <li><a href="https://github.com/martinius96/RFID-otvaranie-dveri/blob/master/datasheet/SRD-05VDC-SL-C-rele.pdf">SRD-05VDC-SL-C - elektromagnetické relé - datasheet</a></li>
  <h1 id="demo"></h1>
-<b>Dostupné technológie:</b>
-<li>Ethernet</li>
-<li>WiFi</li>
-<li>LoRa</li>
-<li>SigFox</li>
-<hr><h2>Zdrojový kód - Offline tester</h2><hr>
-<pre style="background-color:#3498DB;">
-/*|----------------------------------------------------------|*/
-/*|SKETCH PRE TEST RFID CITACKY RC522   (HARDWARE SPI)       |*/
-/*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
-/*|EMAIL: martinius96@gmail.com                              |*/
-/*|DOSKA: ESP8266 (NodeMCU), ESP32, Arduino                  |*/
-/*|WEB: https://arduino.php5.sk                              |*/
-/*|LICENCIA: MIT                                             |*/
-/*|----------------------------------------------------------|*/
-#include &lt;SPI.h&gt;
-#include &lt;RFID.h&gt;
-#define SS_PIN 6
-#define RST_PIN 5
-RFID rfid(SS_PIN, RST_PIN); 
-unsigned long kod;
-
-void setup(){ 
-  Serial.begin(9600);
-  SPI.begin(); 
-  rfid.init();
-}
-
-void loop(){
-  if (rfid.isCard()) {
-    if (rfid.readCardSerial()) {
-      Serial.println(" ");
-      Serial.println("Kod karty ziskany: ");
-      kod = 10000*rfid.serNum[4]+1000*rfid.serNum[3]+100*rfid.serNum[2]+10*rfid.serNum[1]+rfid.serNum[0];
-      Serial.println(kod);
-      String kodik = String(kod);        
-    }
-  }
-  rfid.halt();
-}
-</pre>
+<b>Prenosové technológie v projekte (komunikácia s webovým rozhraním):</b>
+<li>Ethernet - (Wiznet W5100 / W5500)</li>
+<li>WiFi - (ESP8266 / ESP32)</li>
 <hr>
 </div>
      <?php 
