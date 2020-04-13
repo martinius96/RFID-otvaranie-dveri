@@ -120,11 +120,14 @@ input:checked + .slider:before {
    <?php 
       if (isset($_POST["odosli_nastavenia"])) {
     echo '<div class="alert alert-danger">
-  <strong>Nepovolená akcia!</strong> Možnosť upravovať nastavenia je možné iba v platenej verzii projektu - pri záujme: <b>martinius96@gmail.com</b>
+  <strong>Nepovolená akcia!</strong> Možnosť upravovať nastavenia je možné iba v platenej verzii projektu</b>
 </div>';  
 } 
 ?>
 <h3>Nastavenia administrátora</h3>
+<div class="alert alert-danger">
+<strong>Súčasť platenej verzie - v súčasnosti nie je pod vývojom.</strong>
+</div>   
 <hr>
 <form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
     <center><b>Meno a priezvisko administrátora: </b><input type="text" name="meno" value="Martin Chlebovec"></center>
@@ -136,8 +139,7 @@ input:checked + .slider:before {
     <center><b>Prihlasovacie meno: </b><input type="password" name="password" value="administrator"></center>
     <hr>
     <center><input type="submit" name="odosli_nastavenia" class="btn btn-success" value="Upraviť nastavenia"></center>
-    </form>
- 
+    </form> 
   <hr>
  </div>
 
