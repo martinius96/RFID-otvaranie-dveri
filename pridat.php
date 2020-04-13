@@ -52,6 +52,9 @@ include("connect.php");
     <div class="container">
       <div class="row">
     <div class="col-lg-12">
+     <?php 
+      include("odkaz.php");
+      ?>
       </div>
       <div class="col-lg-12 text-center">
 		<center><b>Posledných 5 interakcií</b></center>
@@ -70,6 +73,11 @@ include("connect.php");
        </div>
 
   </body>
+    <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip2"]').tooltip();   
+});
+</script>
       <script>
   $(function() {
   $.get('last5.php', function(data){
