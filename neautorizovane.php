@@ -5,7 +5,7 @@ include("connect.php");
 									 <tr>
 									 <th style="width: 25%;">Od</th>
 									 <th style="width: 25%;">Číslo karty</th>
-									 <th style="width: 25%;">Akcia</th>
+									 <th style="width: 25%;">Akcia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip" data-placement="right" title="Aktivácia karty - Zápis karty do zoznamu oprávnených kariet pre vstup!"></th>
                    <th style="width: 25%;">Meno</th>
  </tr>
 <?php
@@ -20,6 +20,4 @@ include("connect.php");
         		$line2 = mysqli_fetch_assoc($zamestnanec);
         		echo '<td>' . htmlspecialchars($line2['meno']) . '</td>';
 			echo "</tr>";
-		}  ?> 
-	</tbody>
-</table>
+		}  ?> </tbody></table>
