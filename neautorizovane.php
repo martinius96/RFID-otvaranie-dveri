@@ -2,12 +2,12 @@
 include("connect.php");
 ?>
 <table style="width: 100%;" border="1">
-									 <tr>
-									 <th style="width: 25%;">Od</th>
-									 <th style="width: 25%;">Číslo karty</th>
-									 <th style="width: 25%;">Akcia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip" data-placement="right" title="Aktivácia karty - Zápis karty do zoznamu oprávnených kariet pre vstup!"></th>
-                   <th style="width: 25%;">Meno</th>
- </tr>
+	<tr>
+		<th style="width: 25%;">Od</th>
+		<th style="width: 25%;">Číslo karty</th>
+		<th style="width: 25%;">Autorizácia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip" data-placement="right" title="Aktivácia karty - Zápis karty do zoznamu oprávnených kariet pre vstup!"></th>
+        	<th style="width: 25%;">Meno</th>
+ 	</tr>
 <?php
  	$karty = mysqli_query($con,"SELECT * FROM neautorizovane GROUP BY cislo_karty") or die(mysqli_error($con));
 		while($line = mysqli_fetch_assoc($karty)){
