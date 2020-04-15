@@ -18,7 +18,7 @@ const char * host = "arduino.php5.sk"; //bez https a www
 const int httpsPort = 443; //https port
 
 const int rele = 16; //GPIO16 == D0
-const char fingerprint[] PROGMEM = "b0 6d 7f 8c 98 78 8e 6e 0a 57 a8 2f 7e d1 40 2a 1e 3f 48 f7";
+const char fingerprint[] PROGMEM = "00 2c c1 3a 3c fd a2 0a a3 f1 19 1a ee ee 54 72 93 56 7d 1b";
 #define SS_PIN 4
 #define RST_PIN 5
 RFID rfid(SS_PIN, RST_PIN);
