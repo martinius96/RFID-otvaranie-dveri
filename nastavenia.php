@@ -7,14 +7,13 @@ $stranka = "Nastavenia";
 include("connect.php");
 ?>
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Nastavenia administrátora pre webaplikáciu RFID vrátnika. Systémové nastavenia">
-    <meta name="keywords" content="rfid, vrátnik, administrátor, nfc, nastavenia, formulár, systém">
+    <meta name="description" content="Nastavenia administrátora pre webaplikáciu RFID vrátnika. Systémové nastavenia, notifikácie priloženia RFID karty.">
+    <meta name="keywords" content="rfid, vrátnik, administrátor, nfc, nastavenia, formulár, systém, dochádzka, príchod, tag, priloženie, karta, e-mail, notifikácia">
     <meta name="author" content="Martin Chlebovec">
     <meta name="robots" content="index, follow">
-    <title>RFID vrátnik - ESP8266 - Evidencia</title>
+    <title>RFID vrátnik - Nastavenia - ESP8266, ESP32,  Arduino</title>
      <link rel="icon" type="image/png" href="https://i.nahraj.to/f/2g8C.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -116,23 +115,29 @@ input:checked + .slider:before {
     <div class="container">
       <div class="row">
     <div class="col-lg-12">
-    <h1 id="demo"></h1>
-   <?php 
+    <div class="alert alert-success">
+<strong>Podporte projekt pre pridanie nových funkcionalít: <a href="https://paypal.me/chlebovec">PayPal</a></strong>
+<li>Login systém, e-mailové notifikácie priloženia karty, možnosť zmeny prihlasovacích údajov</li>
+<li>Podpora RFID čítačiek RDM6300 (125kHz), PN532 (13.56MHz)</li>
+<li>Podpora STM32, Sigfox, GSM (GPRS) a LoRa technológie</li>
+<li>Vytvorenie DPS pre každú z podporovaných platforiem (Arduino, ESP32, ESP8266)</li>
+<li>Export priložených kariet do .csv / JSON formátu</li>
+</div>
+<h1 id="demo"></h1>
+<?php 
       if (isset($_POST["odosli_nastavenia"])) {
-    echo '<div class="alert alert-danger">
-  <strong>Nepovolená akcia!</strong> Možnosť upravovať nastavenia je možné iba v platenej verzii projektu</b>
-</div>';  
-} 
+        echo '<div class="alert alert-danger"><strong>Nepovolená akcia!</strong> Možnosť upravovať nastavenia je možné iba v platenej verzii projektu</b></div>';  
+      } 
 ?>
 <h3>Nastavenia administrátora</h3>
 <div class="alert alert-danger">
 <strong>Súčasť platenej verzie - v súčasnosti nie je pod vývojom.</strong>
 </div>   
 <hr>
-<form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+    <form method="post"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
     <center><b>Meno a priezvisko administrátora: </b><input type="text" name="meno" value="Martin Chlebovec"></center>
     <!-- Rounded switch -->
-<center><b>Upozorniť na nové priloženie karty: </b><label class="switch"><input type="checkbox"><span class="slider round"></span></label></center>
+    <center><b>Upozorniť na nové priloženie karty: </b><label class="switch"><input type="checkbox"><span class="slider round"></span></label></center>
     <center><b>Priloženie novej karty hlásiť na: </b><input type="text" name="email" value="martinius96@gmail.com"></center>
     <h4>Zmena prihlasovacích údajov</h4>
     <center><b>Prihlasovacie meno: </b><input type="text" name="login" value="admin"></center>
@@ -142,7 +147,6 @@ input:checked + .slider:before {
     </form> 
   <hr>
  </div>
-
        </div>   
       <?php 
       include("footer.php");
