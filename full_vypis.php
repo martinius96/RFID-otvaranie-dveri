@@ -10,7 +10,7 @@ include("connect.php");
 		<th style="width: 25%;">Meno</th>							 
 	</tr></thead><tbody>           
 <?php
- 	$karty = mysqli_query($con,"SELECT * FROM pokusy ORDER BY id DESC") or die(mysqli_error($con));
+ 	$karty = mysqli_query($con,"SELECT * FROM pokusy ORDER BY id DESC LIMIT 100") or die(mysqli_error($con));
 		while($line = mysqli_fetch_assoc($karty)){
 			echo "<tr>";
 			$casik = date('d. M H:i:s',strtotime($line['time']));	
