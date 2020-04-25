@@ -64,20 +64,21 @@ if (isset($_POST["detail_zamestnanca"])) {
 <hr>
 <table style="width: 100%;" border="1">
 									 <tr>
-									 <th style="width: 33.33%;">Číslo karty</th>
-									 <th style="width: 33.33%;">Meno zamestnanca</th>
-                   <th style="width: 33.33%;">Akcia</th>
+									 <th style="width: 25%;">Číslo karty</th>
+									 <th style="width: 25%;">Meno zamestnanca</th>
+                   <th style="width: 25%;">Akcia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip" data-placement="right" title="Úprava mena zamestnanca"></th>
+                   <th style="width: 25%;">Akcia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip2" data-placement="right" title="Odstránenie zamestnanca z evidencie (Presunutie do neevidovaných)!"></th>
  </tr>
 <?php
  	$karty = mysqli_query($con,"SELECT * FROM zamestnanci WHERE meno != 'Neevidovaný' ORDER BY id DESC") or die(mysqli_error($con));
 		while($line = mysqli_fetch_assoc($karty)){
 			echo "<tr>";
 				  echo '<td><i>' . htmlspecialchars($line['cislo_karty']) .'</i></td>';
-          echo '<td><i>' . htmlspecialchars($line['meno']) .'</i></td>';
-          echo "<td><a href='upravit.php?".htmlspecialchars($line['cislo_karty'])."' class='btn btn-danger'>Upraviť</a></td>";
+          echo '<td><b>' . htmlspecialchars($line['meno']) .'</b></td>';
+          echo "<td><a href='upravit.php?".htmlspecialchars($line['cislo_karty'])."' class='btn btn-info'>Upraviť</a></td>";
+          echo "<td><a href='odobratzevidencie.php?".htmlspecialchars($line['cislo_karty'])."' class='btn btn-danger'>Odstrániť z evidencie</a></td>";
 			echo "</tr>";
 		}  ?> </tbody></table>
-	      <hr>
  </div>
 
        </div>   
@@ -87,4 +88,10 @@ if (isset($_POST["detail_zamestnanca"])) {
        </div>
 
   </body>
+    <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+  $('[data-toggle="tooltip2"]').tooltip();   
+});
+</script>
 </html>
