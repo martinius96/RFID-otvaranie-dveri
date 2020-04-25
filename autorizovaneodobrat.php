@@ -5,9 +5,9 @@ include("connect.php");
 	<tr>
 	<th style="width: 20%;">Autorizované od</th>
 	<th style="width: 20%;">Číslo karty</th>
-	<th style="width: 20%;">Deaktívácia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip" data-placement="right" title="Deaktivácia karty - zneplatnenie karty, ponechanie v systéme!"></th>
-  	<th style="width: 20%;">Zmazať<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip2" data-placement="right" title="Výmaz karty - zneplatnenie karty, vymazanie zo systému!"></th>
-  	<th style="width: 20%;">Meno</th>
+	<th style="width: 20%;">Akcia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip" data-placement="right" title="Deaktivácia karty - zneplatnenie karty, ponechanie v systéme!"></th>
+  <th style="width: 20%;">Akcia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip2" data-placement="right" title="Výmaz karty - zneplatnenie karty, vymazanie zo systému!"></th>
+  <th style="width: 20%;">Meno</th>
 </tr>
 <?php
  	$karty = mysqli_query($con,"SELECT * FROM autorizovane ORDER BY id DESC") or die(mysqli_error($con));
@@ -25,3 +25,9 @@ include("connect.php");
 	}  
 ?> 
 </table>
+  <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+  $('[data-toggle="tooltip2"]').tooltip();   
+});
+</script>
