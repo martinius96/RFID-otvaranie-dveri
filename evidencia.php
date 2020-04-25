@@ -52,14 +52,14 @@ include("connect.php");
     <div class="container">
       <div class="row">
     <div class="col-lg-12">
-    <h1 id="demo"></h1>
+      <h1 id="demo"></h1>
 <h3>Evidencia nových zamestnancov</h3>
 <hr>
 <table style="width: 100%;" border="1">
 									 <tr>
 									 <th style="width: 33.33%;">Číslo karty</th>
 									 <th style="width: 33.33%;">Meno zamestnanca</th>
-                   <th style="width: 33.33%;">Akcia</th>
+                   <th style="width: 33.33%;">Akcia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip" data-placement="right" title="Zaevidovať nového zamestnanca"></th>
  </tr>
 <?php
  	$karty = mysqli_query($con,"SELECT * FROM zamestnanci WHERE meno = 'Neevidovaný' ORDER BY id DESC") or die(mysqli_error($con));
@@ -81,4 +81,9 @@ include("connect.php");
        </div>
 
   </body>
+      <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();    
+});
+</script>
 </html>
