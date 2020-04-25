@@ -68,12 +68,6 @@ include("connect.php");
       ?>
      </div>
   </body>
-  <script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip2"]').tooltip();   
-  $('[data-toggle="tooltip2"]').tooltip();   
-});
-</script>
         <script>
         
   $(function() {
