@@ -9,6 +9,7 @@
 * Vzorové zdrojové kódy pre ESP8266, ESP32 komunikujú priamo s touto webovou lokalitou po HTTP/HTTPS protokole
 * Arduino s Ethernetom komunikuje po HTTP protokole
 * Možnosť ihneď vyskúšať po zapojení čítačky a nahratí programu pre odtestovanie funkčnosti
+* Pridaná podpora pre Over The Air aktualizáciu firmvéru prostredníctvom LAN siete - Basic OTA cez Python
 
 # Systém ponúka 2 typy užívateľov projektu
 | Administrátor: <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width="64" height="64"> | Používateľ: <img src="https://image.flaticon.com/icons/svg/1326/1326318.svg" width="64" height="64"> |
@@ -37,11 +38,10 @@
 * ![Basekit](https://arduino.php5.sk/images/basekit.jpg)Basekit (možný iba pri V3, možnosť využiť napájanie na 6-24V)
 #
 * ![Arduino Uno](https://s3-ap-northeast-1.amazonaws.com/switch-science-intl/contents/small/789_201602_102_tBuTiHx.jpg)**Arduino Uno**
-* ![Ethernet W5100](https://s3.amazonaws.com/storage.wobiz.com/24/24605/images/Square/1503854801_df45e8e990ef7e3b39025df4a8b2a008.24605.jpeg)Ethernet W5100
-* ![LoRa](https://cdn.shopify.com/s/files/1/2187/3161/products/RAK811_LoRa_LoRAWAN_module_based_on_SX1276_868_915MHz_up_to_3km_range_128x.png?v=1535900353)LoRa (Semtech SX1276/77/78/79)
-* ![Sigfox modem](https://docid81hrs3j1.cloudfront.net/contents/small/5373_001_5wQsjlY.jpeg)Sigfox modem
+* ![Ethernet W5100](https://s3.amazonaws.com/storage.wobiz.com/24/24605/images/Square/1503854801_df45e8e990ef7e3b39025df4a8b2a008.24605.jpeg)Ethernet Wiznet W5100
+* ![Ethernet W5500](https://cdn.instructables.com/FAT/YMPE/JHQJS5HZ/FATYMPEJHQJS5HZ.LARGE.jpg)Ethernet Wiznet W5500
 #
-* ![ESP32 DevKit](http://www.robotop.lv/1802-home/nodemcu-esp-32-v11.jpg)**ESP32 DevKit v1 - v4**
+* ![ESP32 DevKit](https://images.ua.prom.st/785300776_w128_h128_wifi-bluetooth-modul.jpg)**ESP32 DevKit V1 / DevKitC V4**
 #
 * ![RC522](https://rukminim1.flixcart.com/image/128/128/learning-toy/m/b/e/grab-em-rfid-rc522-spi-original-imaehszrwtx9gshm.jpeg?q=70)Čítačka RC522 na 13.56 MHz pre štandard ISO/IEC 14443 A
 * ![13.56MHz](https://mi4.rightinthebox.com/images/128x128/201307/rpqwut1374140279910.jpg)Kompatibilné karty a kľúčenky
