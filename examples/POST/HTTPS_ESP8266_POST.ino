@@ -19,8 +19,8 @@
 #include <ArduinoOTA.h>
 #endif
 
-const char * ssid = "MenoWifiSiete";
-const char * password = "HesloWifiSiete";
+const char * ssid = "WIFI_NAME";
+const char * password = "WIFI_PASSWORD";
 const char * host = "arduino.php5.sk"; //bez https a www
 const int httpsPort = 443; //https port
 
@@ -41,7 +41,7 @@ void setup() {
     delay(500);
     Serial.print(".");
   }
-#ifdef OTA  
+#ifdef OTA
   // Port defaults to 8266
   // ArduinoOTA.setPort(8266);
 
@@ -68,9 +68,9 @@ void setup() {
     else if (error == OTA_RECEIVE_ERROR) Serial.println("Receive Failed");
     else if (error == OTA_END_ERROR) Serial.println("End Failed");
   });
-#ifdef OTA  
+#ifdef OTA
   ArduinoOTA.begin();
-#endif 
+#endif
   Serial.println("");
   Serial.println("WiFi uspesne pripojene");
   Serial.println("IP adresa: ");
@@ -87,7 +87,7 @@ void loop() {
     Serial.print(".");
   }
   ArduinoOTA.handle();
-#endif 
+#endif
   if (rfid.isCard()) {
     if (rfid.readCardSerial()) {
       Serial.println(" ");
