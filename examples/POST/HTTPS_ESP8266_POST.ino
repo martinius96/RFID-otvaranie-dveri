@@ -7,7 +7,7 @@
 /*|CORE: 2.5.0 (2.5.2)                                       |*/
 /*|WEB: https://arduino.php5.sk                              |*/
 /*|----------------------------------------------------------|*/
-#define OTA //odkomentuj pre OTA UPDATE CEZ LAN
+//#define OTA //odkomentuj pre OTA UPDATE CEZ LAN
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
 #include <SPI.h>
