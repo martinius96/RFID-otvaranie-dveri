@@ -60,6 +60,10 @@
 * ![Arduino core](http://users.sch.gr/johnmaga/0/images/logo/logo-64x64/arduino_b-64x64.png)
 * <img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_977c0721699223be28566021a78599e9/autodesk-eagle.png" width="64" height="64">
 
+# Získanie Root CA certifikátu - (Pre ESP32 - HTTPS)
+* openssl s_client -showcerts -verify 5 -connect example.com:443 < /dev/null
+# Získanie SHA1 fingerprintu certifikátu - (Pre ESP8266 - HTTPS)
+* openssl s_client -connect example.com:443 -showcerts < /dev/null 2>/dev/null   | openssl x509 -in /dev/stdin -sha1 -noout -fingerprint
 
 # Inštalácia systému
 * Stiahnuť repozitár v .zip archíve z Githubu
