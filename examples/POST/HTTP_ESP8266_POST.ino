@@ -7,7 +7,7 @@
 /*|CORE: 2.3.0 - 2.5.0 compatible                            |*/
 /*|WEB: https://arduino.php5.sk                              |*/
 /*|----------------------------------------------------------|*/
-#define OTA //odkomentuj pre OTA UPDATE CEZ LAN
+//#define OTA //odkomentuj pre OTA UPDATE CEZ LAN
 #include <ESP8266WiFi.h>
 #include <SPI.h>
 #include <RFID.h>
