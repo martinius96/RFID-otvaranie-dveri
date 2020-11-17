@@ -1,11 +1,9 @@
 # RFID vrátnik s mikrokontrolérom ESP8266, ESP32
-**Používaním projektu sa osoba zaväzuje k dodržiavaniu zmluvných podmienok MIT licencie, pod ktorou je projekt šírený! Uvedomuje si riziká, obmedzenia a svoje povinnosti, rovnako tak i právne následky v prípade porušenia!**
-* ![MIT Licencia pre RFID vrátnika založeného na platforme Arduino](https://i.imgur.com/SrJXpCV.png)
+**Používaním projektu sa osoba zaväzuje k dodržiavaniu zmluvných podmienok MIT licencie, pod ktorou je projekt šírený! **
 # Podporte projekt pre pridanie nových funkcionalít
 * https://www.paypal.me/chlebovec
 # Stránka projektu
-* https://arduino.php5.sk/rfid/
-* Informácie o projekte: https://arduino.php5.sk/rfid-system.php 
+* Informácie o projekte: http://arduino.clanweb.eu/rfid-system.php 
 * Vzorové zdrojové kódy pre ESP8266, ESP32 komunikujú priamo s touto webovou lokalitou po HTTP/HTTPS protokole
 * Arduino s Ethernetom komunikuje po HTTP protokole
 * Možnosť ihneď vyskúšať po zapojení čítačky a nahratí programu pre odtestovanie funkčnosti
@@ -76,7 +74,6 @@
 * Nahrať program, používať Arduino core 2.5.0/2.5.2 (pre NodeMCU), **verzia 2.3.0 (doteraz používaná) je nekompatibilná** pre HTTPS fingerprint!
 * Pre Arduino, ESP32 je možné použiť aj nanovšie knižnice pre HTTP, HTTPS spojenia
 * Program pre Arduino je plne kompatibilný medzi Arduino Uno, Nano, Mega 1280/2560
-* **Môžete si zakúpiť webové rozhranie na: martinius96@gmail.com, obsahuje dokumentáciu, rozšírenú funkcionalitu, support**
 * Hotovo
 
 # Webové rozhranie v prevádzke:
