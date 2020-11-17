@@ -15,9 +15,9 @@
 | V reálnom čase vidí priloženie karty s výsledkom overenia  | Pri overeni sú mu odistené dvere na 5 sekúnd|
 | Historicky vidí 100 posledných priložení  | Pri neoverení používateľa sa jazýček nevtiahne  |
 | Jedným kliknutím môže schváliť už (skôr) priloženú kartu  | Používateľ o overení/neoverení nie je informovaný (led/buzzer)|
-| Odstránenie karty jedným kliknutím  |  Informovanie používateľa o výsledku overenia cez diódu/buzzer (len platená verzia) |
-| Grafická reprezentácia prístupov  | Používateľ použije Mifare tag, bankomatovú kartu, ISIC kartu, náramok, ktorý spĺňa štandard ISO/IEC 14443 A|
-| Štatistika RFID vrátnika  | Prihlásenia používateľa do aplikácie (len platená verzia) |
+| Odstránenie karty jedným kliknutím  |  Používateľ použije Mifare tag, bankomatovú kartu, ISIC kartu, náramok, ktorý spĺňa štandard ISO/IEC 14443 A |
+| Grafická reprezentácia prístupov  | |
+| Štatistika RFID vrátnika  |  |
 | Vidí zdrojový kód pre mikrokontroléry  |  |
 
 * Overenie kariet a prístupu cez web rozhranie do objektu
