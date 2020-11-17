@@ -1,5 +1,4 @@
 # RFID vrátnik s mikrokontrolérom ESP8266, ESP32
-**Používaním projektu sa osoba zaväzuje k dodržiavaniu zmluvných podmienok MIT licencie, pod ktorou je projekt šírený!**
 # Podporte projekt pre pridanie nových funkcionalít
 * https://www.paypal.me/chlebovec
 # Stránka projektu
@@ -19,16 +18,12 @@
 | Odstránenie karty jedným kliknutím  |  Informovanie používateľa o výsledku overenia cez diódu/buzzer (len platená verzia) |
 | Grafická reprezentácia prístupov  | Používateľ použije Mifare tag, bankomatovú kartu, ISIC kartu, náramok, ktorý spĺňa štandard ISO/IEC 14443 A|
 | Štatistika RFID vrátnika  | Prihlásenia používateľa do aplikácie (len platená verzia) |
-| Vidí zdrojový kód pre NodeMCU  |  |
-| Prihlásenie/odhlásenie (len platená verzia)  |   |
-| Priradenie mien, fotografií ku kartám (len platená verzia)  |  |
-| Export mesačnej dochádzky  vstupov v .csv, .xml, .sql (len platená verzia)  |  |
-| História 1 rok dozadu (len platená verzia)  |  |
+| Vidí zdrojový kód pre mikrokontroléry  |  |
 
-* Overenie kariet a prístupu cez web do objektu
-* Čítačka prečíta kartu štandardu ISO/IEC 14443 A, jej MAC adresu odošle na web, kde sa overí a odpovie sa OK/NO
-* Možno použiť Mifare tagy, ISIC karty, bankomatové, zamestnanecké karty, náramky i kľúčenky, ktoré spĺňajú štandard ISO/EIC 14443 A
-* V prípade odpovede OK mikrokontróler aktivuje jazýček, čím je možné dvere otvoriť. 
+* Overenie kariet a prístupu cez web rozhranie do objektu
+* Čítačka prečíta kartu štandardu ISO/IEC 14443 A, jej UID odošle na web, kde sa overí a odpovie sa OK/NO
+* Možno použiť Mifare tagy, ISIC karty, bankomatové, zamestnanecké karty, náramky i kľúčenky, ktoré spĺňajú štandard ISO/IEC 14443-A
+* V prípade odpovede OK mikrokontróler aktivuje solenoid, ktorý otvorí elektronický zámok. 
 * Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, elektromagnetický jazýček (solenoid) sa vtiahne pri stlačení kľučky
 
 # Hardvér
