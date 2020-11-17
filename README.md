@@ -27,12 +27,12 @@
 * Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, elektromagnetický jazýček (solenoid) sa vtiahne pri stlačení kľučky
 
 # Hardvér
-* ![NodeMCU](https://arduino.php5.sk/images/nodemcuv3.jpg)**NodeMCU (v2, alebo v3)**
-* ![Basekit](https://arduino.php5.sk/images/basekit.jpg)Basekit (možný iba pri V3, možnosť využiť napájanie na 6-24V)
+* ![NodeMCU](https://a.allegroimg.com/s128/038a14/f035c3d6448cbb01f1c543d06c10/Modul-WiFi-ESP8266-NodeMCU-v3-ESP12E-CH340-Arduino)**NodeMCU (v2, alebo v3)**
+* ![Basekit](https://www.robotop.lv/1201-home/nodemcu-base-board-v10.jpg)Basekit (možný iba pri V3, možnosť využiť externé napájanie na 6-24V)
 #
 * ![Arduino Uno](https://s3-ap-northeast-1.amazonaws.com/switch-science-intl/contents/small/789_201602_102_tBuTiHx.jpg)**Arduino Uno**
 * ![Ethernet W5100](https://s3.amazonaws.com/storage.wobiz.com/24/24605/images/Square/1503854801_df45e8e990ef7e3b39025df4a8b2a008.24605.jpeg)Ethernet Wiznet W5100
-* ![Ethernet W5500](https://cdn.instructables.com/FAT/YMPE/JHQJS5HZ/FATYMPEJHQJS5HZ.LARGE.jpg)Ethernet Wiznet W5500
+* ![Ethernet W5500](https://content.instructables.com/ORIG/FAT/YMPE/JHQJS5HZ/FATYMPEJHQJS5HZ.jpg?auto=webp&frame=1&md=b5361d3cb7debcabb4f8547a353b9e04)Ethernet Wiznet W5500
 #
 * ![ESP32 DevKit](https://images.ua.prom.st/785300776_w128_h128_wifi-bluetooth-modul.jpg)**ESP32 DevKit V1 / DevKitC V4**
 #
