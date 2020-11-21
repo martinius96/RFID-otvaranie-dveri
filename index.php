@@ -70,11 +70,4 @@ include("connect.php");
     });
   });
   </script>
-  <script>
-       setInterval(function(){
-  $.get('full_vypis.php', function(data){
-        $('#full').html(data)
-    });
-},15000);   
-</script>
 </html>
