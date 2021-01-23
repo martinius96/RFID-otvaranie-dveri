@@ -20,7 +20,7 @@
 
 const char * ssid = "wifi_meno";
 const char * password = "wifi_heslo";
-const char * host = "www.arduino.php5.sk";
+const char * host = "arduino.clanweb.eu";
 const int httpPort = 80; //http port
 const int rele = 17;
 #define SS_PIN 21
@@ -127,14 +127,17 @@ void loop() {
           }
         }
         String line = client.readStringUntil('\n');
-        if (line == "OK") {
+        if (line.indexOf("OK") > 0) {
+          Serial.println(F("VSTUP POVOLENY"));
+          Serial.println(F("DVERE ODOMKNUTE"));
           digitalWrite(rele, LOW); //invertovane spinane rele active LOW
           delay(5500);              //cas otvorenia dveri
           digitalWrite(rele, HIGH); //zatvor zamok
-        } else if (line == "NO") {
-          digitalWrite(rele, HIGH);
+          Serial.println(F("DVERE ZAMKNUTE"));
+        } else if (line.indexOf("NO") > 0) {
+          Serial.println(F("VSTUP ZAMIETNUTY"));
         } else {
-          Serial.println("Prosim pockajte s dalsim overenim karty 5 sekund!");
+          Serial.println(F("Prosim pockajte s dalsim overenim karty 5 sekund!"));
         }
       }
     }
