@@ -3,8 +3,8 @@
 * https://www.paypal.me/chlebovec
 # Stránka projektu
 * Informácie o projekte: http://arduino.clanweb.eu/rfid-system.php 
-* Vzorové zdrojové kódy pre ESP8266, ESP32 komunikujú priamo s touto webovou lokalitou po HTTP/HTTPS protokole
-* Arduino s Ethernetom komunikuje po HTTP protokole
+* **Vzorové zdrojové kódy nie sú použiteľné na predmetnú doménu z dôvodu REKLÁM na WEBHOSINGU, ktorý zamedzuje správnemu načítaniu Payloadu - Informácia OK / NO z webservera sa nedá v existujúcej implementácii prečítať. Na vlastnom serveri je to v poriadku...**
+* Arduino s Ethernetom komunikuje po HTTP protokole, pre ESP8266 a ESP32 možnosť využiť HTTP i HTTPS protokol pre šifrované spojenie
 * Možnosť ihneď vyskúšať po zapojení čítačky a nahratí programu pre odtestovanie funkčnosti
 * Pridaná podpora pre Over The Air aktualizáciu firmvéru prostredníctvom LAN siete - Basic OTA cez Python
 
