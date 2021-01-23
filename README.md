@@ -7,8 +7,8 @@
 * **Z dostupných zdrojových kódov pre platformy Arduino, ESP8266 a ESP32 je možné využiť iba HTTP variant, nakoľko freehosting clanweb.eu nemá podporu HTTPS!**
 * Možnosť ihneď vyskúšať funkcionalitu systému v testovacom webovom rozhraní po zapojení čítačky NXP RC522 a nahratí programu pre odtestovanie funkčnosti
 * Čítačka RC522 funguje na frekvencii 13.56 MHz, dokáže prečítať RFID tagy štandardu ISO/IEC 14443-A
-* Webové rozhranie dokáže vizualizovať aktuálne priloženia karty s výsledkom overenia s možnosťou riadenia prístupu - autorizácie / deautorizácie kariet
-* Vhodné ako základ pre vlastný projekt s RFID výstupom
+* Webové rozhranie dokáže vizualizovať priloženia karty historicky s výsledkom overenia s možnosťou riadenia prístupu - autorizácie / deautorizácie kariet (automatická obnova údajov bola odstránená)
+* Vhodné ako základ pre vlastný projekt s RFID vstupom od používateľa
 * Pridaná podpora pre Over The Air aktualizáciu firmvéru prostredníctvom LAN siete - Basic OTA cez Python z prostredia Arduino IDE
 * **Čítačka Wiegand, RDM6300 nie je dostupná vo free verzii projektu RFID vrátnik**
 * Článok k projektu (verzia 1.0): https://chiptron.cz/articles.php?article_id=216
