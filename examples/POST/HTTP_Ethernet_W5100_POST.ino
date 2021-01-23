@@ -8,7 +8,7 @@
 /*|----------------------------------------------------------|*/
 #include <RFID.h>
 #include <SPI.h>
-#include <Ethernet2.h>
+#include <Ethernet.h>
 byte mac[] = { 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0x4A };
 const char * host = "arduino.clanweb.eu";
 IPAddress ip(192, 168, 1, 254); //STATIC IP
