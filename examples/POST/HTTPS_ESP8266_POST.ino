@@ -25,6 +25,8 @@ const char * host = "arduino.php5.sk"; //dana domena neexistuje, pripojenie sa n
 const int httpsPort = 443; //https port
 
 const int rele = 16; //GPIO16 == D0
+//FINGERPRINT JE MOZNE ZISKAT CEZ NASTROJ OpenSSL prikazom:
+//openssl s_client -connect example.com:443 -showcerts < /dev/null 2>/dev/null | openssl x509 -in /dev/stdin -sha1 -noout -fingerprint
 const char fingerprint[] PROGMEM = "00 2c c1 3a 3c fd a2 0a a3 f1 19 1a ee ee 54 72 93 56 7d 1b";
 #define SS_PIN 4
 #define RST_PIN 5
