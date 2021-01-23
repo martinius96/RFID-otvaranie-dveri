@@ -4,10 +4,14 @@
 # Stránka projektu
 * Informácie o projekte: http://arduino.clanweb.eu/rfid-system.php 
 * Testovacie webové rozhranie: http://arduino.clanweb.eu/rfid/
-* **Vzorové zdrojové kódy pre dostupné platformy nie sú použiteľné na predmetnú doménu z dôvodu REKLÁM na WEBHOSINGU, ktorý zamedzuje správnemu načítaniu Payloadu - Zapísať UID, preniesť informáciu z RFID čítačky je možné, avšak unformácia OK / NO z webservera sa nedá v existujúcej implementácii prečítať a teda ani ovládať výstup. Na vlastnom serveri je to v poriadku, možné použiť bez problémov...**
-* Arduino s Ethernetom komunikuje po HTTP protokole, pre ESP8266 a ESP32 možnosť využiť HTTP i HTTPS protokol pre šifrované spojenie
-* Možnosť ihneď vyskúšať po zapojení čítačky a nahratí programu pre odtestovanie funkčnosti
-* Pridaná podpora pre Over The Air aktualizáciu firmvéru prostredníctvom LAN siete - Basic OTA cez Python
+* **Z dostupných zdrojových kódov pre platformy Arduino, ESP8266 a ESP32 je možné využiť iba HTTP variant, nakoľko freehosting clanweb.eu nemá podporu HTTPS!**
+* Možnosť ihneď vyskúšať funkcionalitu systému v testovacom webovom rozhraní po zapojení čítačky NXP RC522 a nahratí programu pre odtestovanie funkčnosti
+* Čítačka RC522 funguje na frekvencii 13.56 MHz, dokáže prečítať RFID tagy štandardu ISO/IEC 14443-A
+* Webové rozhranie dokáže vizualizovať aktuálne priloženia karty s výsledkom overenia s možnosťou riadenia prístupu - autorizácie / deautorizácie kariet
+* Vhodné ako základ pre vlastný projekt s RFID výstupom
+* Pridaná podpora pre Over The Air aktualizáciu firmvéru prostredníctvom LAN siete - Basic OTA cez Python z prostredia Arduino IDE
+* **Čítačka Wiegand, RDM6300 nie je dostupná vo free verzii projektu RFID vrátnik**
+* Článok k projektu (verzia 1.0): https://chiptron.cz/articles.php?article_id=216
 
 # Systém ponúka 2 typy užívateľov projektu
 | Administrátor: <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width="64" height="64"> | Používateľ: <img src="https://image.flaticon.com/icons/svg/1326/1326318.svg" width="64" height="64"> |
@@ -21,11 +25,14 @@
 | Štatistika RFID vrátnika  |  |
 | Vidí zdrojový kód pre mikrokontroléry  |  |
 
-* Overenie kariet a prístupu cez web rozhranie do objektu
-* Čítačka prečíta kartu štandardu ISO/IEC 14443 A, jej UID odošle na web, kde sa overí a odpovie sa OK/NO
+* Mikrokontróler po prečítaní UID (identifikátor, ktorý vysiela) RFID karty prostredníctvom čítačky odošle HTTP (HTTPS) POST request na webové rozhranie
+* Webserver overí, či je karta medzi autorizovanými a odpovie textom OK, prípadne NO.
+* Mikrokontróler na tento payload zareaguje a odistí dvere prostredníctvom solenoidu, ktorý je ovládaný cez 5V relé
+* Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, elektromagnetický jazýček (solenoid) sa vtiahne pri stlačení kľučky (1-cestný RFID vrátnik)
 * Možno použiť Mifare tagy, ISIC karty, bankomatové, zamestnanecké karty, náramky i kľúčenky, ktoré spĺňajú štandard ISO/IEC 14443-A
-* V prípade odpovede OK mikrokontróler aktivuje solenoid, ktorý otvorí elektronický zámok. 
-* Z vnútornej strany objektu je možné dvere kľúčkou otvoriť, elektromagnetický jazýček (solenoid) sa vtiahne pri stlačení kľučky
+* Mikrokontróler UID upraví, nikdy neodosiela pôvodný identifikátor karty, ktorý načíta.
+* Na UART rozhranie mikrokontróler posiela udalosti - Eventy - priloženie karty s výsledkom overenia (akceptácie karty webserverom)
+* UID sa ukladajú do MySQL databázy, existujú rôzne tabuľky - prístupy, autorizované karty, evidencia mien ku kartám...
 
 # Hardvér
 * ![NodeMCU](https://a.allegroimg.com/s128/038a14/f035c3d6448cbb01f1c543d06c10/Modul-WiFi-ESP8266-NodeMCU-v3-ESP12E-CH340-Arduino)**NodeMCU (v2, alebo v3)**
@@ -54,12 +61,12 @@
 * ![Arduino core](http://users.sch.gr/johnmaga/0/images/logo/logo-64x64/arduino_b-64x64.png)
 * <img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_977c0721699223be28566021a78599e9/autodesk-eagle.png" width="64" height="64">
 
-# Získanie Root CA certifikátu - (Pre ESP32 - HTTPS)
+# Získanie Root CA certifikátu - (Pre ESP32 - HTTPS):
 * openssl s_client -showcerts -verify 5 -connect example.com:443 < /dev/null
-# Získanie SHA1 fingerprintu certifikátu - (Pre ESP8266 - HTTPS)
+# Získanie SHA1 fingerprintu certifikátu - (Pre ESP8266 - HTTPS):
 * openssl s_client -connect example.com:443 -showcerts < /dev/null 2>/dev/null   | openssl x509 -in /dev/stdin -sha1 -noout -fingerprint
 
-# Inštalácia systému
+# Inštalácia systému - krok po kroku
 * Stiahnuť repozitár v .zip archíve z Githubu
 * Súbor priečinka sql importovať do vašej MySQL databázy - štruktúru, alebo štruktúru + vzorové dáta
 * V súbore connect.php nastaviť vaše údaje na databázu (umiestnenie (localhost/external), user, heslo, meno_db)
