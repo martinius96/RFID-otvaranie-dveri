@@ -20,7 +20,7 @@
 
 const char * ssid = "MenoWifiSiete";
 const char * password = "HesloWifiSiete";
-const char * host = "www.arduino.php5.sk";
+const char * host = "arduino.clanweb.eu";
 const int httpPort = 80; //http port
 const int rele = 16; //GPIO16 == D0
 #define SS_PIN 4
