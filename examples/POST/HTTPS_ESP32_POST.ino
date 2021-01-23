@@ -21,7 +21,7 @@
 
 const char * ssid = "WIFI_NAME";
 const char * password = "WIFI_PASSWORD";
-const char * host = "arduino.php5.sk";
+const char * host = "arduino.php5.sk"; //POUZITA DOMENA NEEXISTUJE. PRIPOJENIE SA NEVYKONA.
 const int httpsPort = 443; //http port
 const int rele = 17;
 #define SS_PIN 21
@@ -135,7 +135,7 @@ void loop() {
       Serial.println(" ");
       Serial.println("Card found");
       kod = 10000 * rfid.serNum[4] + 1000 * rfid.serNum[3] + 100 * rfid.serNum[2] + 10 * rfid.serNum[1] + rfid.serNum[0];
-      Serial.println(kod);
+    //  Serial.println(kod);
       client.stop();
       String kodik = String(kod);
       String data = "kod=" + kodik;
@@ -157,14 +157,17 @@ void loop() {
           }
         }
         String line = client.readStringUntil('\n');
-        if (line == "OK") {
+        if (line.indexOf("OK") > 0) {
+          Serial.println(F("VSTUP POVOLENY"));
+          Serial.println(F("DVERE ODOMKNUTE"));
           digitalWrite(rele, LOW); //invertovane spinane rele active LOW
           delay(5500);              //cas otvorenia dveri
           digitalWrite(rele, HIGH); //zatvor zamok
-        } else if (line == "NO") {
-          digitalWrite(rele, HIGH);
+          Serial.println(F("DVERE ZAMKNUTE"));
+        } else if (line.indexOf("NO") > 0) {
+          Serial.println(F("VSTUP ZAMIETNUTY"));
         } else {
-          Serial.println("Prosim pockajte s dalsim overenim karty 5 sekund!");
+          Serial.println(F("Prosim pockajte s dalsim overenim karty 5 sekund!"));
         }
       }
     }
