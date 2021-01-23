@@ -4,7 +4,7 @@
 /*|FB: https://www.facebook.com/martin.s.chlebovec           |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
 /*|Doska: NodeMCU v3 Lolin (v2 compatible)                   |*/
-/*|CORE: 2.5.0 (2.5.2)                                       |*/
+/*|CORE: 2.7.4                                               |*/
 /*|WEB: https://arduino.php5.sk                              |*/
 /*|----------------------------------------------------------|*/
 //#define OTA //odkomentuj pre OTA UPDATE CEZ LAN
@@ -21,7 +21,7 @@
 
 const char * ssid = "WIFI_NAME";
 const char * password = "WIFI_PASSWORD";
-const char * host = "arduino.php5.sk"; //bez https a www
+const char * host = "arduino.php5.sk"; //dana domena neexistuje, pripojenie sa nevykona
 const int httpsPort = 443; //https port
 
 const int rele = 16; //GPIO16 == D0
@@ -34,6 +34,7 @@ void setup() {
   Serial.begin(9600);
   SPI.begin();
   rfid.init();
+  //client.setInsecure(); //ak webserver neakceptuje pripojenie s fingerpritom, vyuzite allowinsecure (pripojenie bez fingerprintu)
   pinMode(rele, OUTPUT);
   digitalWrite(rele, HIGH); //hotfix
   WiFi.begin(ssid, password);
@@ -95,8 +96,8 @@ void loop() {
       kod = 10000 * rfid.serNum[4] + 1000 * rfid.serNum[3] + 100 * rfid.serNum[2] + 10 * rfid.serNum[1] + rfid.serNum[0];
       Serial.println(kod);
       WiFiClientSecure client;
-      Serial.printf("Using fingerprint '%s'\n", fingerprint);
-      client.setFingerprint(fingerprint);
+      Serial.printf("Using fingerprint '%s'\n", fingerprint); // zakomentovat, ak je odkomentovane client.setInsecure()
+      client.setFingerprint(fingerprint); // zakomentovat, ak je odkomentovane client.setInsecure()
       String kodik = String(kod);
       String data = "kod=" + kodik;
       String url = "/rfid/karta.php";
@@ -117,14 +118,17 @@ void loop() {
           }
         }
         String line = client.readStringUntil('\n');
-        if (line == "OK") {
+       if (line.indexOf("OK") > 0) {
+          Serial.println(F("VSTUP POVOLENY"));
+          Serial.println(F("DVERE ODOMKNUTE"));
           digitalWrite(rele, LOW); //invertovane spinane rele active LOW
           delay(5500);              //cas otvorenia dveri
           digitalWrite(rele, HIGH); //zatvor zamok
-        } else if (line == "NO") {
-          digitalWrite(rele, HIGH);
+          Serial.println(F("DVERE ZAMKNUTE"));
+        } else if (line.indexOf("NO") > 0) {
+          Serial.println(F("VSTUP ZAMIETNUTY"));
         } else {
-          Serial.println("Prosim pockajte s dalsim overenim karty 5 sekund!");
+          Serial.println(F("Prosim pockajte s dalsim overenim karty 5 sekund!"));
         }
       }
       client.stop();
