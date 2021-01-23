@@ -28,6 +28,9 @@ const int rele = 17;
 #define RST_PIN 22
 RFID rfid(SS_PIN, RST_PIN);
 unsigned long kod;
+//Root CA certifikát JE MOZNE ZISKAT CEZ NASTROJ OpenSSL prikazom:
+//openssl s_client -showcerts -verify 5 -connect example.com:443 < /dev/null
+//POUZITE VZDY ROOT CA (nie Intermediate CA), format .pem
 const char* test_root_ca = \
                            "-----BEGIN CERTIFICATE-----\n" \
                            "MIIEsTCCA5mgAwIBAgIQCKWiRs1LXIyD1wK0u6tTSTANBgkqhkiG9w0BAQsFADBh\n" \
