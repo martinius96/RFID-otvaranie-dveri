@@ -61,7 +61,8 @@ include("connect.php");
                 echo '<div class="alert alert-danger"><strong>Meno zamestnanca nemôže byť prázdne! Zápis zakázaný!</strong></div>';
               }else{
                 $zapis = mysqli_query($con,"UPDATE `zamestnanci` SET `meno`='".$meno."' WHERE `cislo_karty`='".$cislo_karty."'") or die(mysqli_error($con));
-                echo '<div class="alert alert-success"><strong>Meno zamestnanca úspešne pozmenené!</strong></div><br><center><a href="index.php" class="btn btn-danger" role="button">Späť na prehľad</a></center>';
+                echo '<div class="alert alert-success"><strong>Meno zamestnanca úspešne pozmenené!</strong></div><br>
+<center><a href="evidencia.php" class="btn btn-danger" role="button">Späť na evidenciu neregistrovaných zamestnancov</a></center>';
               }
       }
  $zamestnanec = mysqli_query($con,"SELECT * FROM `zamestnanci` WHERE `cislo_karty`='$cislo_karty'") or die(mysqli_error($con));
