@@ -56,17 +56,15 @@ include("connect.php");
 <h3>Evidencia nových zamestnancov</h3>
 <hr>
 <table style="width: 100%;" border="1">
-									 <tr>
-									 <th style="width: 33.33%;">Číslo karty</th>
-									 <th style="width: 33.33%;">Meno zamestnanca</th>
-                   <th style="width: 33.33%;">Akcia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip" data-placement="right" title="Zaevidovať nového zamestnanca"></th>
+<tr>
+	<th style="width: 50%;">Číslo karty</th>
+	<th style="width: 50%;">Akcia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip" data-placement="right" title="Zaevidovať nového zamestnanca"></th>
  </tr>
 <?php
  	$karty = mysqli_query($con,"SELECT * FROM zamestnanci WHERE meno = 'Neevidovaný' ORDER BY id DESC") or die(mysqli_error($con));
 		while($line = mysqli_fetch_assoc($karty)){
 			echo "<tr>";
 				  echo '<td><i>' . htmlspecialchars($line['cislo_karty']) .'</i></td>';
-          echo '<td><i>' . htmlspecialchars($line['meno']) .'</i></td>';
           echo "<td><a href='vytvorit.php?".htmlspecialchars($line['cislo_karty'])."' class='btn btn-danger'>Vytvoriť</a></td>";
 			echo "</tr>";
 		}  ?> </tbody></table>
