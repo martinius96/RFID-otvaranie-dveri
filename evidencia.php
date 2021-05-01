@@ -53,7 +53,7 @@ include("connect.php");
       <div class="row">
     <div class="col-lg-12">
       <h1 id="demo"></h1>
-<h3>Evidencia nových zamestnancov</h3>
+<h3>Evidencia nových (neregistrovaných) zamestnancov</h3>
 <hr>
 <table style="width: 100%;" border="1">
 <tr>
