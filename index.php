@@ -143,6 +143,9 @@ table,thead,tbody,tfoot,tr, td,th{
         <hr>
         </div>
       </div>
+      <?php 
+      include("footer.php");
+      ?>
     </div>    
   </body>
     <script>
