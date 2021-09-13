@@ -51,7 +51,7 @@ include("connect.php");
     <!-- Page Content -->
     <div class="container">
       <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-12 text-center">
       <h1 id="demo"></h1>
 <h3>Evidencia nových (neregistrovaných) zamestnancov</h3>
 <hr>
