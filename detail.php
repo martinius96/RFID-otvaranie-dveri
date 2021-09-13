@@ -51,7 +51,7 @@ include("connect.php");
     <!-- Page Content -->
     <div class="container">
       <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-12 text-center">
    <?php 
 if (isset($_POST["detail_zamestnanca"])) {
     echo '<div class="alert alert-danger">
