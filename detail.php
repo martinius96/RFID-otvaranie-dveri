@@ -66,8 +66,8 @@ if (isset($_POST["detail_zamestnanca"])) {
 <tr>
 	<th style="width: 25%;">Číslo karty</th>
 	<th style="width: 25%;">Meno zamestnanca</th>
-	<th style="width: 25%;">Akcia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip" data-placement="right" title="Úprava mena zamestnanca"></th>
-	<th style="width: 25%;">Akcia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip2" data-placement="right" title="Odstránenie zamestnanca z evidencie (Presunutie do neevidovaných)!"></th>
+	<th style="width: 25%;">Akcia<img src="https://i.imgur.com/zMsp0cr.png" width="20px" height="20px" data-toggle="tooltip" data-placement="right" title="Úprava mena zamestnanca"></th>
+	<th style="width: 25%;">Akcia<img src="https://i.imgur.com/zMsp0cr.png" width="20px" height="20px" data-toggle="tooltip2" data-placement="right" title="Odstránenie zamestnanca z evidencie (Presunutie do neevidovaných)!"></th>
 </tr>
 <?php
  	$karty = mysqli_query($con,"SELECT * FROM zamestnanci WHERE meno != 'Neevidovaný' ORDER BY id DESC") or die(mysqli_error($con));
