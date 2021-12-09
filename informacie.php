@@ -59,7 +59,7 @@ include("connect.php");
 <hr>
 <div class="row">
 <div class="col-md-12">
-<center><h3>Administrátor: <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width=64px height=64px></h3></center>
+<center><h3>Administrátor: <img src="https://i.imgur.com/xw6rXON.png" width=64px height=64px></h3></center>
 <hr>
 <p style="text-align: justify;">
 Spravuje webové rozhranie projektu RFID vrátnik.
@@ -74,7 +74,7 @@ Pre lepšiu prenositeľnosť programu medzi jednotlivými platformami používaj
 <b>Možnosť prihlásenia, odhlásenia adminsitrátora, zmeny prihlasovacích údajov, núdzové otvorenie dverí z webového prostredia v prípade straty karty, priradenie zamestnancov, mien, fotografií a tlačenie reportov je súčasťou platenej verzie projektu.</b>
 </p>
 <hr>
-<center><h3>Používateľ: <img src="https://www.flaticon.com/premium-icon/icons/svg/3135/3135715.svg" width=64px height=64px></h3></center>
+<center><h3>Používateľ: <img src="https://i.imgur.com/CP5vSvK.png" width=64px height=64px></h3></center>
 <hr>
 <p style="text-align: justify;">
 Využíva služby RFID čítačky NXP RC522 fyzickým priložením karty, náramku, kľúčenky kompatibilného štandardu ISO/IEC 14443-A.
