@@ -5,7 +5,7 @@ include("connect.php");
 	<tr>
 		<th style="width: 25%;">Od</th>
 		<th style="width: 25%;">Číslo karty</th>
-		<th style="width: 25%;">Akcia<img src="https://image.flaticon.com/icons/svg/788/788893.svg" width="20px" height="20px" data-toggle="tooltip2" data-placement="right" title="Aktivácia karty - Zápis karty do zoznamu oprávnených kariet pre vstup!"></th>
+		<th style="width: 25%;">Akcia<img src="https://i.imgur.com/zMsp0cr.png" width="20px" height="20px" data-toggle="tooltip2" data-placement="right" title="Aktivácia karty - Zápis karty do zoznamu oprávnených kariet pre vstup!"></th>
                 <th style="width: 25%;">Meno</th>
  	</tr>
 <?php
