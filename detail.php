@@ -79,6 +79,7 @@ if (isset($_POST["detail_zamestnanca"])) {
           echo "<td><a href='odobratzevidencie.php?".htmlspecialchars($line['cislo_karty'])."' class='btn btn-danger'>Odstrániť z evidencie</a></td>";
 			echo "</tr>";
 		}  ?> </tbody></table>
+<hr>
  </div>
 
        </div>   
