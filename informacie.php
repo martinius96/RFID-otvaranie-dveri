@@ -85,7 +85,7 @@ Používateľ o neoverení svojho čipu ako takého nie je informovaný. Jeho po
 Používateľ môže na overenie použiť aj svoju ISIC, autobusovú kartu, ktorej fyzickú UID adresu čítačka dokáže prečítať, musí spĺňať štandard ISO/IEC 14443 A.
 </p>
 <hr>
-<center><h3>Technické informácie: <img src="https://i.imgur.com/8JL5XFT.png" width=64px height=64px></h3></center>
+<center><h3>Technické informácie: <img src="https://i.imgur.com/5jvWCOp.png" width=64px height=64px></h3></center>
 <hr>
 <p style="text-align: justify;">
 Čítačka NXP RC522, ktoráje v projekte použitá pracuje na frekvencii 13.56MHz.
