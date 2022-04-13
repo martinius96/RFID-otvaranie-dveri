@@ -70,17 +70,17 @@ $stranka = "Program";
 <td style="width: 50%">
 <p style="text-align: justify;">
 Knižnica pre mikrokontroléry (ATmega) Arduino Uno / Nano / Mega, ESP8266 a ESP32. 
-Umožňuje komunikovať s RFID čítačkou NXP RC522 po SPI zbernici. Novšia knižnica, použitá v príklade pre ESP32.
+Umožňuje komunikovať s RFID čítačkou NXP RC522 po SPI zbernici. <b>Novšia a udržiavaná knižnica, použitá v príklade pre ESP32.</b>
 </p>
 </td>
-<td style="width: 25%"><a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/martinius96/Airsoft-DOMINATOR-RFID/tree/master/src/MFRC522" class="btn btn-success" role="button">Stiahnuť</a></td>
+<td style="width: 25%"><a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/martinius96/RFID-otvaranie-dveri/tree/master/src/MFRC522" class="btn btn-success" role="button">Stiahnuť</a></td>
 </tr>
 <tr>
 <td style="width: 25%"><b>RFID</b></td>
 <td style="width: 50%">
 <p style="text-align: justify;">
 Knižnica pre mikrokontroléry (ATmega) Arduino Uno / Nano / Mega, ESP8266 a ESP32. 
-Umožňuje komunikovať s RFID čítačkou NXP RC522 po SPI zbernici. Staršia knižnica, použitá v príklade pre Arduino a ESP8266.
+Umožňuje komunikovať s RFID čítačkou NXP RC522 po SPI zbernici. <b>Staršia knižnica, použitá v príklade pre Arduino a ESP8266.</b>
 </p>
 </td>
 <td style="width: 25%"><a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/martinius96/RFID-otvaranie-dveri/tree/master/src/rfid" class="btn btn-success" role="button">Stiahnuť</a></td>
@@ -312,7 +312,7 @@ void loop() {
 }
 
 </pre>
-<hr><h2><font color="#95A5A6">HTTP - ESP32 + FreeRTOS, Arduino core 2.0+</font></h2><hr>
+<hr><h2><font color="#95A5A6">HTTP - ESP32 + FreeRTOS, core 2.0+</font></h2><hr>
 <pre style="background-color:#95A5A6;"> 
 /*|--------------------------------------------------------|*/
 /*|Project: RFID remote database access webapp             |*/
@@ -419,7 +419,7 @@ static void Task1code( void * parameter) {
       rfid.PICC_HaltA();
       rfid.PCD_StopCrypto1();
       RFIDcode = code;
-      xQueueSend(q, (void *)&RFIDcode, (TickType_t )0); //add the measurement value to Queue
+      xQueueSend(q, (void *)&RFIDcode, (TickType_t )0); //add RFID card UID to Queue
     }
   }
 }
@@ -432,6 +432,7 @@ static void Task2code( void * parameter) {
   while (1) {
     xQueueReceive(q, &RFIDcode, portMAX_DELAY); //read measurement value from Queue and run code below, if no value, WAIT until portMAX_DELAY
     String data = "kod=" + RFIDcode;
+    client.stop();
     if (client.connect(host, 80)) {
       client.println("POST " + url + " HTTP/1.0");
       client.println("Host: " + (String)host);
