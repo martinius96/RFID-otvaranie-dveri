@@ -88,12 +88,11 @@ Používateľ môže na overenie použiť aj svoju ISIC, autobusovú kartu, ktor
 <center><h3>Technické informácie: <img src="https://i.imgur.com/5jvWCOp.png" width=64px height=64px></h3></center>
 <hr>
 <p style="text-align: justify;">
-Čítačka NXP RC522, ktoráje v projekte použitá pracuje na frekvencii 13.56MHz.
-V tomto projekte čítačka načítava iba fyzickú adresu (UID) RFID kariet, kľúčeniek náramkov, ktoré sa sami odhlásia RFID čítačke, ktorá ich nabije elektrickým poľom.
-Pre komunikáciu s mikrokontrolérom využíva čítačka NXP RC522 SPI zbernicu.
+Čítačka NXP RC522, ktorá je v projekte použitá pracuje na frekvencii 13.56 MHz. Mikrokontróler komunikuje s čítačkou po SPI zbernici rýchlosťou 4 MHz.
+V tomto projekte čítačka načítava iba fyzickú adresu (UID - unikátny identifikátor) RFID kariet, kľúčeniek náramkov, ktoré sa sami odhlásia RFID čítačke, ktorá ich nabije elektrickým poľom, ak sú v dosahu.
 V projekte sú dostupné programové implementácie pre ESP8266, ESP32, Arduino + Ethernet pre komunikáciu s RFID čítačkou a prenosom zaznamenaných údajov na vzdialené webové rozhranie.
-Mikrokontrolér využíva HTTP (HTTPS - iba ESP8266 a ESP32 má aj túto možnosť) POST request, pričom má v tele správy payload z RFID čítačky.
-Neposiela sa reálne UID, mikrokontróler vykoná jeho korekciu - pozmenenie.
+Mikrokontrolér využíva HTTP POST request, pričom má v tele správy payload z RFID čítačky.
+Neposiela sa reálne UID, mikrokontróler vykoná jeho korekciu - softvérové pozmenenie.
 Po odoslaní dát do webového rozhrania sa vykoná checksum cez CRC32B na strane webservera.
 Pod týmto checksumom vystupuje UID v systéme a je to jeho identifikátor v celom webovom rozhraní.
 <b><font color="red">Týmto projektom nie je odporúčané zabezpečovať majetok</font>, za škody, stratu dát autor projektu nezodpovedá.</b>
