@@ -1,7 +1,8 @@
 <?php 
 include("connect.php");
 ?>
-<table style="width: 100%;" border="1">
+<div class="table-responsive">   
+<table class="table" style="border: 1px solid black;">
 	<thead>
   <tr>
 		<th style="width: 25%;">Čas</th>
@@ -34,3 +35,4 @@ include("connect.php");
 	echo "</tr>";
 		}  ?> 
 </tbody></table>
+</div>
