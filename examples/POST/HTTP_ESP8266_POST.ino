@@ -1,13 +1,14 @@
-/*|----------------------------------------------------------|*/
-/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU               |*/
-/*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
-/*|FB: https://www.facebook.com/martin.s.chlebovec           |*/
-/*|EMAIL: martinius96@gmail.com                              |*/
-/*|Doska: NodeMCU v3 Lolin (v2 compatible)                   |*/
-/*|CORE: 2.3.0 - 2.5.0 compatible                            |*/
-/*|WEB: https://arduino.php5.sk                              |*/
-/*|----------------------------------------------------------|*/
-//#define OTA //odkomentuj pre OTA UPDATE CEZ LAN
+/*|-------------------------------------------------------------|*/
+/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU                  |*/
+/*|VYHOTOVIL: MARTIN CHLEBOVEC                                  |*/
+/*|FB: https://www.facebook.com/martin.s.chlebovec              |*/
+/*|EMAIL: martinius96@gmail.com                                 |*/
+/*|Doska: ESP8266 Generic / NodeMCU / WEmos D1 Mini + NXP RC522 |*/
+/*|CORE: 2.7.4 compatible                                       |*/
+/*|Testovacie web rozhranie: http://arduino.clanweb.eu/rfid/    |*/
+/*|-------------------------------------------------------------|*/
+
+//#define OTA //odkomentuj pre OTA UPDATE CEZ LAN cez espota.py
 #include <ESP8266WiFi.h>
 #include <SPI.h>
 #include <RFID.h>
@@ -18,8 +19,9 @@
 #include <ArduinoOTA.h>
 #endif
 
-const char * ssid = "MenoWifiSiete";
-const char * password = "HesloWifiSiete";
+const char * ssid = "WIFI_NAME";
+const char * password = "WIFI_PASSWORD";
+
 const char * host = "arduino.clanweb.eu";
 const int httpPort = 80; //http port
 const int rele = 16; //GPIO16 == D0
