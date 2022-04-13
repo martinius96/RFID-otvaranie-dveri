@@ -312,7 +312,7 @@ void loop() {
 }
 
 </pre>
-<hr><h2><font color="#95A5A6">HTTP - ESP32</font></h2><hr>
+<hr><h2><font color="#95A5A6">HTTP - ESP32 + FreeRTOS, Arduino core 2.0+</font></h2><hr>
 <pre style="background-color:#95A5A6;"> 
 /*|--------------------------------------------------------|*/
 /*|Project: RFID remote database access webapp             |*/
