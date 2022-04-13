@@ -27,92 +27,12 @@ include("connect.php");
     c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
     })(document);
     smartlook('init', 'db50efe9fff280a17db52b82be221240cbbd3dbe');
-</script>    
-  <style>
-
-.aa_h2{
-  font:100 5rem/1 Roboto;
-  text-transform: uppercase;
-}
-table{
-   background: #fff;
-}
-table,thead,tbody,tfoot,tr, td,th{
-  text-align: center;
-  margin: auto;
-  border:1px solid #dedede;
-  padding: 1rem;
-}
-.table    { display: table; width: 50%; }
-.tr       { display: table-row;  }
-.thead    { display: table-header-group }
-.tbody    { display: table-row-group }
-.tfoot    { display: table-footer-group }
-.col      { display: table-column }
-.colgroup { display: table-column-group }
-.td, .th   { display: table-cell; width: 50%; }
-.caption  { display: table-caption }
-
-.table,
-.thead,
-.tbody,
-.tfoot,
-.tr,
-.td,
-.th{
-  text-align: center;
-  margin: auto;
-  padding: 1rem;
-}
-.table{
-  background: #fff;
-  margin: auto;
-  border:none;
-  padding: 0;
-  margin-bottom: 5rem;
-}
-
-.th{
-  font-weight: 700;
-  border:1px solid #dedede;
-  &:nth-child(odd){
-    border-right:none;
-  }
-}
-.td{
-  font-weight: 300;
-  border:1px solid #dedede;
-  border-top:none;
-  &:nth-child(odd){
-    border-right:none;
-  }
-}
-
-.aa_htmlTable{
-  background: tomato;
-  padding: 5rem;
-  display: table;
-  width: 100%;
-  height: 100vh;
-  vertical-align: middle;
-}
-.aa_css{
-  background: skyblue;
-  padding: 5rem;
-  display: table;
-  width: 100%;
-  height: 100vh;
-  vertical-align: middle;
-}
-
-.aa_ahmadawais{
-  display: table;
-  width: 100%;
-  font: 100 1.2rem/2 Roboto;
-  margin: 5rem auto;
-}
-    
-  </style>  
+</script> 
+	<style>
+		table, th, td {
+  			border: 1px solid black;
+		}
+	</style>
   </head>
 
   <body onload="myFunction()">
@@ -136,10 +56,13 @@ table,thead,tbody,tfoot,tr, td,th{
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
+       <?php 
+      include("odkaz.php");
+      ?>
       </div>
       <div class="col-lg-12 text-center">
-        <h1 id="demo"></h1>
        <div id="full"></div>
+       <h1 id="demo"></h1>
         <hr>
         </div>
       </div>
@@ -155,4 +78,11 @@ table,thead,tbody,tfoot,tr, td,th{
     });
   });
   </script>
+  <script>
+       setInterval(function(){
+  $.get('full_vypis.php', function(data){
+        $('#full').html(data)
+    });
+},15000);   
+</script>
 </html>
