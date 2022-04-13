@@ -1,11 +1,12 @@
-/*|----------------------------------------------------------|*/
-/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU               |*/
-/*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
-/*|FB: https://www.facebook.com/martin.s.chlebovec           |*/
-/*|EMAIL: martinius96@gmail.com                              |*/
-/*|Doska: Arduino Uno (Nano, Mega) + Wiznet W5100 (Ethernet) |*/
-/*|WEB: https://arduino.clanweb.eu                           |*/
-/*|----------------------------------------------------------|*/
+/*|-----------------------------------------------------------|*/
+/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU                |*/
+/*|Arduino + Ethernet Wiznet W5100 / W5500 + NXP RC522        |*/
+/*|VYHOTOVIL: MARTIN CHLEBOVEC                                |*/
+/*|FB: https://www.facebook.com/martin.s.chlebovec            |*/
+/*|EMAIL: martinius96@gmail.com                               |*/
+/*|Testovacie WEB rozhranie: https://arduino.clanweb.eu/rfid/ |*/
+/*|-----------------------------------------------------------|*/
+
 #include <RFID.h>
 #include <SPI.h>
 #include <Ethernet.h>
