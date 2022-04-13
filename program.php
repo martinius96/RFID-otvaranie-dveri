@@ -103,8 +103,11 @@ Umožňuje komunikovať s RFID čítačkou NXP RC522 po SPI zbernici. <b>Starši
 #include &lt;SPI.h>
 #include &lt;Ethernet.h>
 byte mac[] = { 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0x4A };
-const char * host = "arduino.clanweb.eu";
+
+const char * host = "<?php echo $_SERVER['SERVER_NAME']; ?>";
+String url = "<?php if ($pathInfo['dirname'] != "/") { echo $pathInfo['dirname']; }  ?>/karta.php";
 IPAddress ip(192, 168, 1, 254); //STATIC IP
+
 #define SS_PIN 6
 #define RST_PIN 5
 RFID rfid(SS_PIN, RST_PIN);
@@ -136,7 +139,6 @@ void loop() {
       client.stop();
       String kodik = String(kod);
       String data = "kod=" + kodik;
-      String url = "/rfid/karta.php";
       if (client.connect(host, 80)) {
         client.println("POST " + url + " HTTP/1.0"); //pri HTTP/1.1 Chunk encoding - narocne spracovanie
         client.println("Host: " + (String)host);
@@ -200,8 +202,10 @@ void loop() {
 const char * ssid = "WIFI_NAME";
 const char * password = "WIFI_PASSWORD";
 
-const char * host = "arduino.clanweb.eu";
+const char * host = "<?php echo $_SERVER['SERVER_NAME']; ?>";
+String url = "<?php if ($pathInfo['dirname'] != "/") { echo $pathInfo['dirname']; }  ?>/karta.php";
 const int httpPort = 80; //http port
+
 const int rele = 16; //GPIO16 == D0
 #define SS_PIN 4
 #define RST_PIN 5
@@ -274,7 +278,6 @@ void loop() {
       client.stop();
       String kodik = String(kod);
       String data = "kod=" + kodik;
-      String url = "/rfid/karta.php";
       if (client.connect(host, httpPort)) {
         client.println("POST " + url + " HTTP/1.0");
         client.println("Host: " + (String)host);
@@ -337,8 +340,8 @@ const int rele = 17; //RELAY PIN
 
 const char * ssid = "MY_WIFI"; //WiFi hotspot name
 const char * password = "MY_WIFI_PASSWORD"; //WiFi hotspot password
-const char* host = "arduino.clanweb.eu"; //domain - host
-String url = "/rfid/karta.php"; //URL behind host domain --> target PHP file
+const char* host = "<?php echo $_SERVER['SERVER_NAME']; ?>"; //domain - host
+String url = "<?php if ($pathInfo['dirname'] != "/") { echo $pathInfo['dirname']; }  ?>/karta.php"; //URL behind host domain --> target PHP file
 
 
 
