@@ -47,7 +47,7 @@ $stranka = "Program";
     <!-- Page Content -->
     <div class="container">
 	   <hr><h2>Projekt RFID otvárania dverí - vrátnika:</h2><hr>
-    <div class="alert alert-danger">
+    <div class="alert alert-success">
 	    <strong>Zdrojové kódy webového rozhrania pre projekt RFID vrátnik sú dostupné zdarma pod MIT licenciou:</strong> <a href="https://github.com/martinius96/RFID-otvaranie-dveri/">Repozitár Github</a><br>
 </div>
  <h1 id="demo"></h1>
@@ -174,7 +174,7 @@ void loop() {
 }
 
 </pre>
-<hr><h2><font color="#3498DB">HTTP - ESP8266</font><hr>
+<hr><h2><font color="#3498DB">HTTP - ESP8266</font></h2><hr>
 <pre style="background-color:#3498DB;"> 
 /*|-------------------------------------------------------------|*/
 /*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU                  |*/
@@ -312,7 +312,7 @@ void loop() {
 }
 
 </pre>
-<hr><h2><font color="#95A5A6">HTTP - ESP32</font><hr>
+<hr><h2><font color="#95A5A6">HTTP - ESP32</font></h2><hr>
 <pre style="background-color:#95A5A6;"> 
 /*|--------------------------------------------------------|*/
 /*|Project: RFID remote database access webapp             |*/
