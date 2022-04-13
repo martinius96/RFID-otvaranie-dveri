@@ -5,7 +5,7 @@
 /*|E-mail: martinius96@gmail.com                           |*/
 /*|Test web interface: http://arduino.clanweb.eu/rfid/     |*/
 /*|Usage license: MIT                                      |*/
-/*|Revísion: 31. March 2022                                |*/
+/*|Revision: 31. March 2022                                |*/
 /*|Tested stable ESP32 core: 2.0.2                         |*/
 /*|657 kB flash usage, 37 kB RAM usage                     |*/
 /*|--------------------------------------------------------|*/
@@ -21,6 +21,7 @@ const int rele = 17; //RELAY PIN
 
 const char * ssid = "MY_WIFI"; //WiFi hotspot name
 const char * password = "MY_WIFI_PASSWORD"; //WiFi hotspot password
+
 const char* host = "arduino.clanweb.eu"; //domain - host
 String url = "/rfid/karta.php"; //URL behind host domain --> target PHP file
 
@@ -137,7 +138,7 @@ static void Task2code( void * parameter) {
         Serial.println(F("ACCESS GAINED"));
         Serial.println(F("DOORS OPENED"));
         digitalWrite(rele, LOW); //inverted ACTIVE-LOW logic
-        delay(5500);              //duration of doors opened
+        vTaskDelay(5500 / portTICK_PERIOD_MS); //duration of doors opened
         digitalWrite(rele, HIGH); //lock doors pack
         Serial.println(F("DOORS CLOSED"));
       } else if (line.indexOf("NO") > 0) {
@@ -157,5 +158,5 @@ void dump_byte_array(byte *buffer, byte bufferSize) {
   }
   Serial.print(F("Detected UID (code) of RFID CARD: "));
   code = 10000 * buffer[4] + 1000 * buffer[3] + 100 * buffer[2] + 10 * buffer[1] + buffer[0]; //finalny kod karty
-  Serial.println(code);
+  //Serial.println(code);
 }
