@@ -265,7 +265,7 @@ td.text-right {
    <table class="rwd-table">
   <tr>
     <th>RFID RC522</th>
-    <th>ESP8266 - NodeMCU</th>
+    <th>ESP32 (ESP32-WROOM-32 / ESP32-S)</th>
   </tr>
   <tr>
     <td>3.3V</td>
