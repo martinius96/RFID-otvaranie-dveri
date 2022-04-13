@@ -21,7 +21,6 @@ const int rele = 17; //RELAY PIN
 
 const char * ssid = "MY_WIFI"; //WiFi hotspot name
 const char * password = "MY_WIFI_PASSWORD"; //WiFi hotspot password
-
 const char* host = "arduino.clanweb.eu"; //domain - host
 String url = "/rfid/karta.php"; //URL behind host domain --> target PHP file
 
@@ -104,7 +103,7 @@ static void Task1code( void * parameter) {
       rfid.PICC_HaltA();
       rfid.PCD_StopCrypto1();
       RFIDcode = code;
-      xQueueSend(q, (void *)&RFIDcode, (TickType_t )0); //add the measurement value to Queue
+      xQueueSend(q, (void *)&RFIDcode, (TickType_t )0); //add RFID card UID to Queue
     }
   }
 }
@@ -117,6 +116,7 @@ static void Task2code( void * parameter) {
   while (1) {
     xQueueReceive(q, &RFIDcode, portMAX_DELAY); //read measurement value from Queue and run code below, if no value, WAIT until portMAX_DELAY
     String data = "kod=" + RFIDcode;
+    client.stop();
     if (client.connect(host, 80)) {
       client.println("POST " + url + " HTTP/1.0");
       client.println("Host: " + (String)host);
