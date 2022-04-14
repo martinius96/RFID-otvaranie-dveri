@@ -88,6 +88,10 @@ Umožňuje komunikovať s RFID čítačkou NXP RC522 po SPI zbernici. <b>Starši
 </tbody>
 </table>
 </div>
+<?php
+$currentPath = $_SERVER['PHP_SELF']; 
+$pathInfo = pathinfo($currentPath);
+?>
 <hr><h2><font color="#27AE60">HTTP - Arduino + Ethernet W5100 / W5500</font></h2><hr>
 <pre style="background-color:#27AE60;"> 
 /*|-----------------------------------------------------------|*/
@@ -105,7 +109,7 @@ Umožňuje komunikovať s RFID čítačkou NXP RC522 po SPI zbernici. <b>Starši
 byte mac[] = { 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0x4A };
 
 const char * host = "<?php echo $_SERVER['SERVER_NAME']; ?>";
-String url = "<?php if ($pathInfo['dirname'] != "/") { echo $pathInfo['dirname']; }  ?>/karta.php";
+String url = "<?php if ($pathInfo['dirname'] != "/") { echo $pathInfo['dirname']; }  ?>/karta.php"; //URL
 IPAddress ip(192, 168, 1, 254); //STATIC IP
 
 #define SS_PIN 6
@@ -203,7 +207,7 @@ const char * ssid = "WIFI_NAME";
 const char * password = "WIFI_PASSWORD";
 
 const char * host = "<?php echo $_SERVER['SERVER_NAME']; ?>";
-String url = "<?php if ($pathInfo['dirname'] != "/") { echo $pathInfo['dirname']; }  ?>/karta.php";
+String url = "<?php if ($pathInfo['dirname'] != "/") { echo $pathInfo['dirname']; }  ?>/karta.php"; //URL
 const int httpPort = 80; //http port
 
 const int rele = 16; //GPIO16 == D0
@@ -341,7 +345,7 @@ const int rele = 17; //RELAY PIN
 const char * ssid = "MY_WIFI"; //WiFi hotspot name
 const char * password = "MY_WIFI_PASSWORD"; //WiFi hotspot password
 const char* host = "<?php echo $_SERVER['SERVER_NAME']; ?>"; //domain - host
-String url = "<?php if ($pathInfo['dirname'] != "/") { echo $pathInfo['dirname']; }  ?>/karta.php"; //URL behind host domain --> target PHP file
+String url = "<?php if ($pathInfo['dirname'] != "/") { echo $pathInfo['dirname']; }  ?>/karta.php"; //URL
 
 
 
