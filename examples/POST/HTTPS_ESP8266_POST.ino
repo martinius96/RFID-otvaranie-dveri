@@ -101,7 +101,6 @@ void setup() {
     else if (error == OTA_RECEIVE_ERROR) Serial.println("Receive Failed");
     else if (error == OTA_END_ERROR) Serial.println("End Failed");
   });
-#ifdef OTA
   ArduinoOTA.begin();
 #endif
   Serial.println("");
@@ -136,6 +135,7 @@ void loop() {
     delay(500);
     Serial.print(".");
   }
+#ifdef OTA
   ArduinoOTA.handle();
 #endif
   if (rfid.isCard()) {
