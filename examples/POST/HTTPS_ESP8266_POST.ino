@@ -8,6 +8,7 @@
 /*|WEB: http://arduino.clanweb.eu/rfid/                      |*/
 /*|----------------------------------------------------------|*/
 //#define OTA //odkomentuj pre OTA UPDATE CEZ LAN z Arduino IDE (espota.py)
+#include <Arduino.h>             // Arduino core
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
 #include <SPI.h>
@@ -18,12 +19,18 @@
 #include <WiFiUdp.h>
 #include <ArduinoOTA.h>
 #endif
+WiFiClientSecure client;
 
+//WIFI RELATED
 const char * ssid = "WIFI_NAME";
 const char * password = "WIFI_PASSWORD";
-const char * host = "host.com"; 
+
+
+//WEBSERVER RELATED
+const char * host = "host.com"; //domain for connection
+String url = "/rfid/karta.php"; //route to target .php file (under domain)
 const int httpsPort = 443; //https port
-WiFiClientSecure client;
+
 const int rele = 16; //GPIO16 == D0
 //Root CA cert --> CERTIFIKÁT CERTIFIKAČNEJ AUTORITY, KTORÁ VYDALA CERTIFIKÁT VÁŠ WEBSERVER v .pem formáte
 //DST ROOT CA X3 EXAMPLE (https://i.imgur.com/fvw4huT.png)
@@ -49,17 +56,17 @@ const static char* test_root_ca PROGMEM = \
     "PnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls\n" \
     "YSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk\n" \
     "CAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=\n" \
-    "-----END CERTIFICATE-----\n";  
+    "-----END CERTIFICATE-----\n";
 X509List cert(test_root_ca);
 #define SS_PIN 4 //D2
 #define RST_PIN 5 //D1
 RFID rfid(SS_PIN, RST_PIN);
 unsigned long kod;
+
 void setup() {
   Serial.begin(9600);
   SPI.begin();
   rfid.init();
-  //client.setInsecure(); //ak webserver neakceptuje pripojenie s fingerpritom, vyuzite allowinsecure (pripojenie bez fingerprintu)
   pinMode(rele, OUTPUT);
   digitalWrite(rele, HIGH); //hotfix
   WiFi.begin(ssid, password);
@@ -139,7 +146,6 @@ void loop() {
       Serial.println(kod);
       String kodik = String(kod);
       String data = "kod=" + kodik;
-      String url = "/rfid/karta.php";
       if (client.connect(host, httpsPort)) {
         client.println("POST " + url + " HTTP/1.0");
         client.println("Host: " + (String)host);
@@ -157,7 +163,7 @@ void loop() {
           }
         }
         String line = client.readStringUntil('\n');
-       if (line.indexOf("OK") > 0) {
+        if (line.indexOf("OK") > 0) {
           Serial.println(F("VSTUP POVOLENY"));
           Serial.println(F("DVERE ODOMKNUTE"));
           digitalWrite(rele, LOW); //invertovane spinane rele active LOW
