@@ -1,13 +1,13 @@
 /*|----------------------------------------------------------|*/
-/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU  (FUNGUJE)    |*/
+/*|SKETCH PRE RFID SYSTEM S WEB ADMINISTRACIOU               |*/
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                               |*/
 /*|FB: https://www.facebook.com/martin.s.chlebovec           |*/
 /*|EMAIL: martinius96@gmail.com                              |*/
-/*|Doska: NodeMCU v3 Lolin (v2 compatible)                   |*/
-/*|CORE: 2.7.4                                               |*/
-/*|WEB: https://arduino.php5.sk                              |*/
+/*|Doska: NodeMCU v3 Lolin (v2 compatible), Wemos D1 Mini    |*/
+/*|CORE: 3.0.0+                                              |*/
+/*|WEB: http://arduino.clanweb.eu/rfid/                      |*/
 /*|----------------------------------------------------------|*/
-//#define OTA //odkomentuj pre OTA UPDATE CEZ LAN
+//#define OTA //odkomentuj pre OTA UPDATE CEZ LAN z Arduino IDE (espota.py)
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
 #include <SPI.h>
