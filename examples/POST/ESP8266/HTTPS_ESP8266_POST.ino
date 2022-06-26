@@ -135,6 +135,7 @@ void loop() {
     delay(500);
     Serial.print(".");
   }
+yield();
 #ifdef OTA
   ArduinoOTA.handle();
 #endif
