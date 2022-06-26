@@ -4,7 +4,7 @@
 /*|FB: https://www.facebook.com/martin.s.chlebovec              |*/
 /*|EMAIL: martinius96@gmail.com                                 |*/
 /*|Doska: ESP8266 Generic / NodeMCU / WEmos D1 Mini + NXP RC522 |*/
-/*|CORE: 2.7.4 compatible                                       |*/
+/*|CORE: 3.0.0+ compatible                                      |*/
 /*|Testovacie web rozhranie: http://arduino.clanweb.eu/rfid/    |*/
 /*|-------------------------------------------------------------|*/
 
@@ -85,6 +85,7 @@ void loop() {
     delay(500);
     Serial.print(".");
   }
+yield();
 #ifdef OTA 
   ArduinoOTA.handle();
 #endif 
