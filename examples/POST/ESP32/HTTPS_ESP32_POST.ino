@@ -7,6 +7,7 @@
 /*|Revision: 31. March 2022                                |*/
 /*|Tested stable ESP32 core: 2.0.1 / 2.0.3-RC1 (IDF 4.4)   |*/
 /*|799 kB flash usage, 38 kB RAM usage                     |*/
+/*|WEB: https://hladinomer.000webhostapp.com/rfid/         |*/
 /*|--------------------------------------------------------|*/
 
 #include <WiFi.h>
