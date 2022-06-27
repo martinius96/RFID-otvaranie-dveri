@@ -3,7 +3,6 @@
 /*|ESP32 (DevKit, Generic), Arduino Core with FreeRTOS     |*/
 /*|Autor: Martin Chlebovec (martinius96)                   |*/
 /*|E-mail: martinius96@gmail.com                           |*/
-/*|There isn't test web interface available for HTTPS now  |*/
 /*|Usage license: MIT                                      |*/
 /*|Revision: 31. March 2022                                |*/
 /*|Tested stable ESP32 core: 2.0.1 / 2.0.3-RC1 (IDF 4.4)   |*/
@@ -22,7 +21,7 @@ const int rele = 17; //RELAY PIN
 
 const char * ssid = "MY_WIFI"; //WiFi hotspot name
 const char * password = "MY_WIFI_PASSWORD"; //WiFi hotspot password
-const char* host = "XXXXX.com"; //domain - host
+const char* host = "hladinomer.000webhostapp.com"; //domain - host
 String url = "/rfid/karta.php"; //URL behind host domain --> target PHP file
 
 
@@ -72,7 +71,7 @@ void setup() {
   digitalWrite(rele, HIGH); //hotfix
   WiFi.begin(ssid, password); //pripoj sa na wifi siet s heslom
   while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
+    delay(500);
     Serial.print(".");
   }
   Serial.println(F(""));
