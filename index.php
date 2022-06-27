@@ -56,9 +56,6 @@ include("connect.php");
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-       <?php 
-      include("odkaz.php");
-      ?>
       </div>
       <div class="col-lg-12 text-center">
        <div id="full"></div>
