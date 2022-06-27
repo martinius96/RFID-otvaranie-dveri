@@ -5,7 +5,7 @@
 /*|EMAIL: martinius96@gmail.com                              |*/
 /*|Doska: NodeMCU v3 Lolin (v2 compatible), Wemos D1 Mini    |*/
 /*|CORE: 3.0.0+                                              |*/
-/*|WEB: http://arduino.clanweb.eu/rfid/                      |*/
+/*|WEB: https://hladinomer.000webhostapp.com/rfid/           |*/
 /*|----------------------------------------------------------|*/
 //#define OTA //odkomentuj pre OTA UPDATE CEZ LAN z Arduino IDE (espota.py)
 #include <Arduino.h>             // Arduino core
@@ -27,8 +27,8 @@ const char * password = "WIFI_PASSWORD";
 
 
 //WEBSERVER RELATED
-const char * host = "host.com"; //domain for connection
-String url = "/rfid/karta.php"; //route to target .php file (under domain)
+const char* host = "hladinomer.000webhostapp.com"; //domain - host
+String url = "/rfid/karta.php"; //URL behind host domain --> target PHP file
 const int httpsPort = 443; //https port
 
 const int rele = 16; //GPIO16 == D0
