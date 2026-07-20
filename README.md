@@ -1,17 +1,4 @@
 # RFID vrátnik s mikrokontrolérom ESP8266, ESP32
-# Podporte projekt pre pridanie nových funkcionalít
-* https://www.paypal.me/chlebovec
-# Stránka projektu
-* Informácie o projekte: http://arduino.clanweb.eu/rfid-system.php 
-* Testovacie webové rozhranie: http://arduino.clanweb.eu/rfid/
-* **Z dostupných zdrojových kódov pre platformy Arduino, ESP8266 a ESP32 je možné využiť iba HTTP variant, nakoľko freehosting clanweb.eu nemá podporu HTTPS!**
-* Možnosť ihneď vyskúšať funkcionalitu systému v testovacom webovom rozhraní po zapojení čítačky NXP RC522 a nahratí programu pre odtestovanie funkčnosti
-* Čítačka RC522 funguje na frekvencii 13.56 MHz, dokáže prečítať RFID tagy štandardu ISO/IEC 14443-A
-* Webové rozhranie dokáže vizualizovať priloženia karty historicky s výsledkom overenia s možnosťou riadenia prístupu - autorizácie / deautorizácie kariet (automatická obnova údajov bola odstránená)
-* Vhodné ako základ pre vlastný projekt s RFID vstupom od používateľa
-* Pridaná podpora pre Over The Air aktualizáciu firmvéru prostredníctvom LAN siete - Basic OTA cez Python z prostredia Arduino IDE
-* **Čítačka Wiegand, RDM6300 nie je dostupná vo free verzii projektu RFID vrátnik**
-* Článok k projektu (verzia 1.0): https://chiptron.cz/articles.php?article_id=216
 
 # Systém ponúka 2 typy užívateľov projektu
 | Administrátor: <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width="64" height="64"> | Používateľ: <img src="https://image.flaticon.com/icons/svg/1326/1326318.svg" width="64" height="64"> |
