@@ -1,7 +1,7 @@
 # RFID vrátnik s mikrokontrolérom ESP8266, ESP32
 
 # Systém ponúka 2 typy užívateľov projektu
-| Administrátor: <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width="64" height="64"> | Používateľ: <img src="https://image.flaticon.com/icons/svg/1326/1326318.svg" width="64" height="64"> |
+| Administrátor: <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnGCGOwcj7dI9Y3XVPOqpoG14JQRxOymAar4eBrCfFi8pULu32k658SazQ&s=10" width="64" height="64"> | Používateľ: <img src="https://cdn-icons-png.flaticon.com/512/12583/12583751.png" width="64" height="64"> |
 | ------------- | ------------- |
 | Spravuje webové rozhranie | Fyzicky prikladá NFC tag/kľúčenku/náramok/kartu|
 | V reálnom čase vidí priloženie karty s výsledkom overenia  | Pri overeni sú mu odistené dvere na 5 sekúnd|
