@@ -21,24 +21,6 @@
 * Na UART rozhranie mikrokontróler posiela udalosti - Eventy - priloženie karty s výsledkom overenia (akceptácie karty webserverom)
 * UID sa ukladajú do MySQL databázy, existujú rôzne tabuľky - prístupy, autorizované karty, evidencia mien ku kartám...
 
-# Hardvér
-* ![NodeMCU](https://a.allegroimg.com/s128/038a14/f035c3d6448cbb01f1c543d06c10/Modul-WiFi-ESP8266-NodeMCU-v3-ESP12E-CH340-Arduino)**NodeMCU (v2, alebo v3)**
-* ![Basekit](https://www.robotop.lv/1201-home/nodemcu-base-board-v10.jpg)Basekit (možný iba pri V3, možnosť využiť externé napájanie na 6-24V)
-#
-* ![Arduino Uno](https://s3-ap-northeast-1.amazonaws.com/switch-science-intl/contents/small/789_201602_102_tBuTiHx.jpg)**Arduino Uno**
-* ![Ethernet W5100](https://s3.amazonaws.com/storage.wobiz.com/24/24605/images/Square/1503854801_df45e8e990ef7e3b39025df4a8b2a008.24605.jpeg)Ethernet Wiznet W5100
-* ![Ethernet W5500](https://content.instructables.com/ORIG/FAT/YMPE/JHQJS5HZ/FATYMPEJHQJS5HZ.jpg?auto=webp&frame=1&md=b5361d3cb7debcabb4f8547a353b9e04)Ethernet Wiznet W5500
-#
-* ![ESP32 DevKit](https://images.ua.prom.st/785300776_w128_h128_wifi-bluetooth-modul.jpg)**ESP32 DevKit V1 / DevKitC V4**
-#
-* ![RC522](https://rukminim1.flixcart.com/image/128/128/learning-toy/m/b/e/grab-em-rfid-rc522-spi-original-imaehszrwtx9gshm.jpeg?q=70)Čítačka RC522 na 13.56 MHz pre štandard ISO/IEC 14443 A
-* ![13.56MHz](https://mi4.rightinthebox.com/images/128x128/201307/rpqwut1374140279910.jpg)Kompatibilné karty a kľúčenky
-* ![1-kanálové elmg. relé](https://rukminim1.flixcart.com/image/128/128/jlfh6kw0/learning-toy/2/z/f/single-channel-5v-relay-module-sunrobotics-original-imaf8k84asferu9r.jpeg?q=70)SRD-05VDC-SL-C (elmg. relé 1-kanálové)
-* ![Solenoidový jazýček](https://tshop.r10s.com/e15/6ac/b493/9ecd/709c/ca5e/d201/1108e7b222c4544488dd21.jpg?_ex=128x128)Solenoid - jazýčkový zámok
-
-# Princíp solenoid jazýčka 
-![Princíp jazýčka](https://www.adafruit.com/images/1512animation.gif)
-
 # Technológie
 * ![HTML5](https://imag.malavida.com/mvimgbig/download-s/html5-video-player-10741-0.jpg)
 * ![PHP](https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/4050af38-9b27-11e6-b10d-00163ec9f5fa/1688065098/php-logo.jpg)
@@ -47,11 +29,6 @@
 * <img src="https://cdn.iconscout.com/icon/free/png-256/bootstrap-6-1175203.png" width="64" height="64">
 * ![Arduino core](http://users.sch.gr/johnmaga/0/images/logo/logo-64x64/arduino_b-64x64.png)
 * <img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_977c0721699223be28566021a78599e9/autodesk-eagle.png" width="64" height="64">
-
-# Získanie Root CA certifikátu - (Pre ESP32 - HTTPS):
-* openssl s_client -showcerts -verify 5 -connect example.com:443 < /dev/null
-# Získanie SHA1 fingerprintu certifikátu - (Pre ESP8266 - HTTPS):
-* openssl s_client -connect example.com:443 -showcerts < /dev/null 2>/dev/null   | openssl x509 -in /dev/stdin -sha1 -noout -fingerprint
 
 # Inštalácia systému - krok po kroku
 * Stiahnuť repozitár v .zip archíve z Githubu
