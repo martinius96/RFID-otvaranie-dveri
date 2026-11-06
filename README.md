@@ -1,5 +1,5 @@
 # RFID vrátnik s mikrokontrolérom ESP8266, ESP32
-
+* Projekt je neudržiavaný, verzie Arduino Core < 2020
 # Systém ponúka 2 typy užívateľov projektu
 | Administrátor: <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnGCGOwcj7dI9Y3XVPOqpoG14JQRxOymAar4eBrCfFi8pULu32k658SazQ&s=10" width="64" height="64"> | Používateľ: <img src="https://cdn-icons-png.flaticon.com/512/12583/12583751.png" width="64" height="64"> |
 | ------------- | ------------- |
@@ -21,15 +21,6 @@
 * Na UART rozhranie mikrokontróler posiela udalosti - Eventy - priloženie karty s výsledkom overenia (akceptácie karty webserverom)
 * UID sa ukladajú do MySQL databázy, existujú rôzne tabuľky - prístupy, autorizované karty, evidencia mien ku kartám...
 
-# Technológie
-* ![HTML5](https://imag.malavida.com/mvimgbig/download-s/html5-video-player-10741-0.jpg)
-* ![PHP](https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/4050af38-9b27-11e6-b10d-00163ec9f5fa/1688065098/php-logo.jpg)
-* <img src="https://d1q6f0aelx0por.cloudfront.net/product-logos/0dd7193f-e747-4a15-b797-818b9fac3656-mysql.png" width="64" height="64">
-* <img src="https://cdn.iconscout.com/icon/free/png-256/jquery-10-1175155.png" width="64" height="64">
-* <img src="https://cdn.iconscout.com/icon/free/png-256/bootstrap-6-1175203.png" width="64" height="64">
-* ![Arduino core](http://users.sch.gr/johnmaga/0/images/logo/logo-64x64/arduino_b-64x64.png)
-* <img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_977c0721699223be28566021a78599e9/autodesk-eagle.png" width="64" height="64">
-
 # Inštalácia systému - krok po kroku
 * Stiahnuť repozitár v .zip archíve z Githubu
 * Súbor priečinka sql importovať do vašej MySQL databázy - štruktúru, alebo štruktúru + vzorové dáta
@@ -39,7 +30,7 @@
 * Web súbory nahrať na FTP server (kompatibilné s PHP 5, aj PHP 7)
 * V zdrojovom kóde pre NodeMCU - zvoliť si verziu HTTPS/HTTP, zmeniť údaje k wifi sieti, údaje na váš webserver, rovnako i pre ESP32/Arduino
 * Nahrať program, používať Arduino core 2.5.0/2.5.2 (pre NodeMCU), **verzia 2.3.0 (doteraz používaná) je nekompatibilná** pre HTTPS fingerprint!
-* Pre Arduino, ESP32 je možné použiť aj nanovšie knižnice pre HTTP, HTTPS spojenia
+* **Pre Arduino, ESP32 je možné použiť aj nanovšie knižnice pre HTTP, HTTPS spojenia**
 * Program pre Arduino je plne kompatibilný medzi Arduino Uno, Nano, Mega 1280/2560
 * Hotovo
 
@@ -111,14 +102,3 @@
 | NO | IN |
 | COM  | - |
 | NC  | 12/24 DC/AC |
-
-* Nulák, respektíve GND podľa typu obvodu (AC/DC) je pripojený na zdroj po celú dobu prevádzky solenoid jazýčka.
-
-# Schéma zapojenia Arduino
-![Schéma Arduino + Ethernet - RFID vrátnik](https://i.imgur.com/DoPktzT.png)
-
-# Schéma zapojenia ESP8266 (NodeMCU)
-![Schéma NodeMCU - ESP8266 - RFID vrátnik](https://i.imgur.com/j9wciSz.png)
-
-# Schéma zapojenia ESP32
-![Schéma ESP32 - RFID vrátnik](https://i.imgur.com/oR0RjWB.png)
